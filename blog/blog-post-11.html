@@ -1,0 +1,68 @@
+<h1>
+Distributed Computing Based Drugs 
+</h1>
+<hr class="publications-hr">
+1/1/2021
+<hr class="publications-hr">
+<p>
+The idea of many small individual parts making one big process is probably so native to you that you do not stop and looking at such systems in wonder.
+You are using one of them on a daily basis - the internet! The internet is built on a big number of computers which each one by itself cannot provide the whole complexity of the internet. 
+You probably work in a company which other professionals - another distributed system. If you think about it, even the cells in your body cooperate to form you - a very cool system if I may.  
+</p>
+<p>
+A common property of all three mentioned examples is that there are several types of <i>"agents"</i> in each system. Indeed, on the internet, there are user devices and servers along with other less-popular types of internet-connected devices. 
+There are different roles in a company and different types of cells in your body. This property allows the development of much reacher system comparing to systems based on a single type of agent.
+</p>
+<p>
+Nevertheless, several types of agents add a complexity that will make our lives harder in the following few minutes so let's elegantly ignore them and focus on single-type distributed systems.
+Furthermore, the examples of agents we just reviewed are really complex by themself. Computers, people, and even cells are capable to do calculations, remember things, and communicate (transfer signals to be accurate).
+This kind of agent is really cool but let's go even one step further and require our agents to be really "basic". How basic? let's remove their ability to communicate, remember, or perform any computation.
+</p>
+<p>
+In this setting where all our agents are the same and very basic, we need to make them operate together somehow - after all, we want a distributed system and not a population of static (and properly confused if you ask me) agents.  
+Therefore, like in many biological systems, we can assume somethings is happening (which the agents are passive in this process) which makes our agents interact with each other.
+These interactions changing the <b>state</b> of the agents. Formally, we can define this kind of system using the population protocol model.
+</p>
+<h3>
+The population protocol 
+</h3>
+<p>
+A population protocol is a distributed computing model formed by resource-limited mobile agents that meet in a random way. 
+The state of agents updates whenever they meet based on their and the agents they met in previous states [1].  
+As a result, functions are computed by checking the states of the agents once the computation is over.
+</p>
+<p>
+This system may sound simple and very limited but there is nothing farther from the truth. 
+First, from a theoretical point of view, there are multiple hard problems elegantly solved by population protocol based models. To name a few [2]:
+</p>
+<p style="margin-bottom: 0.75rem;"> 1. Majority (consensus) voting. </p>
+<p style="margin-bottom: 0.75rem;"> 2. Picking a leader. </p>
+<p style="margin-bottom: 0.75rem;"> 3. Counting the number of agents. </p>
+<p>
+Inspired by biological processes, Paun defined a family of systems [3] to model a
+collection of mobile finite-state agents that interact with one another and
+also with membranes. The membranes divide space into regions and groups
+of agents within a single region have interactions. The system specifies a set
+of interaction rules for each region. These interactions can create new agents,
+destroy existing agents, change agents’ states, and cause agents to cross a membrane into an adjacent region.
+</p>
+<p>
+Another biological case where population protocol is useful is in the development of a targeted drug delivery nanorobots' swarm-based treatment.
+By developing the nanorobots with the needed design to execute a given treatment protocol which is based on population protocol, one can be assured the treatment will be executed correctly even without intervention during the process itself. 
+</p>
+<p>
+While the computer becomes better (hardware and software alike) as individual devices, we see increasing interest in networks of computers (for example, the cloud technology). 
+Implementing these ideas and technologies in a biological settings, allow us to perform complex tasks with relatively simple agents. 
+This is a step in the way of more personalized and with fewer side effects treatments.
+</p>
+<hr class="publications-hr">
+<h3>Referances</h3>
+<p>
+[1] Alistarh et al., Time-space trade-offs in population protocols. Society for Industrial and Applied Mathematics. 2017; 2560–2579.
+</p>
+<p>
+[2] Aspnes et al., An Introduction to Population Protocols. Yale Press. 2008; 1-27.
+</p>
+<p>
+[3] Paun, G., Computing with membranes. Journal of Computer and System Sciences. 2020; 61(1), 108–143.
+</p>

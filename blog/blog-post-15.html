@@ -1,0 +1,290 @@
+<h1>
+The graphs every AI developer must know and their python implementation
+</h1>
+<hr class="publications-hr">
+15/3/2021
+<hr class="publications-hr">
+<p class="no-show-desktop">
+<b>Technical note: we apologize but the code segments of this blog post are avalible on desktop only.</b>
+</p>
+
+<p>
+The <a href="https://www.sciencedirect.com/science/article/pii/S0016328717300046">Artificial Intelligence (AI) revolution</a> is around the corner where in 2018 alone there are around <a href="https://www.statista.com/statistics/941054/number-of-ai-companies-worldwide-by-country/#:~:text=The%20statistic%20shows%20the%20number,the%20United%20States%20was%202%2C028.">4000 middle-large companies</a> focusing on AI and who knows how many more startups and academic projects.
+One of the main steps in a successful ML \ AI project is well communicating your results to others. It is well known that people prefer graphs and visuals rather than text and equations. Combining these two factors, you need a few graphs for your project. This raises the question - "what graph shall I use?". Here is a few advance graph that put your project in the best light. 
+</p>
+
+<p>
+First, we need to import a few libraries so it will be easy to work. One can avoid the <b>numpy</b> and <b>pandas</b> libraries but this will require to re-write a lot of ready, easy to use code so you probably do not need to do so without a really good reason.
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
+import numpy as np  # for numerical manipulations
+import pandas as pd # for data manipulations
+import matplotlib as mpl # for graphs generations... the main library we discuss today
+import matplotlib.pyplot as plt # just the plot manager of this library
+import seaborn as sns # an extension of the matplotlib library that will save us a lot of time
+</code>
+</pre>
+</p>
+
+<h3>Know your data</h3>
+<p>
+Classification, if we ignore the fancy terms, methods, and mathematics is the idea to draw a line (usually not a straight one) between two or more groups in a given space (again, usually R^n). 
+A real-world classification task will usually have more than three input parameters (the highest number we can plot) so "seeing" the whole data is not something we can usually do.
+Hover, we can sample sub-spaces of the problem and start working from there. The following graph will help you understand the classification path you need.
+</p>
+
+<h4>Density Curves with Histogram</h4>
+<p>
+This graph gives a two in one solution for parameter density. From the empirical, cold, accurate perspective - you have the classical histogram graph. 
+On the other hand, from the numerical, easy to work with a perspective you have the density curve fit. This is not too complex or advance graph and this is exactly why it opens our list.
+</p>
+<p>
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
+# Import Data
+df = pd.read_csv("your-csv-file-goes-here")
+
+# Draw Plot
+plt.figure(figsize=(10,10))
+df_parameters_cols = [your-df-coloums-classes-names-goes-here]
+classes_names = [your-classes-names-goes-here]
+colors = [your-favorite-colors-goes-here]
+for col_name_index in df_parameters_cols:
+	sns.distplot(df.loc[df[df_parameters_cols[col_name_index]] == classes_names[col_name_index],
+				 classes_names[col_name_index], 
+				 color=colors[col_name_index]
+				)
+
+# Decoration
+plt.title('Cool plot title')
+plt.legend()
+
+# save figure and close
+plt.save_fig(your-path-goes-here)
+plt.close()
+</code>
+</pre>
+</p>
+<p style="text-align: center;">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/23_DensityPlot_With_Histogram_Matplotlib-min-1024x796.png?ezimgfmt=rs:722x561/rscb3/ng:webp/ngcb3" alt="Density Curves with Histogram sample">
+</p>
+
+<h4>Time Series Decomposition Plot</h4>
+<p>
+The time series decomposition plot shows the breakdown of the time series into trend, seasonal and residual components. It uses <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier transform</a> under the hood which can be fine-tuned later to obtain other signals.
+The pleasure of this plot is the small amount of code needed to obtain a decent decomposition. 
+</p>
+<p>
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
+from statsmodels.tsa.seasonal import seasonal_decompose
+from dateutil.parser import parse
+
+# Import Data
+df = pd.read_csv("your-csv-file-goes-here")
+dates = pd.DatetimeIndex([parse(d).strftime('%Y-%m-01') for d in df['date']])
+df.set_index(dates, inplace=True)
+
+# Decompose 
+result = seasonal_decompose(df['your-coloum'], 
+							model='multiplicative' # play with this argument
+						    )
+
+# Plot
+plt.rcParams.update()
+result.plot().suptitle('Cool plot title')
+
+# save figure and close
+plt.save_fig(your-path-goes-here)
+plt.close()
+</code>
+</pre>
+</p>
+<p style="text-align: center;">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/39_TimeSeries_Decomposition_Statmodels_Matplotlib-min.png?ezimgfmt=rs:722x669/rscb3/ng:webp/ngcb3" alt="Time Series Decomposition Plot Sample">
+</p>
+
+<h3>Time series</h3>
+<p>
+Time goes by and generating a very important dimension to your data while doing so. People just love seeing how things change over time. 
+If you have time-series data, the following graphs just give your audience exactly what they are looking for...
+</p>
+
+<h4>Slope Chart</h4>
+<p>
+The slope chart plot is useful to see how multiple processes change over two or more points in time. Usually, the sign gradient of these processes is useful information as well which is added to the graph via color indexing.
+This plot is best used for a relatively small amount of processes (up to 10) with up to 4 or 5 columns as too much information will shadow each other and make the plot unreadable.  
+</p>
+<p>
+<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
+import matplotlib.lines as mlines
+
+# Import Data # 
+df = pd.read_csv("your-csv-file")
+
+# change the style if you need something else
+left_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df.continent, df[first-time-related-coloum])] 
+right_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df.continent, df[second-time-related-coloum])]
+
+# Draw line fucntion #
+def newline(p1, p2, color='black'):
+    ax = plt.gca()
+    l = mlines.Line2D([p1[0], p2[0]], # start point on plot
+					  [p1[1], p2[1]], # end point on plot
+					  color='black', # change the color based on the gradient of the line (positive or negative)
+					  marker='o',  # play with the marker - it can be used similarly to the color example
+					  markersize=6 # just so it will be visible
+					)
+    ax.add_line(l) # add to the plot 
+    return l
+
+fig, ax = plt.subplots(1,1,figsize=(10,10)) # just to get one plot box with axes 
+
+# Vertical Lines # 
+# play with the style as you want 
+ax.vlines(x=1, ymin=500, ymax=13000, color='black', alpha=0.7, linewidth=1, linestyles='dotted') 
+ax.vlines(x=3, ymin=500, ymax=13000, color='black', alpha=0.7, linewidth=1, linestyles='dotted') 
+
+# Points # 
+ax.scatter(y=df[first-time-related-coloum], x=np.repeat(1, df.shape[0]), s=10, color='black', alpha=0.7)
+ax.scatter(y=df[second-time-related-coloum], x=np.repeat(3, df.shape[0]), s=10, color='black', alpha=0.7)
+
+# Line Segmentsand Annotation
+for p1, p2, c in zip(df[first-time-related-coloum], df[second-time-related-coloum], df['continent']):
+    newline([1,p1], [3,p2])
+    ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center')
+    ax.text(3+0.05, p2, c + ', ' + str(round(p2)), horizontalalignment='left', verticalalignment='center')
+
+# 'Before' and 'After' Annotations
+ax.text(1-0.05, 13000, 'BEFORE', horizontalalignment='right', verticalalignment='center')
+ax.text(3+0.05, 13000, 'AFTER', horizontalalignment='left', verticalalignment='center')
+
+# Decoration
+ax.set_title("cool plot title")
+ax.set(xlim=(min-x, max-x), 
+	   ylim=(min-y, max-y),
+	   ylabel='processes sub-title')
+ax.set_xticks([1, 3]) # change to the number of coloums you want to show
+ax.set_xticklabels(["first-time", "second-time"])
+plt.yticks(np.arange(500, 13000, 2000)) # according to the 'ax.vlines' lines 
+
+# Lighten borders - nice touch
+plt.gca().spines["top"].set_alpha(.0)
+plt.gca().spines["bottom"].set_alpha(.0)
+plt.gca().spines["right"].set_alpha(.0)
+plt.gca().spines["left"].set_alpha(.0)
+
+# save figure and close
+plt.save_fig(your-path-goes-here)
+plt.close()
+</code>
+</pre>
+</p>
+<p style="text-align: center;">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/18_Slopechart_Matplotlib-min-1024x880.png?ezimgfmt=rs:722x620/rscb3/ng:webp/ngcb3" alt="Slope Chart Sample">
+</p>
+
+<h4>Autocorrelation Plots</h4>
+<p>
+The Autocorrelation plot shows the correlation of the time series with its own lags. 
+Each vertical line represents the correlation between the series and its lag starting from lag 0. 
+The blue shaded region in the plot is the significance level. 
+Those lags that lie above the blue line are the significant lags.
+This plot is really useful in regression tasks over time to see how different lags influence the model.
+</p>
+<p>
+<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+# Import Data
+df = pd.read_csv('your-csv-file')
+
+# Draw Plot
+fig, ax = plt.subplots(1, 1, figsize=(20,10))
+plot_acf(df["important-coloum"].tolist(),
+		 ax=ax, 
+		 lags=50 # play with this number 
+		)
+
+# Decorate #
+# font size of tick labels
+ax.tick_params(axis='both', labelsize=12)
+
+# save fig and close
+plt.save_fig()
+plt.close()
+</code>
+</pre>
+</p>
+<p style="text-align: center;">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/37_ACF_PACF_Plot_Matplotlib_Statmodels-min-1024x384.png?ezimgfmt=rs:722x271/rscb3/ng:webp/ngcb3" alt="Autocorrelation Plot Sample">
+</p>
+
+<h3>Model performance with noisy data</h3>
+<p>
+The world is messy, and your data is messy as well. But, there is no need to be ashamed of this - on the opposite, give it the place it deserves and plot it!
+A lot of reports, papers and etc. show only the average (mean) result of research. Do not get me wrong, the average result holds meaningful information but as my Ph.D. advisor once said as a paraphrase on the common phrase <i>"god is in the standard deviation"</i>.
+Therefore, here are a few graphs showing both the average result and the error around it.
+</p>
+
+<h4>Scatter plot with linear regression line of best fit</h4>
+<p>
+A scatter plot is a standard nowadays as it provides a raw view of the data, allowing the viewer to get a clear picture of what is going on. 
+When you add a linear regression you provide the first attempt a person needs to run on data (who do not like linear stuff). 
+Then, you blow the viewers' minds with your confidence interval, clearly showing the model's performance over the interesting values and how one can trust it. 
+This graph is a must in every regression presentation - either in the baseline slide or in the results section. 
+</p>
+<p>
+<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
+# Import Data
+df = pd.read_csv("your-csv-here")
+
+# Plot
+sns.set_style("white") # I like it, pick the one looks best on your report
+gridobj = sns.lmplot(
+					 x="df-col-name", # the depndent parameter
+					 y="df-col-name", # the indepndent parameter
+					 hue="df-col-name", # the coloum that defined two or more groups (not commanly used)
+					 data=df, # the data frame one wants to plot
+					)
+
+# Decorations
+gridobj.set(xlim=(min-value, max-value), 
+            ylim=(min-value, max-value))
+plt.title("An informative title for your plot")
+
+# Save and close for next plot
+plt.save_fig(the-path-you-need-here)
+plt.close()
+</code>
+</pre>
+</p>
+<p style="text-align: center;">
+<img style="max-width: 450px; width: 100%;" width="600" height="440" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/3_1_Scatterplot_with_linesofbestfit_Seaborn-min-1024x612.png?ezimgfmt=rs:722x431/rscb3/ng:webp/ngcb3" alt="Scatter plot with linear regression line of best fit Sample">
+</p>
+
+<p>
+This discussion is heavily based on the <b>Mathplotlib</b> library as it really common and operates as the base of other more advanced libraries. 
+Understanding Mathplotlib and being able to manipulate the graphs in this level easily transform to the same skill on "higher" level libraries. 
+Hover, we could not end this discussion without several honorable mentions one needs to check to reduce development time:
+</p>
+<ul style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
+	<li><a href="https://seaborn.pydata.org/">Seaborn</a> - a Python data visualization library based on Matplotlib. It provides a higher-level wrapper on the library which makes it easier to use.</li>
+	<li><a href="https://plotly.com/python/">Plotly</a> - graphing library makes it easy to create interactive, publication-quality graphs.</li>
+	<li><a href="https://bokeh.org/">Bokeh</a> - a flexible interactive visualization library that targets web browsers for representation.</li>
+	<li><a href="https://altair-viz.github.io/">Altair</a> - a declarative statistical visualization library for Python based on vega-lite, which makes it ideal for plots that require a lot of statistical transformation.</li>
+	<li><a href="https://python-visualization.github.io/folium/">Folium</a> - makes it easy to visualize data on an interactive leaflet map. The library has a number of built-in tilesets from <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, <a href="https://www.mapbox.com/">Mapbox</a> (that I personally like), and <a href="http://maps.stamen.com/">Stamen</a>.</li>
+</ul>
+
+<p>
+Congratulations! you are now the master of AI plots. You just need to do all the other parts of a successful AI project and plot your way to victory. 
+Communicating your results (even if they not as good as you hoped) in the right way is a critical part of developing new technology and products. 
+By the way, if you would like some help with the plotting for your AI, or any other part in this manner, feel free to <a href="/about.html">contact me</a>.
+</p>
+
+<p>
+<small>* All images in this blog post have been taken from: www.machinelearningplus.com</small>
+<p>

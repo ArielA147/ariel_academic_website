@@ -1,0 +1,42 @@
+<h1>
+3 techniques for a better quality of tagged data for ML tasks.
+</h1>
+<hr class="publications-hr">
+1/4/2020
+<hr class="publications-hr">
+<p>
+At the age of data-driven algorithms, business, personal life, and much more we are seeing each day how machines "learn" to perform more complex which were out of reach with traditional algorithms. We see businesses optimize their sales, customer loyalty, and employee happiness by investing in analyzing the data we are able to collect in a cheap and fast way nowadays.
+</p>
+<p>
+Indeed, Peter Sondergaard said (and I quote): "Information is the oil of the 21st century, and analytics is the combustion engine".
+</p>
+<p>
+Other lead figures as Prof' Dan Ariely - expert of social economics or Geoffrey Moore addressing this phenomenon and its importance.
+</p>
+<p>
+But, (you anticipate that there is going to be a "but" any time soon) the enormous amount of data we have is, most of the time, unordered, not specific and the worst part - not correct. This is indeed a shameful situation as it makes the developing of new algorithms and business upon data-driven approach much harder. Let me clear things up with some example...
+</p>
+<p>
+You are a restaurant (the good type of course) trying to find if its clients are enjoying the new menu better then the old one. You decide to do a test and provide to the clients the food from the old menu and freebies of the new one just to hear their opinion [where did you find this star as a marketing manager? amazing idea!]. But there is a small problem, your clients are polite (who thought politeness is a bad thing...) and therefore score your new dishes always high cause they got them for free and you were nice so they don't want to harm your feelings. The result? a data that does not represent the truth at all; such unfortunate after all the investment in them.
+</p>
+<p>
+So, you may ask, what can we do to deal with these problems - we still wish to use data-driven algorithms. Well, there is no easy answer but I will present 3 techniques for improving the quality of your data.
+</p>
+<h3>
+Compare other's work to yours
+</h3>
+<p>
+If you are handling a Vision or NLP problem it is classic to start by tagging by yourself [and we trust your tagging, after all - you know what you are doing ;)] when receiving tagging from other taggers. You wish to insert in there work, examples you already tagged and allow to tag them as well. This way, you can estimate the quality of there work and if it's done randomly, you can assume the same quality to the other tags. This allows not only to know the quality of your but by repeat the task with the same tagger to find where is the difficulties in the tagging process and then improve it.
+</p>
+<h3>
+Cross validate with few taggers
+</h3>
+<p>
+This is both similar and different from the first techniques as one can take one of two ways using this technique. The first one is to give a few taggers the same examples and by combining their results (majority vote, average, sum, union, etc.) to ensure the quality it better. The problem is that the technique becomes expansive is one wish to improve the quality by giving the same example to more and more taggers. The second option is to give some percent (10% is a good rule of thumb) to two taggers (let's call them A, B) and another same percent from B's set of examples to another tagger (call them B, C). Do it to a list of taggers and validate only the first one to get a good understanding of the quality of the taggers on one hand and decrease the double-checking on the other hand.
+</p>
+<h3>
+Use the tagging process to improve the tagging process
+</h3>
+<p>
+Like other systems improve by user's feedback, this process is not different. If you using (and you should) your own tagging software that your taggers us, you can not only receive the tagged data but a meta-data of the tagging process as well. Using this data, it is possible to see why and when your taggers get wrong or what takes them more time and makes the process more expensive. This is a similar idea of how improvement algorithms but finding the edge-cases they misbehave at; but this time with human taggers. <br><br>
+</p>
