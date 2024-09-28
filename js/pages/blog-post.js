@@ -3,7 +3,7 @@ import { PageRender, retrivedData } from '/js/pageRender.js';
 import { NextBlogPostCard } from '/js/components/nextBlogPostCard.js';
 
 // Data file paths
-let NEXT_BLOG_JSON = "/data/jsons/next_blog.json";
+let NEXT_BLOG_JSON = "data/jsons/next_blog.json";
 
 // consts
 const default_sorter = "order";
@@ -54,7 +54,7 @@ class BlogPost extends PageRender
 				client = new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			client.onreadystatechange = contentHandler;
-			client.open("GET", "/blog/blog-post-" + this.postName + ".html", false);
+			client.open("GET", "blog/blog-post-" + this.postName + ".html", false);
 			client.send();
 		}
 		catch (error)

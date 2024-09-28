@@ -57,7 +57,7 @@
       "description":"A Hebrew summary (40 pages, hand written) of a dyanmic systems mathematics course in BIU at 2017.",
       "recommendation":"",
       "fileLinks":[
-         {"info": "Project", "type": 1, "link": "/files/dynamic_systems_hebrew_course.pdf"},
+         {"info": "Project", "type": 1, "link": "files/dynamic_systems_hebrew_course.pdf"},
          {"info": "cite", "type": 3, "link": ""}
        ],
       "authors": "Lazebnik, T.",

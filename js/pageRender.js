@@ -1,7 +1,7 @@
 // Data file paths
 let PLACE_HOLDER = "{}";
-let SEO_JSON = "/data/jsons/seo/[].json";
-let MAIN_JSON = "/data/jsons/[].json";
+let SEO_JSON = "data/jsons/seo/[].json";
+let MAIN_JSON = "data/jsons/[].json";
 
 // globals //
 let retrivedData = null;

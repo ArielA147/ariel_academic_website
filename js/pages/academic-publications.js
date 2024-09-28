@@ -5,7 +5,7 @@ import { addCollapseFunction } from '/js/descriptionSlicer.js';
 import {Icons} from '/js/components/icons.js';
 
 // Data file paths
-let PUBLICATIONS_JSON = "/data/jsons/academic-publications.json";
+let PUBLICATIONS_JSON = "data/jsons/academic-publications.json";
 
 // consts
 const default_sorter = "year";

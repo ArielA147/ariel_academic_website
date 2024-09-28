@@ -28,7 +28,7 @@ OCTI is a strategy box game for two players. The OCTI game has two main styles t
 <p>
 The game starts when both players have their four pieces standing on marked home <i>base</i> locations. The game is turn-based when the green player is the first to take a turn. In each turn, the player plays by clicking on the relevant piece. Then, he can either add a direction arrow to it, or move to a desired location, as shown in the figure below. In case a player "jumps over" an adversary piece and is able to jump over additional pieces, he can do so in the same turn. The game is won by one of two ways: when a player lands a piece on one of the opponent's base tiles, or when a player manages to capture all opponent's pieces.
 </p>
-<br><div style="text-align: center;"><img src="/blog/images/blog_20_turns.png" width="100%" style="text-align: center; max-width: 800px;"></div><br><br>
+<br><div style="text-align: center;"><img src="blog/images/blog_20_turns.png" width="100%" style="text-align: center; max-width: 800px;"></div><br><br>
 <h4>Project structure</h4>
 <p>
 The game is developed as a single-page website, in pure JavaScript (JS) programming language with the <a href="https://p5js.org/">P5</a> library. The game's board is rendered once on page load and then the pieces and mouse cursor are rendered in each frame. When a player wins the game, a winning message appear and after some delay the game resets. 
@@ -181,7 +181,7 @@ With (1-epsilon) probability the policy chooses an action that is optimal (accor
 <p>
 A schematic view of the RL agent related logic, divided into training and inference stages, is shown in the figure below.
 </p>
-<br><div style="text-align: center;"><img src="/blog/images/blog_20_training.png" width="100%" style="text-align: center; max-width: 800px;"></div><br><br>
+<br><div style="text-align: center;"><img src="blog/images/blog_20_training.png" width="100%" style="text-align: center; max-width: 800px;"></div><br><br>
 <h5 style="font-size: 14pt;">Game’s state encoding</h5>
 <p>
 with the directions added to them during the game. Since a piece may be captures during the game, its necessitates a special way to encode it. In addition, each piece has a color (flag) which indicates which of the players own it. Therefore, one can describe the state using an 80-dimensional array; Each 11 elements describe the following attributes: the first two values hold the <i>x</i> and <i>y</i> location coordinates. The additional eight values binary indicate if a direction is added to the piece. A special value (for example -1) indicates if the piece has been captured. 
@@ -215,7 +215,7 @@ As a sanity check, we examined the the graph bars related to the AI agents playi
 The next test was conducted using five volunteers with different levels of expertise in the game, starting with players first time playing and ending with a master player. The players played 10 games against each of the AI agents in a random order.
  As expected, a clear monotonous trend is reflected from the graph for all AI agents, where the higher the skill of the player the better the performance against the AI. More importantly, is that the win averages of the RL agent are higher than the other AI agents for all most all the players that participated, with a single exception of player 3, for which RL performance equaled to the MINMAX agent. What even more impressive is that the RL agent was the only AI agent that manged to beat the master player at least once, as shown by the bar on the right.
 </p>
-<br><div style="text-align: center;"><img src="/blog/images/blog_20_eval.png" width="100%" style="text-align: center; max-width: 800px;"></div><br><br>
+<br><div style="text-align: center;"><img src="blog/images/blog_20_eval.png" width="100%" style="text-align: center; max-width: 800px;"></div><br><br>
 <h3>Discussion</h3>
 <p>
 In our project we developed an online digitized version of the OCTI board game. The main challenges we faced at first when tackling the RL player development were all connected to the later realization of the uniqueness and complexity that characterise the general family of board games - "Multi agent adversarial problem".

@@ -597,7 +597,7 @@
 					},
 					{
 						"name": "BIU 2019 (a) Exam ",
-						"link": "/files/numerical_analysis_sample_exam_2019_a.pdf",
+						"link": "files/numerical_analysis_sample_exam_2019_a.pdf",
 						"description": "Exam by Dr. Michal Michali, thanks to Ohav Levy for the document"
 					}
 				]
@@ -644,12 +644,12 @@
 							"description": ""
 						}, {
 							"name": "Legendre and Chebyshev polynomials - file 3",
-							"link": "/files/numerical_analysis_polynoms.pdf",
+							"link": "files/numerical_analysis_polynoms.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Legendre and Chebyshev polynomials - file 4",
-							"link": "/files/numerical_analysis_сhvishev.docx",
+							"link": "files/numerical_analysis_сhvishev.docx",
 							"type": "slides",
 							"description": ""
 						}, {
@@ -676,7 +676,7 @@
 							"description": ""
 						}, {
 							"name": "Numerical Integration",
-							"link": "/files/numerical_analysis_numerical_Integration.pdf",
+							"link": "files/numerical_analysis_numerical_Integration.pdf",
 							"type": "slides",
 							"description": ""
 						}]
@@ -780,22 +780,22 @@
 							"description": ""
 						}, {
 							"name": "Dual theory for linear optimization problems (file 1)",
-							"link": "/files/linear_optimization_big_m_1.pdf",
+							"link": "files/linear_optimization_big_m_1.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Dual theory for linear optimization problems (file 2)",
-							"link": "/files/linear_optimization_big_m_2.pdf",
+							"link": "files/linear_optimization_big_m_2.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Dual theory for linear optimization problems",
-							"link": "/files/dual_simplex_example_1.pdf",
+							"link": "files/dual_simplex_example_1.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Dual Simplex analysis",
-							"link": "/files/dual_simplex_example_2.pdf",
+							"link": "files/dual_simplex_example_2.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
@@ -817,33 +817,33 @@
 					"resources": {
 						"Home Work": [{
 							"name": "Home work 1",
-							"link": "/files/88369-hw-01.pdf",
+							"link": "files/88369-hw-01.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Home work 2",
-							"link": "/files/OR-Exercise 3.pdf",
+							"link": "files/OR-Exercise 3.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Home work 3",
-							"link": "/files/OR-Exercise 4.pdf",
+							"link": "files/OR-Exercise 4.pdf",
 							"type": "slides",
 							"description": ""
 						}],
 						"Home Work Answer": [{
 							"name": "Home Work Answer 1",
-							"link": "/files/88369-hw-01-sol.pdf",
+							"link": "files/88369-hw-01-sol.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Home Work Answer 2",
-							"link": "/files/linear_optimization_hw_1_answer_1_3.pdf",
+							"link": "files/linear_optimization_hw_1_answer_1_3.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Home Work Answer 3",
-							"link": "/files/88369-hw-04-sol.pdf",
+							"link": "files/88369-hw-04-sol.pdf",
 							"type": "slides",
 							"description": ""
 						}]
@@ -900,32 +900,32 @@
 					"resources": {
 						"Slides": [{
 							"name": "Introduction to numerical analysis and numerical error",
-							"link": "/files/tools_numerical_lession_1_d.pdf",
+							"link": "files/tools_numerical_lession_1_d.pdf",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
 						}, {
 							"name": "Introduction to numerical analysis and numerical error (file 1)",
-							"link": "/files/tools_numerical_lession_1_a.pdf",
+							"link": "files/tools_numerical_lession_1_a.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Introduction to numerical analysis and numerical error (file 2)",
-							"link": "/files/tools_numerical_lession_1_b.pdf",
+							"link": "files/tools_numerical_lession_1_b.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Introduction to numerical analysis and numerical error (file 3)",
-							"link": "/files/tools_numerical_lession_1_c.pdf",
+							"link": "files/tools_numerical_lession_1_c.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "More numerical error and zero points of a function",
-							"link": "/files/tools_numerical_lession_2.pdf",
+							"link": "files/tools_numerical_lession_2.pdf",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
 						}, {
 							"name": " Continue zero points of a function, fix points and some Matlab Code",
-							"link": "/files/tools_numerical_lession_3.pdf",
+							"link": "files/tools_numerical_lession_3.pdf",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
 						}]
@@ -937,52 +937,52 @@
 					"resources": {
 						"Slides": [{
 							"name": "LU and Gauss methods",
-							"link": "/files/linear_numerical_presentation.pptx",
+							"link": "files/linear_numerical_presentation.pptx",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "LU and SVD methods  - LU example",
-							"link": "/files/numerical_tools_lession_5_file_0.pptx",
+							"link": "files/numerical_tools_lession_5_file_0.pptx",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "LU and SVD methods - LU analysis",
-							"link": "/files/numerical_tools_lession_5_file_1.pptx",
+							"link": "files/numerical_tools_lession_5_file_1.pptx",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "LU and SVD methods- SVD algorithm",
-							"link": "/files/numerical_tools_lession_5_file_2.pptx",
+							"link": "files/numerical_tools_lession_5_file_2.pptx",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "LU and SVD methods - SVD example)",
-							"link": "/files/numerical_tools_lession_5_file_3.pptx",
+							"link": "files/numerical_tools_lession_5_file_3.pptx",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Linear Iterative methods",
-							"link": "/files/numerical_tools_lession_5.pptx",
+							"link": "files/numerical_tools_lession_5.pptx",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
 						}, {
 							"name": "Yakobi-Zidal method and interpolation",
-							"link": "/files/tools_numerical_lession_6.pptx",
+							"link": "files/tools_numerical_lession_6.pptx",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
 						}, {
 							"name": "Yakobi-Zidal method and interpolation advanced (file 1)",
-							"link": "/files/numerical_tools_lecture_8 (1).pdf",
+							"link": "files/numerical_tools_lecture_8 (1).pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Yakobi-Zidal method and interpolation advanced (file 2)",
-							"link": "/files/numerical_tools_lecture_8 (2).pdf",
+							"link": "files/numerical_tools_lecture_8 (2).pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Yakobi-Zidal method and interpolation advanced (file 3)",
-							"link": "/files/numerical_tools_lecture_8 (3).pdf",
+							"link": "files/numerical_tools_lecture_8 (3).pdf",
 							"type": "slides",
 							"description": ""
 						}]
@@ -999,27 +999,27 @@
 							"description": ""
 						}, {
 							"name": "(Fast) Fourier Transform (file 1)",
-							"link": "/files/numerical_tools_lession_9_a.pdf",
+							"link": "files/numerical_tools_lession_9_a.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "(Fast) Fourier Transform (file 2)",
-							"link": "/files/numerical_tools_lession_9_b.pdf",
+							"link": "files/numerical_tools_lession_9_b.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Numerical Differentiation",
-							"link": "/files/numerical_tools_lession_10.PDF",
+							"link": "files/numerical_tools_lession_10.PDF",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Numerical Integration",
-							"link": "/files/numerical_analysis_numerical_Integration.pdf",
+							"link": "files/numerical_analysis_numerical_Integration.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
 							"name": "Numerical ODE Solvers - Euler Method",
-							"link": "/files/tools_numerical_ode_lecture.pdf",
+							"link": "files/tools_numerical_ode_lecture.pdf",
 							"type": "slides",
 							"description": ""
 						}, {
@@ -1070,7 +1070,7 @@
 			"resources": {
 				"Must": [{
 					"name": "Final Project Guideline",
-					"link": "/files/hit_math_cyber/cyber_final_course.pdf",
+					"link": "files/hit_math_cyber/cyber_final_course.pdf",
 					"description": "All the details about the course's final project.",
 					"type": "file"
 				}],
@@ -1118,19 +1118,19 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 1: Prime numbers and etc.",
-								"link": "/files/hit_math_cyber/1_1_primes.pdf",
+								"link": "files/hit_math_cyber/1_1_primes.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},
 							{
 								"name": "Lession 1: Intro to encryption",
-								"link": "/files/hit_math_cyber/1_2_encryption.pdf",
+								"link": "files/hit_math_cyber/1_2_encryption.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},
 							{
 								"name": "Lession 2: Crypto cont.",
-								"link": "/files/hit_math_cyber/2_1.pdf",
+								"link": "files/hit_math_cyber/2_1.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							}
@@ -1143,37 +1143,37 @@
 					"resources": {
 						"Lectures": [{
 							"name": "Lession 3: Graph theory from a cyber prespective",
-							"link": "/files/hit_math_cyber/3.pdf",
+							"link": "files/hit_math_cyber/3.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 4: Time Series Analysis",
-							"link": "/files/hit_math_cyber/4.pdf",
+							"link": "files/hit_math_cyber/4.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 5 (a): Data-driven security challanges",
-							"link": "/files/hit_math_cyber/5_1.pdf",
+							"link": "files/hit_math_cyber/5_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 5 (b): Directions and solutions",
-							"link": "/files/hit_math_cyber/5_2.pdf",
+							"link": "files/hit_math_cyber/5_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 5 (c): Example - cybersecurity events detection in a data-driven manner",
-							"link": "/files/hit_math_cyber/5_3.pdf",
+							"link": "files/hit_math_cyber/5_3.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 6 (b): Multiagent traffic monitoring",
-							"link": "/files/hit_math_cyber/6_2.pdf",
+							"link": "files/hit_math_cyber/6_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 6 (c): Advanced Persistent Threats",
-							"link": "/files/hit_math_cyber/6_3.pdf",
+							"link": "files/hit_math_cyber/6_3.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						}]
@@ -1185,37 +1185,37 @@
 					"resources": {
 						"Lectures": [{
 							"name": "Lession 7 (a): Anomaly Detection in Time Series",
-							"link": "/files/hit_math_cyber/7_1.pdf",
+							"link": "files/hit_math_cyber/7_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 7 (b): Anomaly Detection in Time Series - more methods",
-							"link": "/files/hit_math_cyber/7_2.pdf",
+							"link": "files/hit_math_cyber/7_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 8 (a): Unsupervised Anomaly Detection on TimeSeries",
-							"link": "/files/hit_math_cyber/8_1.pdf",
+							"link": "files/hit_math_cyber/8_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 8 (b): ANOMALIB: A DEEP LEARNING LIBRARY FOR ANOMALY DETECTION",
-							"link": "/files/hit_math_cyber/8_2.pdf",
+							"link": "files/hit_math_cyber/8_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 9 (a): Cybersecurity Threats and Their Mitigation Approaches Using Machine Learning",
-							"link": "/files/hit_math_cyber/9_1.pdf",
+							"link": "files/hit_math_cyber/9_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 9 (b): Anomaly-Based Intrusion Detection by Machine Learning: A Case Study on Probing Attacks to an Institutional Network",
-							"link": "/files/hit_math_cyber/9_2.pdf",
+							"link": "files/hit_math_cyber/9_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 9 (c): Towards Zero-Shot Flow-Based Cyber-Security Anomaly Detection Framework",
-							"link": "/files/hit_math_cyber/9_3.pdf",
+							"link": "files/hit_math_cyber/9_3.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						}]
@@ -1227,32 +1227,32 @@
 					"resources": {
 						"Lectures": [{
 							"name": "Lession 10 (a): Deep Reinforcement Learning for Cyber Security",
-							"link": "/files/hit_math_cyber/10_1.pdf",
+							"link": "files/hit_math_cyber/10_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 10 (b): An Ensemble Deep Learning-Based Cyber-Attack Detection in Industrial Control System",
-							"link": "/files/hit_math_cyber/10_2.pdf",
+							"link": "files/hit_math_cyber/10_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 11 (a): Internet of Things Cyber Attacks Detection using Machine Learning",
-							"link": "/files/hit_math_cyber/11_1.pdf",
+							"link": "files/hit_math_cyber/11_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 11 (b): DDoS Attack Detection using Machine Learning Techniques in Cloud Computing Environments",
-							"link": "/files/hit_math_cyber/11_2.pdf",
+							"link": "files/hit_math_cyber/11_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 12 (a): From product recommendation to cyber-attack prediction: generating attack graphs and predicting future attacks",
-							"link": "/files/hit_math_cyber/12_1.pdf",
+							"link": "files/hit_math_cyber/12_1.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						},{
 							"name": "Lession 12 (b): A Machine-Learning-Based Cyber Attack Detection Model for Wireless Sensor Networks in Microgrids",
-							"link": "/files/hit_math_cyber/12_2.pdf",
+							"link": "files/hit_math_cyber/12_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						}]
@@ -1377,14 +1377,14 @@
 			"resources": {
 				"Must":[{
 					"name": "Final Project Guideline",
-					"link": "/files/rl_course/final_course_guideline.pdf",
+					"link": "files/rl_course/final_course_guideline.pdf",
 					"description": "All the details about the course's final project - you really should read it carfully.",
 					"type": "file"
 				}
 				],
 				"Extra": [{
 					"name": "An example for a similar (good) final project",
-					"link": "/files/rl_course/cyber_final_project_example.pdf",
+					"link": "files/rl_course/cyber_final_project_example.pdf",
 					"description": "Note this is a paper from another course and their task was a bit different. That said, the overall design of the work is relevent and you can learn from it.",
 					"type": "file"
 				},{
@@ -1437,7 +1437,7 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 1: Introduction",
-								"link": "/files/rl_course/1.pdf",
+								"link": "files/rl_course/1.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1447,7 +1447,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 2: Exploration and Exploitation",
-								"link": "/files/rl_course/2.pdf",
+								"link": "files/rl_course/2.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1457,7 +1457,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 3: Markov Decision Processes and Dynamic Programming",
-								"link": "/files/rl_course/3.pdf",
+								"link": "files/rl_course/3.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1473,7 +1473,7 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 4: Theoretical Fundamentals of Dynamic Programming",
-								"link": "/files/rl_course/4.pdf",
+								"link": "files/rl_course/4.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1483,7 +1483,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 5: Model-Free Prediction",
-								"link": "/files/rl_course/5.pdf",
+								"link": "files/rl_course/5.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1493,7 +1493,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 6: Model-Free Control",
-								"link": "/files/rl_course/6.pdf",
+								"link": "files/rl_course/6.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1509,7 +1509,7 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 7: Function Approximation in RL",
-								"link": "/files/rl_course/7.pdf",
+								"link": "files/rl_course/7.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1519,17 +1519,17 @@
 								"type": "video"
 							},{
 								"name": "Lession 8: Planning and models",
-								"link": "/files/rl_course/8.pdf",
+								"link": "files/rl_course/8.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
 								"name": "Lession 9: Policy Gradients and Actor Critics",
-								"link": "/files/rl_course/9.pdf",
+								"link": "files/rl_course/9.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
 								"name": "Lession 10: Deep Reinforcement Learning",
-								"link": "/files/rl_course/10.pdf",
+								"link": "files/rl_course/10.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							}]
@@ -1547,7 +1547,7 @@
 			"university": "Jonkoping University",
 			"department": "School of Engineering",
 			"location_class": "see agenda",
-			"syllabus": "/files/ju_rl_course/syllabus.pdf",
+			"syllabus": "files/ju_rl_course/syllabus.pdf",
 			"description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
 			"grade_parts": [{
 					"name": "Final project",
@@ -1565,22 +1565,22 @@
 			"resources": {
 				"Must":[{
 					"name": "Course's stracture",
-					"link": "/files/ju_rl_course/course_structure.pdf",
+					"link": "files/ju_rl_course/course_structure.pdf",
 					"description": "A one-page description of the course so you can be oriented quickly during the semester.",
 					"type": "file"
 				},{
 					"name": "Home Work #1",
-					"link": "/files/ju_rl_course/hw1.pdf",
+					"link": "files/ju_rl_course/hw1.pdf",
 					"description": "Home work #1 for submission",
 					"type": "file"
 				},{
 					"name": "Home Work #2",
-					"link": "/files/ju_rl_course/hw2.pdf",
+					"link": "files/ju_rl_course/hw2.pdf",
 					"description": "Home work #2 for submission",
 					"type": "file"
 				},{
 					"name": "Final Project Guideline",
-					"link": "/files/ju_rl_course/final_project.pdf",
+					"link": "files/ju_rl_course/final_project.pdf",
 					"description": "All the details about the course's final project - you really should read it carfully.",
 					"type": "file"
 				}
@@ -1623,7 +1623,7 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 1: Introduction to Reinforcement Learning",
-								"link": "/files/rl_course/1.pdf",
+								"link": "files/rl_course/1.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1633,7 +1633,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 2: Tabular MDP Planning and RL Policy Evaluation",
-								"link": "/files/rl_course/2.pdf",
+								"link": "files/rl_course/2.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1643,7 +1643,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 3: Q-learning",
-								"link": "/files/rl_course/3.pdf",
+								"link": "files/rl_course/3.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1659,7 +1659,7 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 4: Policy Gradient Methods (1)",
-								"link": "/files/rl_course/4.pdf",
+								"link": "files/rl_course/4.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1669,7 +1669,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 5: Policy Gradient Methods (2)",
-								"link": "/files/rl_course/5.pdf",
+								"link": "files/rl_course/5.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1679,7 +1679,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 6: Policy Gradient Methods (3)",
-								"link": "/files/rl_course/6.pdf",
+								"link": "files/rl_course/6.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1695,7 +1695,7 @@
 					"resources": {
 						"Lectures": [{
 								"name": "Lession 7: Imitation Learning",
-								"link": "/files/rl_course/7.pdf",
+								"link": "files/rl_course/7.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1705,7 +1705,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 8: Rewards in RL",
-								"link": "/files/rl_course/8.pdf",
+								"link": "files/rl_course/8.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1715,7 +1715,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 9: Deep Reinforcement Learning (1)",
-								"link": "/files/rl_course/9.pdf",
+								"link": "files/rl_course/9.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1725,7 +1725,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 10: Deep Reinforcement Learning (2)",
-								"link": "/files/rl_course/10.pdf",
+								"link": "files/rl_course/10.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1735,7 +1735,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 11: Data Efficient RL",
-								"link": "/files/rl_course/11.pdf",
+								"link": "files/rl_course/11.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
@@ -1745,7 +1745,7 @@
 								"type": "video"
 							},{
 								"name": "Lession 12: RL Evaluation",
-								"link": "/files/rl_course/12.pdf",
+								"link": "files/rl_course/12.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{

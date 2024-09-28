@@ -4,7 +4,7 @@ import { TeamCard } from '/js/components/teamCard.js';
 import { addCollapseFunction } from '/js/descriptionSlicer.js';
 
 // Data file paths
-let LAB_JSON = "/data/jsons/lab.json";
+let LAB_JSON = "data/jsons/lab.json";
 
 // consts
 const default_sorter = "order";

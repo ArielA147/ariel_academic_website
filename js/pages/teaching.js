@@ -4,7 +4,7 @@ import {CourseCard} from '/js/components/courseCard.js';
 import {Icons} from '/js/components/icons.js';
 
 // Data file paths
-let TAECHING_JSON = "/data/jsons/teaching.json";
+let TAECHING_JSON = "data/jsons/teaching.json";
 
 // consts
 let default_filter = "All Universities";

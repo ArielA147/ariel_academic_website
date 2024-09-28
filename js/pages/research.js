@@ -7,7 +7,7 @@ import { Tabs } from '/js/components/tabs.js';
 import { addCollapseFunction } from '/js/descriptionSlicer.js';
 
 // Data file paths
-let RESEARCH_JSON = "/data/jsons/research.json";
+let RESEARCH_JSON = "data/jsons/research.json";
 let SECTIONS = ["Ongoing-Projects", "Previous-Projects", "Work-with-me"];
 
 /*

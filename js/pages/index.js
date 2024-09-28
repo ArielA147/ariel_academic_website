@@ -6,9 +6,9 @@ import { Icons } from '/js/components/icons.js';
 import { addCollapseFunction, descriptionTrim } from '/js/descriptionSlicer.js';
 
 // Data file paths
-let UPDATES_TEXT = "/data/notifications.txt"
-let LECTURE_INFO_JSON = "/data/jsons/lecturer.json";
-let INDEX_JSON = "/data/jsons/index.json";
+let UPDATES_TEXT = "data/notifications.txt"
+let LECTURE_INFO_JSON = "data/jsons/lecturer.json";
+let INDEX_JSON = "data/jsons/index.json";
 
 const notificationsArray = [];
 

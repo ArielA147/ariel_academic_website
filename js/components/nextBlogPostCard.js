@@ -25,7 +25,7 @@ class NextBlogPostCard extends Element
 		}
 		var answer = '<div class="academic-papers-panel next-blog-card-size"><div class="personal-col w-100 next-post-box-title"><h3>' 
 		+ this.title + '</h3>' + "<div class='meta-blog-next-post-time-element meta-blog-post-title'>" + this.date + " &#9679; " + this.reading_time + " minutes to read </div><h5>" +
-		final_desc + '</h5><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="/blog-post.html?post=' + this.link_address + '" class="download-btn">Read More</a></div></div></div>';
+		final_desc + '</h5><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="blog-post.html?post=' + this.link_address + '" class="download-btn">Read More</a></div></div></div>';
 		return answer;
 	}
 	

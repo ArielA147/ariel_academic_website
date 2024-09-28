@@ -25,7 +25,7 @@ class CourseUpdate extends Element
 		let visitTag = "";
 		if (lastVisit.getTime() < this.date)
 		{
-			visitTag = '<img src="/img/flags/label_tag.png" style="float: right;" alt="new resource"/>';
+			visitTag = '<img src="img/flags/label_tag.png" style="float: right;" alt="new resource"/>';
 			this.last_html_flag_show = true;
 		}
 

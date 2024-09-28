@@ -15,7 +15,7 @@ One of the main steps in a successful ML \ AI project is well communicating your
 
 <p>
 First, we need to import a few libraries so it will be easy to work. One can avoid the <b>numpy</b> and <b>pandas</b> libraries but this will require to re-write a lot of ready, easy to use code so you probably do not need to do so without a really good reason.
-<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<pre class="language-python no-show-mobile" data-src="blog/blog-post-15.html" data-download-link>
 <code class="language-python no-show-mobile">
 import numpy as np  # for numerical manipulations
 import pandas as pd # for data manipulations
@@ -39,7 +39,7 @@ This graph gives a two in one solution for parameter density. From the empirical
 On the other hand, from the numerical, easy to work with a perspective you have the density curve fit. This is not too complex or advance graph and this is exactly why it opens our list.
 </p>
 <p>
-<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<pre class="language-python no-show-mobile" data-src="blog/blog-post-15.html" data-download-link>
 <code class="language-python no-show-mobile">
 # Import Data
 df = pd.read_csv("your-csv-file-goes-here")
@@ -75,7 +75,7 @@ The time series decomposition plot shows the breakdown of the time series into t
 The pleasure of this plot is the small amount of code needed to obtain a decent decomposition. 
 </p>
 <p>
-<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<pre class="language-python no-show-mobile" data-src="blog/blog-post-15.html" data-download-link>
 <code class="language-python no-show-mobile">
 from statsmodels.tsa.seasonal import seasonal_decompose
 from dateutil.parser import parse
@@ -116,7 +116,7 @@ The slope chart plot is useful to see how multiple processes change over two or 
 This plot is best used for a relatively small amount of processes (up to 10) with up to 4 or 5 columns as too much information will shadow each other and make the plot unreadable.  
 </p>
 <p>
-<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<pre class="language-python no-show-mobile no-show-mobile" data-src="blog/blog-post-15.html" data-download-link>
 <code class="language-python no-show-mobile">
 import matplotlib.lines as mlines
 
@@ -194,7 +194,7 @@ Those lags that lie above the blue line are the significant lags.
 This plot is really useful in regression tasks over time to see how different lags influence the model.
 </p>
 <p>
-<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<pre class="language-python no-show-mobile no-show-mobile" data-src="blog/blog-post-15.html" data-download-link>
 <code class="language-python no-show-mobile">
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
@@ -237,7 +237,7 @@ Then, you blow the viewers' minds with your confidence interval, clearly showing
 This graph is a must in every regression presentation - either in the baseline slide or in the results section. 
 </p>
 <p>
-<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<pre class="language-python no-show-mobile no-show-mobile" data-src="blog/blog-post-15.html" data-download-link>
 <code class="language-python no-show-mobile">
 # Import Data
 df = pd.read_csv("your-csv-here")
