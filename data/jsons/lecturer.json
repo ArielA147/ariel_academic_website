@@ -1,10 +1,9 @@
 {
 	"position": "Lecturer | PhD student",
 	"field": "The economics of AI",
-	"addresses":
-	[
+	"addresses": [
 		{
-			"university":"Jonkoping University",
+			"university": "Jonkoping University",
 			"location": "E2418",
 			"hours": "Send an email"
 		}
@@ -16,6 +15,6 @@
 	"facebook_link": "",
 	"github_link": "",
 	"bitbucket_link": "",
-	"name":"Einav Peretz Andersson",
-	"cvfile":"/files/cv.pdf"
+	"name": "Ariel motherfucking Alexi",
+	"cvfile": "/files/cv.pdf"
 }
