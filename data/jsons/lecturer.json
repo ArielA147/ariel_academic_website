@@ -1,21 +1,21 @@
 {
-	"position": "Mathematican | AI expert | Entrepreneur",
-	"field": "Mathematics for Personalized Medicine and More",
+	"position": "Lecturer | PhD student",
+	"field": "The economics of AI",
 	"addresses":
 	[
 		{
-			"university":"Ariel",
-			"location": "Math. Building, room ?",
+			"university":"Jonkoping University",
+			"location": "E2418",
 			"hours": "Send an email"
 		}
 	],
-	"phone": "0545524589",
-	"email": "lazebnik.teddy (at) gmail.com",
-	"linkedin_link": "https://www.linkedin.com/in/teddy-lazebnik/",
-	"google_scholar_link": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
-	"facebook_link": "https://www.facebook.com/profile.php?id=100018459427933",
-	"github_link": "https://github.com/teddy4445",
-	"bitbucket_link": "https://bitbucket.org/teddy_lazebnik/",
-	"name":"Teddy Lazebnik",
-	"cvfile":"files/cv.pdf"
+	"phone": "+46 36-10 1713",
+	"email": "einav.peretz.andersson@ju.se",
+	"linkedin_link": "https://www.linkedin.com/in/einav-peretz-andersson/",
+	"google_scholar_link": "https://scholar.google.com/citations?hl=en&user=kfEJa0EAAAAJ",
+	"facebook_link": "",
+	"github_link": "",
+	"bitbucket_link": "",
+	"name":"Einav Peretz Andersson",
+	"cvfile":"/files/cv.pdf"
 }
