@@ -1,4 +1,4 @@
-import { Element } from 'js/components/element.js';
+import { Element } from '../../js/components/element.js';
 
 class PostCard extends Element {
 	constructor(title, link_post, year) {

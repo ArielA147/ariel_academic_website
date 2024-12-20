@@ -1,5 +1,5 @@
-import { Element } from 'js/components/element.js';
-import { ActionButton } from 'js/components/actionButton.js';
+import { Element } from '../../js/components/element.js';
+import { ActionButton } from '../../js/components/actionButton.js';
 
 class CourseCard extends Element {
 	constructor(name, code, year, topic, department, semester, university, description) {

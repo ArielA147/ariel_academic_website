@@ -1,5 +1,5 @@
-import { Element } from 'js/components/element.js';
-import { ActionButton } from 'js/components/actionButton.js';
+import { Element } from '../../js/components/element.js';
+import { ActionButton } from '../../js/components/actionButton.js';
 
 class passkeyPanel extends Element {
 	constructor(url, error) {

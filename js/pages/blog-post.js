@@ -1,6 +1,6 @@
 // imports
-import { PageRender, retrivedData } from 'js/pageRender.js';
-import { NextBlogPostCard } from 'js/components/nextBlogPostCard.js';
+import { PageRender, retrivedData } from '../../js/pageRender.js';
+import { NextBlogPostCard } from '../../js/components/nextBlogPostCard.js';
 
 // Data file paths
 let NEXT_BLOG_JSON = 'data/jsons/next_blog.json';

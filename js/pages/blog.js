@@ -1,8 +1,8 @@
 // imports
-import { PageRender, retrivedData } from 'js/pageRender.js';
-import { BlogCard } from 'js/components/blogCard.js';
-import { addCollapseFunction } from 'js/descriptionSlicer.js';
-import { Icons } from 'js/components/icons.js';
+import { PageRender, retrivedData } from '../../js/pageRender.js';
+import { BlogCard } from '../../js/components/blogCard.js';
+import { addCollapseFunction } from '../../js/descriptionSlicer.js';
+import { Icons } from '../../js/components/icons.js';
 
 // Data file paths
 let BLOG_JSON = 'data/jsons/blog.json';

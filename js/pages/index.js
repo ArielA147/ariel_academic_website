@@ -1,9 +1,9 @@
 // imports
-import { PageRender, retrivedData } from 'js/pageRender.js';
-import { PublicationCard } from 'js/components/publicationCard.js';
-import { ProjectPanel } from 'js/components/projectPanel.js';
-import { Icons } from 'js/components/icons.js';
-import { addCollapseFunction, descriptionTrim } from 'js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '../../js/pageRender.js';
+import { PublicationCard } from '../../js/components/publicationCard.js';
+import { ProjectPanel } from '../../js/components/projectPanel.js';
+import { Icons } from '../../js/components/icons.js';
+import { addCollapseFunction, descriptionTrim } from '../../js/descriptionSlicer.js';
 
 // Data file paths
 let UPDATES_TEXT = 'data/notifications.txt';

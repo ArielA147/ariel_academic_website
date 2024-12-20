@@ -1,5 +1,5 @@
-import { Element } from 'js/components/element.js';
-import { CourseResource } from 'js/components/courseResource.js';
+import { Element } from '../../js/components/element.js';
+import { CourseResource } from '../../js/components/courseResource.js';
 
 class CourseModule extends Element {
 	constructor(title, explanation, resources) {

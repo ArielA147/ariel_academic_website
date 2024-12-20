@@ -1,4 +1,4 @@
-import { Element } from 'js/components/element.js';
+import { Element } from '../../js/components/element.js';
 
 class ResearchPosition extends Element {
 	constructor(name, description, requierments, applay_text, position_type, connect_email) {

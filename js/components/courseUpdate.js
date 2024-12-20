@@ -1,6 +1,6 @@
-import { Element } from 'js/components/element.js';
-import { descriptionTrim } from 'js/descriptionSlicer.js';
-import { Icons } from 'js/components/icons.js';
+import { Element } from '../../js/components/element.js';
+import { descriptionTrim } from '../../js/descriptionSlicer.js';
+import { Icons } from '../../js/components/icons.js';
 
 class CourseUpdate extends Element {
 	constructor(title, link, description, date) {

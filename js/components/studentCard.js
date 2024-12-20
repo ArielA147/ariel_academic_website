@@ -1,5 +1,5 @@
-import { Element } from 'js/components/element.js';
-import { ProjectStudent } from 'js/components/ProjectStudent.js';
+import { Element } from '../../js/components/element.js';
+import { ProjectStudent } from '../../js/components/ProjectStudent.js';
 
 class StudentCard extends Element {
 	constructor(name, description, projects, year, degree, linked_link, publiction_link, is_alumni) {

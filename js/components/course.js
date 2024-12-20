@@ -1,9 +1,9 @@
-import { Element } from 'js/components/element.js';
-import { CourseResource } from 'js/components/courseResource.js';
-import { CourseUpdate } from 'js/components/courseUpdate.js';
-import { CourseModule } from 'js/components/courseModule.js';
-import { descriptionTrim } from 'js/descriptionSlicer.js';
-import { Icons } from 'js/components/icons.js';
+import { Element } from '../../js/components/element.js';
+import { CourseResource } from '../../js/components/courseResource.js';
+import { CourseUpdate } from '../../js/components/courseUpdate.js';
+import { CourseModule } from '../../js/components/courseModule.js';
+import { descriptionTrim } from '../../js/descriptionSlicer.js';
+import { Icons } from '../../js/components/icons.js';
 
 class Course extends Element {
 	constructor(
