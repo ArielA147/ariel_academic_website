@@ -54,7 +54,7 @@ class BlogPost extends PageRender
 				client = new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			client.onreadystatechange = contentHandler;
-			client.open("GET", "/blog/blog-post-" + this.postName + ".html", false);
+			client.open("GET", "blog/blog-post-" + this.postName + ".html", false);
 			client.send();
 		}
 		catch (error)
