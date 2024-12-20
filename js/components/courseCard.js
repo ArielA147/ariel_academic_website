@@ -31,7 +31,6 @@ class CourseCard extends Element
 		+'</div>'
 		+'<p>'+this.department+'<br />'+this.university+'</p>'
 		+'<div class="panel-btn personal-row space-between">'
-		+'<div class="flex-start"><a href="/course-page.html?course_id='
 		+ this.code + '" class="secondary-btn">Go to course</a></div>'
 		+'</div>'
 		+'</div>';
