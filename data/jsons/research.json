@@ -1,122 +1,42 @@
 {
-	"work_with_me_opening": "Want to work with me? Send me an <a href='mailto:einav.peretz.andersson@ju.se'>email</a> and lets discuss.",
+	"work_with_me_opening": "Want to work with me? Send me an <a href='mailto:ariel.alexi@biu.ac.il'>email</a> and lets discuss.",
 	"open_positions": [
 		
 	],
-	"projects": [{
-			"name": "Next Generation (Tillväxtverket)",
+	"projects": [
+		{
+			"name": "Understanding pandemic spread and optimizing resource allocation to control it",,
+			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
+			"start_month": 3,
+			"start_year": 2024,
+			"end_month": 7,
+			"end_year": 2025,
+			"team_members": 3,
+			"relevant_resources": []
+		},{
+			"name": "A biologically-informed and data-driven approach to scientometrics",
 			"participants": [{
-				"name": "Vinit Parida",
-				"title": "Ph.D.",
+				"name": "Ariel Rosenfeld",
+				"title": "Prof.",
 				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?hl=en&user=E-4NXpcAAAAJ",
+				"websiteLink": "https://arielrosenfeld.com/",
+				"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
 				"linkedinLink": ""
-			},{
-				"name": "Patrick Mikalef",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?hl=en&user=S-cenCEAAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Sabrina Tabares",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.se/citations?hl=en&user=fWHQ-WIAAAAJ",
-				"linkedinLink": ""
-			},{
+			},
+			{
 				"name": "Teddy Lazebnik",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "https://teddylazebnik.com/",
-				"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
-				"linkedinLink": "https://www.linkedin.com/in/teddy-lazebnik/"
-			},{
-				"name": "Maria Riveiro",
-				"title": "Ph.D.",
-				"role": "Co-author",
+				"title": "Dr.",
+				"role": "",
 				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?user=RfaWgB0AAAAJ&hl=en",
-				"linkedinLink": ""
-			},{
-				"name": "Maria Riveiro",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?user=RfaWgB0AAAAJ&hl=en",
-				"linkedinLink": ""
-			},{
-				"name": "Lars Carlsson",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?hl=en&user=VILa-_0AAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Alexandra Kogan",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.se/citations?hl=en&user=9rUcuC0AAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Peter Njekwa Ryberg",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.se/citations?hl=en&user=fkAOcAUAAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Meira Levy",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.se/citations?hl=en&user=uVim3SAAAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Anna Zamansky",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.se/citations?hl=en&user=zOwPqJoAAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Cinzia Battistella",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?hl=en&user=72FAEssAAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Giovanna Attanasio",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?hl=en&user=VhPztmgAAAAJ",
-				"linkedinLink": ""
-			},{
-				"name": "Richard Torkar",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?user=yNR3XUMAAAAJ&hl=en",
-				"linkedinLink": ""
-			},{
-				"name": "Eriks Klotins",
-				"title": "Ph.D.",
-				"role": "Co-author",
-				"websiteLink": "",
-				"googleLink": "https://scholar.google.com/citations?user=dBieLTcAAAAJ&hl=en",
+				"googleLink": "",
 				"linkedinLink": ""
 			}],
-			"description": "The 'Next Generation' initiative is part of Tillväxtverket’s efforts to promote innovation and sustainable growth in Sweden. [Explore Tillväxtverket here.](insert link to Tillväxtverket website) A Smart Promotor of Biodiversity for Our Gardens and Common Green Spaces (Vinnova) This project aims to develop innovative solutions for enhancing biodiversity in urban green spaces. It includes travel grants to establish research collaborations with Husqvarna, Haifa University (Israel), and LEMNISCATE (Israel) AFAIR Project (The Knowledge Foundation). The AFAIR project, supported by the Knowledge Foundation, focuses on advancing research in biodiversity and its impact on green spaces.",
-			"start_month": 11,
-			"start_year": 2024,
-			"end_month": 11,
+			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
+			"start_month": 1,
+			"start_year": 2025,
+			"end_month": 12,
 			"end_year": 2025,
-			"team_members": 14,
+			"team_members": 3,
 			"relevant_resources": []
 		}
 	]
