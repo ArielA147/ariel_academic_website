@@ -38,7 +38,7 @@ class PublicationCard extends Element {
 			'<div class="academic-papers-panel"><div class="personal-row-col col-reverse-mobile w-100 align-space-between"><h3>' +
 			this.title +
 			'</h3>';
-		if (this.fileLinks[1]['link'] != '') {
+		if (this.fileLinks[1] && this.fileLinks[1]['link'] != '') {
 			answer +=
 				'<a class="cite-btn" onclick="copy_cite(\'' +
 				this.title.replaceAll("'", '').replaceAll(' ', '_') +
@@ -63,7 +63,11 @@ class PublicationCard extends Element {
 				this.type +
 				'</span></div>';
 		}
-		if (this.fileLinks[0]['link'] != '' && this.isFileFormat(this.fileLinks[0]['link'])) {
+		if (
+			this.fileLinks[0] &&
+			this.fileLinks[0]['link'] != '' &&
+			this.isFileFormat(this.fileLinks[0]['link'])
+		) {
 			answer += '<div class="inner-publication-card-div">';
 			answer +=
 				'<a href="' +
@@ -80,7 +84,7 @@ class PublicationCard extends Element {
 			'</div></div><input type="text" style="display: none;" id="' +
 			this.title.replaceAll("'", '').replaceAll(' ', '_') +
 			'" value="' +
-			this.fileLinks[1]['link'] +
+			(this.fileLinks[1] && this.fileLinks[1]['link'] != '' ? this.fileLinks[1]['link'] : '') +
 			'"></div></div>';
 		return answer;
 	}
@@ -125,7 +129,7 @@ class PublicationCard extends Element {
 		return new PublicationCard(
 			jsonObj['name'],
 			jsonObj['description'],
-			ActionButton.createListFromJson(jsonObj['fileLinks']),
+			ActionButton.createListFromJson(jsonObj['fileLinks'] || []),
 			jsonObj['authors'],
 			jsonObj['year'],
 			jsonObj['topic'],
