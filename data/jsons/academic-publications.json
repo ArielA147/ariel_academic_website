@@ -1,94 +1,112 @@
 {
-    "publications": [
-        {
-            "name": "Comparison of pandemic intervention policies in several building types using heterogeneous population model",
-            "authors": "T. Lazebnik, A. Alexi",
-            "year": 2022,
-            "publisher": "Communications in Nonlinear Science and Numerical Simulation",
-            "type": "Paper",
-            "topic": "Epidemiology",
-            "publicationStatus": "Published",
-            "citations": 39
-        },
-        {
-            "name": "Microfounded tax revenue forecast model with heterogeneous population and genetic algorithm approach",
-            "authors": "A. Alexi, T. Lazebnik, L. Shami",
-            "year": 2024,
-            "publisher": "Computational Economics",
-            "type": "Paper",
-            "topic": "Economic",
-            "publicationStatus": "Published",
-            "citations": 16
-        },
-        {
-            "name": "A security games inspired approach for distributed control of pandemic spread",
-            "authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
-            "year": 2023,
-            "publisher": "Advanced Theory and Simulations",
-            "type": "Paper",
-            "topic": "Epidemiology",
-            "publicationStatus": "Published",
-            "citations": 16
-        },
-        {
-            "name": "High resolution spatio-temporal model for room-level airborne pandemic spread",
-            "authors": "T. Lazebnik, A. Alexi",
-            "year": 2023,
-            "publisher": "Mathematics",
-            "type": "Paper",
-            "topic": "Epidemiology",
-            "publicationStatus": "Published",
-            "citations": 13
-        },
-        {
-            "name": "Multi-species prey–predator dynamics during a multi-strain pandemic",
-            "authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
-            "year": 2023,
-            "publisher": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
-            "type": "Paper",
-            "topic": "Biomathematics",
-            "publicationStatus": "Published",
-            "citations": 10
-        },
-        {
-            "name": "The scientometrics and reciprocity underlying co-authorship panels in Google Scholar profiles",
-            "authors": "A. Alexi, T. Lazebnik, A. Rosenfeld",
-            "year": 2024,
-            "publisher": "Scientometrics",
-            "type": "Paper",
-            "topic": "Social",
-            "publicationStatus": "Published",
-            "citations": 6
-        },
-        {
-            "name": "The trade-off between airborne pandemic control and energy consumption using air ventilation solutions",
-            "authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
-            "year": 2022,
-            "publisher": "Sensors",
-            "type": "Paper",
-            "topic": "Epidemiology",
-            "publicationStatus": "Published",
-            "citations": 6
-        },
-        {
-            "name": "Economical–epidemiological analysis of the coffee trees rust pandemic",
-            "authors": "T. Lazebnik, A. Rosenfeld, L. Shami",
-            "year": 2024,
-            "publisher": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
-            "type": "Paper",
-            "topic": "Biomathematics",
-            "publicationStatus": "Published",
-            "citations": 2
-        },
-        {
-            "name": "The Academic Midas Touch: A citation-based indicator of research excellence",
-            "authors": "A. Rosenfeld, A. Alexi, L. Mushiev, T. Lazebnik",
-            "year": 2025,
-            "publisher": "Journal of Data and Information Science",
-            "type": "Paper",
-            "topic": "Scientometrics",
-            "publicationStatus": "Published",
-            "citations": 1
-        }
-    ]
+	"publications": [
+		{
+			"name": "Comparison of pandemic intervention policies in several building types using heterogeneous population model",
+			"authors": "T. Lazebnik, A. Alexi",
+			"year": 2022,
+			"publisher": "Communications in Nonlinear Science and Numerical Simulation",
+			"type": "Paper",
+			"topic": "Epidemiology",
+			"publicationStatus": "Published",
+			"citations": 39,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "Microfounded tax revenue forecast model with heterogeneous population and genetic algorithm approach",
+			"authors": "A. Alexi, T. Lazebnik, L. Shami",
+			"year": 2024,
+			"publisher": "Computational Economics",
+			"type": "Paper",
+			"topic": "Economic",
+			"publicationStatus": "Published",
+			"citations": 16,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "A security games inspired approach for distributed control of pandemic spread",
+			"authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
+			"year": 2023,
+			"publisher": "Advanced Theory and Simulations",
+			"type": "Paper",
+			"topic": "Epidemiology",
+			"publicationStatus": "Published",
+			"citations": 16,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "High resolution spatio-temporal model for room-level airborne pandemic spread",
+			"authors": "T. Lazebnik, A. Alexi",
+			"year": 2023,
+			"publisher": "Mathematics",
+			"type": "Paper",
+			"topic": "Epidemiology",
+			"publicationStatus": "Published",
+			"citations": 13,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "Multi-species prey–predator dynamics during a multi-strain pandemic",
+			"authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
+			"year": 2023,
+			"publisher": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+			"type": "Paper",
+			"topic": "Biomathematics",
+			"publicationStatus": "Published",
+			"citations": 10,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "The scientometrics and reciprocity underlying co-authorship panels in Google Scholar profiles",
+			"authors": "A. Alexi, T. Lazebnik, A. Rosenfeld",
+			"year": 2024,
+			"publisher": "Scientometrics",
+			"type": "Paper",
+			"topic": "Social",
+			"publicationStatus": "Published",
+			"citations": 6,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "The trade-off between airborne pandemic control and energy consumption using air ventilation solutions",
+			"authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
+			"year": 2022,
+			"publisher": "Sensors",
+			"type": "Paper",
+			"topic": "Epidemiology",
+			"publicationStatus": "Published",
+			"citations": 6,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "Economical–epidemiological analysis of the coffee trees rust pandemic",
+			"authors": "T. Lazebnik, A. Rosenfeld, L. Shami",
+			"year": 2024,
+			"publisher": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+			"type": "Paper",
+			"topic": "Biomathematics",
+			"publicationStatus": "Published",
+			"citations": 2,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		},
+		{
+			"name": "The Academic Midas Touch: A citation-based indicator of research excellence",
+			"authors": "A. Rosenfeld, A. Alexi, L. Mushiev, T. Lazebnik",
+			"year": 2025,
+			"publisher": "Journal of Data and Information Science",
+			"type": "Paper",
+			"topic": "Scientometrics",
+			"publicationStatus": "Published",
+			"citations": 1,
+			"fileLinks": [],
+			"description": "this is a description ya'll"
+		}
+	]
 }
