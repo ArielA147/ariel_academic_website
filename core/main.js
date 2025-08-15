@@ -42,7 +42,7 @@ function onPageLoad()
 function loadHeader()
 {	
 	client.onreadystatechange  = HeaderHandler;
-	client.open("GET", "components/header.html", false);
+	client.open("GET", "/components/header.html", false);
 	client.send();
 }
 
@@ -58,7 +58,7 @@ function HeaderHandler()
 function loadFooter()
 {		
 	client.onreadystatechange  = FooterHandler;
-	client.open("GET", "components/footer.html", false);
+	client.open("GET", "/components/footer.html", false);
 	client.send();
 }
 
@@ -289,3 +289,8 @@ function passkey() {
 // end - cookie related functions // 
 
 /* end - help functions */
+
+// TODO: add this functionality. create a navigation.js script
+// navLink.addEventListener("click", e => {
+//   if (isCurrentPage) e.preventDefault();
+// });
