@@ -1,36 +1,38 @@
 {
 	"work_with_me_opening": "Want to work with me? Send me an <a href='mailto:ariel.alexi@biu.ac.il'>email</a> and lets discuss.",
-	"open_positions": [
-		
-	],
+	"open_positions": [],
 	"projects": [
 		{
-			"name": "Understanding pandemic spread and optimizing resource allocation to control it",,
+			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
 			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
 			"start_month": 3,
 			"start_year": 2024,
 			"end_month": 7,
 			"end_year": 2025,
 			"team_members": 3,
-			"relevant_resources": []
-		},{
+			"relevant_resources": [],
+			"participants": []
+		},
+		{
 			"name": "A biologically-informed and data-driven approach to scientometrics",
-			"participants": [{
-				"name": "Ariel Rosenfeld",
-				"title": "Prof.",
-				"role": "Co-author",
-				"websiteLink": "https://arielrosenfeld.com/",
-				"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
-				"linkedinLink": ""
-			},
-			{
-				"name": "Teddy Lazebnik",
-				"title": "Dr.",
-				"role": "",
-				"websiteLink": "",
-				"googleLink": "",
-				"linkedinLink": ""
-			}],
+			"participants": [
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Prof.",
+					"role": "Co-author",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Dr.",
+					"role": "",
+					"websiteLink": "",
+					"googleLink": "",
+					"linkedinLink": ""
+				}
+			],
 			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
 			"start_month": 1,
 			"start_year": 2025,
