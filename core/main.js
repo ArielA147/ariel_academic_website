@@ -1,30 +1,15 @@
-// add header and footer to each page
-
 import { ROOT_PATH } from '../shared/constants.js';
+import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../shared/events.js';
 import { DataLoader } from './DataLoader.js';
 
-// init all the objects needed //
-let client;
 let thisPage = location.href.split('/').slice(-1)[0];
 if (thisPage == '') {
 	thisPage = 'index';
 }
-// end - init all the objects needed //
 
-// run this method on page load
 await onPageLoad();
 
-// the function to run on page load to build dynamic components that does not change often or not render in SEO lookups
 async function onPageLoad() {
-	// code for IE7+, Firefox, Chrome, Opera, Safari
-	if (window.XMLHttpRequest) {
-		client = new XMLHttpRequest();
-	} // code for IE6, IE5
-	else {
-		client = new ActiveXObject('Microsoft.XMLHTTP');
-	}
-
-	// perform all the preparation actions needed  //
 	await renderHeader();
 	await renderFooter();
 	activeMenuLink();
@@ -41,6 +26,7 @@ async function renderHeader() {
 	const header = await DataLoader.loadHeader();
 	if (header) {
 		document.getElementById('header').innerHTML = header;
+		document.dispatchEvent(new Event(HEADER_RENDERED_EVENT));
 	}
 }
 
@@ -48,6 +34,7 @@ async function renderFooter() {
 	const footer = await DataLoader.loadFooter();
 	if (footer) {
 		document.getElementById('footer').innerHTML = footer;
+		document.dispatchEvent(new Event(FOOTER_RENDERED_EVENT));
 	}
 }
 
