@@ -1,5 +1,7 @@
 // add header and footer to each page
 
+import { ROOT_PATH } from '../shared/constants.js';
+
 // init all the objects needed //
 let client;
 let thisPage = location.href.split('/').slice(-1)[0];
@@ -134,9 +136,7 @@ function gotoIndex() {
 
 	// TODO: fix magic number
 	if (width > 850) {
-		const isDev =
-			location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1');
-		window.location.replace(isDev ? '/' : '/ariel_academic_website');
+		window.location.replace(ROOT_PATH);
 	}
 }
 
