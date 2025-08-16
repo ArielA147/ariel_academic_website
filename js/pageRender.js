@@ -1,7 +1,7 @@
 // Data file paths
-let PLACE_HOLDER = "{}";
-let SEO_JSON = "/data/jsons/seo/[].json";
-let MAIN_JSON = "/data/jsons/[].json";
+// let PLACE_HOLDER = "{}";
+// let SEO_JSON = "/data/jsons/seo/[].json";
+// let MAIN_JSON = "/data/jsons/[].json";
 
 // globals //
 let retrivedData = null;
@@ -34,17 +34,17 @@ class PageRender
 	
 	// guess the main files in the server if not provided 
 	// TODO: think again if we need this function
-	static guessDataLocation()
-	{
-		var pageName = location.pathname.split("/").slice(-1)[0];
-		if (pageName == "")
-		{
-			pageName = "index";
-		}
+	// static guessDataLocation()
+	// {
+	// 	var pageName = location.pathname.split("/").slice(-1)[0];
+	// 	if (pageName == "")
+	// 	{
+	// 		pageName = "index";
+	// 	}
 		
-		return {"seo": SEO_JSON.replace(PLACE_HOLDER, pageName),
-				"main": MAIN_JSON.replace(PLACE_HOLDER, pageName)}
-	}
+	// 	return {"seo": SEO_JSON.replace(PLACE_HOLDER, pageName),
+	// 			"main": MAIN_JSON.replace(PLACE_HOLDER, pageName)}
+	// }
 	
 	// read parameters from the page's url as HTTP get 
 	static readGetPrams()
