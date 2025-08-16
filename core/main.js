@@ -37,7 +37,7 @@ function onPageLoad() {
 // load the HTML of the header from the right file and put in the right location
 function loadHeader() {
 	client.onreadystatechange = HeaderHandler;
-	client.open('GET', 'components/header.html', false);
+	client.open('GET', 'partials/header.html', false);
 	client.send();
 }
 
@@ -50,7 +50,7 @@ function HeaderHandler() {
 // load the HTML of the header from the right file and put in the right location
 function loadFooter() {
 	client.onreadystatechange = FooterHandler;
-	client.open('GET', 'components/footer.html', false);
+	client.open('GET', 'partials/footer.html', false);
 	client.send();
 }
 
@@ -132,10 +132,11 @@ function gotoIndex() {
 		document.documentElement.clientWidth,
 	);
 
+	// TODO: fix magic number
 	if (width > 850) {
-		// TODO: fix magic number
-		window.location.replace('/ariel_academic_website');
-		// window.location.replace('/');
+		const isDev =
+			location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1');
+		window.location.replace(isDev ? '/' : '/ariel_academic_website');
 	}
 }
 
