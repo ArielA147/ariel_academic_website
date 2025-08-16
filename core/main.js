@@ -132,10 +132,11 @@ function gotoIndex() {
 		document.documentElement.clientWidth,
 	);
 
+	// TODO: fix magic number
 	if (width > 850) {
-		// TODO: fix magic number
-		window.location.replace('/ariel_academic_website');
-		// window.location.replace('/');
+		const isDev =
+			location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1');
+		window.location.replace(isDev ? '/' : '/ariel_academic_website');
 	}
 }
 
