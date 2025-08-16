@@ -134,7 +134,8 @@ function gotoIndex() {
 
 	if (width > 850) {
 		// TODO: fix magic number
-		window.location.replace('/');
+		window.location.replace('/ariel_academic_website');
+		// window.location.replace('/');
 	}
 }
 
