@@ -37,7 +37,7 @@ function onPageLoad() {
 // load the HTML of the header from the right file and put in the right location
 function loadHeader() {
 	client.onreadystatechange = HeaderHandler;
-	client.open('GET', 'components/header.html', false);
+	client.open('GET', 'partials/header.html', false);
 	client.send();
 }
 
@@ -50,7 +50,7 @@ function HeaderHandler() {
 // load the HTML of the header from the right file and put in the right location
 function loadFooter() {
 	client.onreadystatechange = FooterHandler;
-	client.open('GET', 'components/footer.html', false);
+	client.open('GET', 'partials/footer.html', false);
 	client.send();
 }
 
