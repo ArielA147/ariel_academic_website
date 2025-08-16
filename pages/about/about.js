@@ -4,7 +4,7 @@ import { Icons } from '../../js/components/icons.js';
 import { Tabs } from '../../js/components/tabs.js';
 import { ProjectSection } from '../../js/components/projectSection.js';
 import { Resource } from '../../js/components/resources.js';
-import { addCollapseFunction } from '../../js/descriptionSlicer.js';
+import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
 let LECTURER_INFO_JSON = 'data/jsons/lecturer.json';

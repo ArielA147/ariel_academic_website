@@ -1,6 +1,6 @@
 import { Element } from '../../js/components/element.js';
 import { ActionButton } from '../../js/components/actionButton.js';
-import { descriptionTrim } from '../../js/descriptionSlicer.js';
+import { descriptionTrim } from '../../utils/descriptionSlicer.js';
 
 let ALL_TOPIC_KEY = 'all';
 

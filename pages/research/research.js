@@ -4,7 +4,7 @@ import { ResearchProject } from '../../js/components/researchProject.js';
 import { ResearchPosition } from '../../js/components/researchPosition.js';
 import { Icons } from '../../js/components/icons.js';
 import { Tabs } from '../../js/components/tabs.js';
-import { addCollapseFunction } from '../../js/descriptionSlicer.js';
+import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
 let RESEARCH_JSON = 'data/jsons/research.json';
