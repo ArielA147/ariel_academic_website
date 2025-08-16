@@ -1,8 +1,7 @@
 // imports
 import { PageRender, retrivedData } from '../../js/pageRender.js';
-import { BlogCard } from '../../js/components/blogCard.js';
+import { BlogCard } from './components/blogCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
-import { Icons } from '../../js/components/icons.js';
 
 // Data file paths
 let BLOG_JSON = 'data/jsons/blog.json';
