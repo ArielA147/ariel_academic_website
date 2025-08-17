@@ -1,8 +1,10 @@
 // imports
-import { PageRender, retrivedData } from '../../js/pageRender.js';
+// import { PageRender, retrivedData } from '../../js/pageRender.js';
 import { PublicationCard } from '../../js/components/publicationCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
+import { Page } from '../../core/Page.js';
+import { DataType } from '../../shared/constants.js';
 
 // Data file paths
 let PUBLICATIONS_JSON = 'data/jsons/academic-publications.json';
@@ -14,44 +16,48 @@ const default_filter = null;
 /*
 	Single instance class to build academic-publications.html page with dynamic content from JSONS from the server
 */
-class AcademicPublications extends PageRender {
-	constructor() {
-		super();
-		AcademicPublications.loadFileFromServer(PUBLICATIONS_JSON, true);
-		this.publicationList = PublicationCard.createListFromJson(retrivedData['publications']);
-		this.sorter = default_sorter;
-	}
+class AcademicPublications extends Page {
+	#publicationsList = []; // list of PublicationCard objects
+	#sorter = default_sorter;
 
-	// just gather all the build of all the sections in the page - one per call to the server side
-	build() {
-		// get the data from the GET HTTP from the URL and build the page
-		var getParms = PageRender.readGetPrams();
-		var sorter;
-		if (getParms.get('sort') != null) {
-			this.sorter = getParms.get('sort');
+	async build() {
+		const pageData = await this.loadPageData(PUBLICATIONS_JSON, DataType.JSON);
+		this.#setupPublications(pageData.publications);
+		const searchParams = this.getSearchParams();
+
+		if (searchParams.get('sort') != null) {
+			this.#sorter = searchParams.get('sort');
 		} else {
-			this.sorter = default_sorter;
+			this.#sorter = default_sorter;
 			console.log('AcademicPublications.build did not find sorter, using default');
 		}
 
-		var filter;
-		if (getParms.get('filter') != null) {
-			filter = getParms.get('filter');
+		let filter;
+		if (searchParams.get('filter') != null) {
+			filter = searchParams.get('filter');
 		} else {
 			filter = default_filter;
 			console.log('AcademicPublications.build did not find filter, using default');
 		}
 
 		// build the page itself
-		this.buildHeader(this.sorter, filter);
-		this.buildBody(this.sorter, filter);
+		await this.buildHeader(this.#sorter, filter);
+		await this.buildBody(this.#sorter, filter);
 
 		addCollapseFunction();
 	}
 
+	/**
+	 *
+	 * @param {any[]} publications
+	 */
+	#setupPublications(publications) {
+		this.#publicationsList = PublicationCard.createListFromJson(publications);
+	}
+
 	/* build section functions */
 
-	buildHeader(sorter = default_sorter, filter = default_filter) {
+	async buildHeader(sorter = default_sorter, filter = default_filter) {
 		try {
 			// highlight the sort button which is active
 			document.getElementById('sort-btn-' + sorter).classList.add('active-sort-button');
@@ -60,8 +66,8 @@ class AcademicPublications extends PageRender {
 			var years = [];
 			var topics = [];
 			var types = [];
-			for (var pubIndex = 0; pubIndex < this.publicationList.length; pubIndex++) {
-				var item = this.publicationList[pubIndex];
+			for (var pubIndex = 0; pubIndex < this.#publicationsList.length; pubIndex++) {
+				var item = this.#publicationsList[pubIndex];
 				years.push(item.year);
 				topics.push(item.topic);
 				types.push(item.type);
@@ -81,16 +87,20 @@ class AcademicPublications extends PageRender {
 
 			let reset = document.getElementById('reset-btn');
 			reset.innerHTML = Icons.reset() + ' Reset';
-			reset.addEventListener('click', () => {
+			reset.addEventListener('click', async () => {
 				this.clearFilterViewSelect();
-				this.buildBody();
+				await this.buildBody();
 			});
 		} catch (error) {
 			console.log('Error at AcademicPublications.buildHeader saying: ' + error);
 		}
 	}
 
-	buildBody(sorter = default_sorter, filter = default_filter, filterProperty = default_sorter) {
+	async buildBody(
+		sorter = default_sorter,
+		filter = default_filter,
+		filterProperty = default_sorter,
+	) {
 		if (filter == default_filter) {
 			document.getElementById('reset-btn').style.display = 'none';
 		} else {
@@ -98,7 +108,7 @@ class AcademicPublications extends PageRender {
 		}
 		// perpare ds //
 		// sort the list
-		var buildPublicationList = PublicationCard.sortByProperty(this.publicationList, sorter);
+		var buildPublicationList = PublicationCard.sortByProperty(this.#publicationsList, sorter);
 
 		// if filter needed
 		if (filter != null) {
@@ -180,16 +190,16 @@ class AcademicPublications extends PageRender {
 		}
 	}
 
-	changeSort(sort_value) {
+	async changeSort(sort_value) {
 		document.getElementById('sort-btn-topic').classList.remove('active-sort-button');
 		document.getElementById('sort-btn-year').classList.remove('active-sort-button');
 		document.getElementById('sort-btn-type').classList.remove('active-sort-button');
 		document.getElementById('sort-btn-' + sort_value).classList.add('active-sort-button');
 
-		this.buildBody(sort_value, default_filter);
+		await this.buildBody(sort_value, default_filter);
 	}
 
-	changeFilterYear() {
+	async changeFilterYear() {
 		// get value
 		var selector = document.getElementById('year-filter');
 		var selectorIndex = selector.selectedIndex;
@@ -206,10 +216,10 @@ class AcademicPublications extends PageRender {
 			filter = default_filter;
 		}
 
-		this.buildBody(this.sorter, filter, 'year');
+		await this.buildBody(this.#sorter, filter, 'year');
 	}
 
-	changeFilterType() {
+	async changeFilterType() {
 		// get value
 		var selector = document.getElementById('type-filter');
 		var selectorIndex = selector.selectedIndex;
@@ -226,10 +236,10 @@ class AcademicPublications extends PageRender {
 			filter = default_filter;
 		}
 
-		this.buildBody(this.sorter, filter, 'type');
+		await this.buildBody(this.#sorter, filter, 'type');
 	}
 
-	changeFilterTopic() {
+	async changeFilterTopic() {
 		// get value
 		var selector = document.getElementById('topic-filter');
 		var selectorIndex = selector.selectedIndex;
@@ -246,7 +256,7 @@ class AcademicPublications extends PageRender {
 			filter = default_filter;
 		}
 
-		this.buildBody(this.sorter, filter, 'topic');
+		await this.buildBody(this.#sorter, filter, 'topic');
 	}
 
 	clearFilterViewSelect() {
