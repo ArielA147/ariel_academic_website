@@ -1,54 +1,42 @@
-// imports
-import { PageRender, retrivedData } from '../../js/pageRender.js';
 import { BlogCard } from './components/blogCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
+import { Page } from '../../core/Page.js';
+import { DataType } from '../../shared/constants.js';
 
-// Data file paths
 let BLOG_JSON = 'data/jsons/blog.json';
 
-// consts
 const default_sorter = 'year';
-const default_filter = null;
 
-/*
-	Single instance class to build academic-publications.html page with dynamic content from JSONS from the server
-*/
-class Blog extends PageRender {
-	constructor() {
-		super();
-		Blog.loadFileFromServer(BLOG_JSON, true);
-		this.publicationList = BlogCard.createListFromJson(retrivedData['posts']);
+class Blog extends Page {
+	#publicationList = null;
+
+	async #setupPublicationData() {
+		if (this.#publicationList !== null) {
+			return;
+		}
+
+		const pageData = await this.loadPageData(BLOG_JSON, DataType.JSON);
+		this.#publicationList = BlogCard.createListFromJson(pageData['posts']);
 	}
 
-	// just gather all the build of all the sections in the page - one per call to the server side
-	build() {
-		// build the page itself
-		this.buildBody();
-
+	async build() {
+		await this.buildBody();
 		addCollapseFunction();
 	}
 
-	/* build section functions */
+	async buildBody(search_term = '') {
+		await this.#setupPublicationData();
+		const sortedPublicationList = BlogCard.sortByProperty(this.#publicationList, default_sorter);
 
-	buildBody(search_term = '') {
-		// perpare ds //
-		// sort the list
-		var buildPublicationList = BlogCard.sortByProperty(this.publicationList, default_sorter);
-
-		// build the UI //
 		try {
-			if (buildPublicationList.length > 0) {
-				var ansewrHtml = '';
-				for (
-					var elementIndex = buildPublicationList.length - 1;
-					elementIndex >= 0;
-					elementIndex--
-				) {
-					if (buildPublicationList[elementIndex].title.includes(search_term) || search_term == '') {
-						ansewrHtml += buildPublicationList[elementIndex].toHtml();
+			if (sortedPublicationList.length > 0) {
+				let answerHtml = '';
+				for (let i = sortedPublicationList.length - 1; i >= 0; i--) {
+					if (sortedPublicationList[i].title.includes(search_term) || search_term == '') {
+						answerHtml += sortedPublicationList[i].toHtml();
 					}
 				}
-				document.getElementById('publications-body').innerHTML = ansewrHtml;
+				document.getElementById('publications-body').innerHTML = answerHtml;
 			} // show error message
 			else {
 				document.getElementById('publications-body').innerHTML =
@@ -59,19 +47,13 @@ class Blog extends PageRender {
 		}
 	}
 
-	/* end -  build sections functions */
-
-	/* GUI functions */
-
+	// TODO: is this even used?
 	search() {
 		this.buildBody(document.getElementById('').value.trim().toLowerCase());
 	}
-
-	/* end - GUI functions */
 }
 
-// run the class build on page load
 document.blog = new Blog();
-document.blog.build();
+await document.blog.build();
 
 export { Blog };
