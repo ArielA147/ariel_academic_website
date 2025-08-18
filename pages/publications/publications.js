@@ -291,6 +291,6 @@ class AcademicPublications extends Page {
 
 // run the class build on page load
 document.academicPublications = new AcademicPublications();
-document.academicPublications.build();
+await document.academicPublications.build();
 
 export { AcademicPublications };

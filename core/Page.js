@@ -2,7 +2,7 @@ import { DataType } from '../shared/constants.js';
 import { DataLoader } from './DataLoader.js';
 
 export class Page {
-	build() {
+	async build() {
 		throw new Error('NotImplemented: Page#Build method must be implemented by subclasses.');
 	}
 

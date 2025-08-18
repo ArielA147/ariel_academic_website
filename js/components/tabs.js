@@ -1,3 +1,4 @@
+import { insertGetParamToUrl } from "../../core/main.js";
 
 class Tabs
 {

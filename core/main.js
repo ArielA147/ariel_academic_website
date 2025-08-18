@@ -178,7 +178,8 @@ function getCookie(cname) {
 	return '';
 }
 
-function insertGetParamToUrl(key, value) {
+// TODO: move to core/url.js
+export function insertGetParamToUrl(key, value) {
 	key = encodeURIComponent(key);
 	value = encodeURIComponent(value);
 
@@ -211,7 +212,8 @@ function closeUpdates() {
 	document.getElementById('update-container').classList.add('closed-section');
 }
 
-function removeAlertsPanels() {
+// TODO: move to alerts.js?
+export function removeAlertsPanels() {
 	for (var i = 1; i <= 2; i++) {
 		document.getElementById('alert-panel-' + i).style.display = 'none';
 	}
