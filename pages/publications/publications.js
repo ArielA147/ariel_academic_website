@@ -1,21 +1,14 @@
-// imports
-// import { PageRender, retrivedData } from '../../js/pageRender.js';
 import { PublicationCard } from '../../js/components/publicationCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
 import { Page } from '../../core/Page.js';
 import { DataType } from '../../shared/constants.js';
 
-// Data file paths
 let PUBLICATIONS_JSON = 'data/jsons/academic-publications.json';
 
-// consts
 const default_sorter = 'year';
 const default_filter = null;
 
-/*
-	Single instance class to build academic-publications.html page with dynamic content from JSONS from the server
-*/
 class AcademicPublications extends Page {
 	#publicationsList = []; // list of PublicationCard objects
 	#sorter = default_sorter;
