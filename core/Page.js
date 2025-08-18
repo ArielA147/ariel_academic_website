@@ -38,4 +38,12 @@ export class Page {
 			}
 		}
 	}
+
+	/**
+	 * @param {string} filePath 
+	 * @returns {Promise<string | null>}
+	 */
+	async loadPageComponent(filePath) {
+		return this.loadPageData(filePath, DataType.HTML);
+	}
 }
