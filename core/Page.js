@@ -1,4 +1,4 @@
-import { DataType } from '../shared/constants.js';
+import { DataType } from '../constants/data.js';
 import { DataLoader } from './DataLoader.js';
 
 export class Page {

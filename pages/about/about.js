@@ -5,7 +5,7 @@ import { Tabs } from '../../js/components/tabs.js';
 import { ProjectSection } from '../../js/components/projectSection.js';
 import { Resource } from '../../js/components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
-import { JSON_FILE_PATHS, DataType } from '../../shared/constants.js';
+import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
 
 let SECTIONS = ['Biography', 'Personal-projects', 'Recommended-resources'];
@@ -14,7 +14,7 @@ let ALL_TOPIC_KEY = 'all';
 
 class About extends Page {
 	#openSection = null;
-	/** @type {import('../../shared/types.js').Resource} */
+	/** @type {import('../../constants/types.js').Resource} */
 	#resourcesObj = {};
 
 	constructor() {
@@ -183,9 +183,9 @@ class About extends Page {
 		let cv = lecturerObj.cvfile;
 		let email = lecturerObj.email;
 		let phone = lecturerObj.phone;
-		let linkedin = lecturerObj.linkedin_link;
-		let google = lecturerObj.google_scholar_link;
-		let facebook = lecturerObj.facebook_link;
+		let linkedin = lecturerObj.linkedinLink;
+		let google = lecturerObj.googleScholarLink;
+		let facebook = lecturerObj.facebookLink;
 
 		let contacts = document.getElementById('contacts');
 		let mobileContacts = document.getElementById('contacts-mobile');

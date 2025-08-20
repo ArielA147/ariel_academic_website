@@ -2,7 +2,7 @@ import { Page } from '../../core/Page.js';
 import { Icons } from '../../js/components/icons.js';
 import { ProjectPanel } from '../../js/components/projectPanel.js';
 import { PublicationCard } from '../../js/components/publicationCard.js';
-import { DataType, JSON_FILE_PATHS } from '../../shared/constants.js';
+import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
@@ -135,9 +135,9 @@ class IndexPage extends Page {
 		let cv = jsonObj.cvfile;
 		let email = jsonObj.email;
 		let phone = jsonObj.phone;
-		let linkedin = jsonObj.linkedin_link;
-		let google = jsonObj.google_scholar_link;
-		let facebook = jsonObj.facebook_link;
+		let linkedin = jsonObj.linkedinLink;
+		let google = jsonObj.googleScholarLink;
+		let facebook = jsonObj.facebookLink;
 		let mobileContacts = document.getElementById('lecture_icons');
 		if (cv != '') {
 			let elem_mob = document.createElement('A');

@@ -6,7 +6,7 @@ import { ResearchPosition } from '../../js/components/researchPosition.js';
 import { ResearchProject } from '../../js/components/researchProject.js';
 import { Tabs } from '../../js/components/tabs.js';
 import { getQueryParams } from '../../services/url.js';
-import { DataType, JSON_FILE_PATHS } from '../../shared/constants.js';
+import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths

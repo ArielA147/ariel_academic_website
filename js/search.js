@@ -1,4 +1,4 @@
-import { HEADER_RENDERED_EVENT } from '../shared/events.js';
+import { HEADER_RENDERED_EVENT } from '../constants/events.js';
 
 let PARAM_QUERY = 'query';
 var docs = [];

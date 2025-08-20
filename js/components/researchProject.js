@@ -8,23 +8,23 @@ class ResearchProject extends Element {
 		name,
 		participents,
 		description,
-		start_month,
-		start_year,
-		end_month,
-		end_year,
-		team_members,
-		relevant_resources,
+		startMonth,
+		startYear,
+		endMonth,
+		endYear,
+		teamMembers,
+		relevantResources,
 	) {
 		super();
 		this.name = name;
 		this.participents = participents;
 		this.description = description;
-		this.start_month = start_month;
-		this.start_year = start_year;
-		this.end_month = end_month;
-		this.end_year = end_year;
-		this.team_members = team_members;
-		this.relevant_resources = relevant_resources;
+		this.startMonth = startMonth;
+		this.startYear = startYear;
+		this.endMonth = endMonth;
+		this.endYear = endYear;
+		this.teamMembers = teamMembers;
+		this.relevantResources = relevantResources;
 	}
 
 	// convert the object into HTML
@@ -38,7 +38,7 @@ class ResearchProject extends Element {
 			html += this._createTeamSection();
 		}
 
-		if (this.relevant_resources.length > 0) {
+		if (this.relevantResources.length > 0) {
 			html += this._createLinksSection();
 		}
 
@@ -62,12 +62,12 @@ class ResearchProject extends Element {
 			jsonObj['name'],
 			ResearchTeamMember.createListFromJson(jsonObj['participants']),
 			jsonObj['description'],
-			jsonObj['start_month'],
-			jsonObj['start_year'],
-			jsonObj['end_month'],
-			jsonObj['end_year'],
-			jsonObj['team_members'],
-			CourseResource.createListFromJsonWithoutOrder(jsonObj['relevant_resources']),
+			jsonObj['startMonth'],
+			jsonObj['startYear'],
+			jsonObj['endMonth'],
+			jsonObj['endYear'],
+			jsonObj['teamMembers'],
+			CourseResource.createListFromJsonWithoutOrder(jsonObj['relevantResources']),
 		);
 	}
 
@@ -76,13 +76,13 @@ class ResearchProject extends Element {
 			'<div class="research-title space-between"><h3 class="content-title">' +
 			this.name +
 			'</h3><p class="research-duration">[' +
-			this.start_month +
+			this.startMonth +
 			'/' +
-			this.start_year +
+			this.startYear +
 			' - ' +
-			this.end_month +
+			this.endMonth +
 			'/' +
-			this.end_year +
+			this.endYear +
 			']</p></div><hr class="blue-hr">'
 		);
 	}
@@ -140,7 +140,7 @@ class ResearchProject extends Element {
 
 		html += '<div class="relevant-links-content-section collapsing-section open-section">';
 
-		this.relevant_resources.forEach((resource) => {
+		this.relevantResources.forEach((resource) => {
 			html += resource.toHtml();
 		});
 

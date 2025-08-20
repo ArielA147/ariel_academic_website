@@ -1,7 +1,7 @@
 import { Page } from '../../core/Page.js';
 import { NextBlogPostCard } from '../../js/components/nextBlogPostCard.js';
 import { getQueryParams } from '../../services/url.js';
-import { JSON_FILE_PATHS, DataType } from '../../shared/constants.js';
+import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 
 const WORDS_PER_MINUTE_READING = 240;
 let this_post_index = 0;

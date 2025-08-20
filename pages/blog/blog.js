@@ -1,7 +1,7 @@
 import { BlogCard } from './components/blogCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Page } from '../../core/Page.js';
-import { JSON_FILE_PATHS, DataType } from '../../shared/constants.js';
+import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 
 const default_sorter = 'year';
 

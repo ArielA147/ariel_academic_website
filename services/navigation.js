@@ -1,4 +1,4 @@
-import { ROOT_PATH } from '../shared/constants.js';
+import { ROOT_PATH } from '../constants/data.js';
 
 export function navigateToHomePage() {
 	const screenWidth = Math.max(

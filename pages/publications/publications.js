@@ -2,7 +2,7 @@ import { PublicationCard } from '../../js/components/publicationCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
 import { Page } from '../../core/Page.js';
-import { DataType, JSON_FILE_PATHS } from '../../shared/constants.js';
+import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
 
 const default_sorter = 'year';
@@ -13,7 +13,7 @@ class AcademicPublications extends Page {
 	#sorter = default_sorter;
 
 	async build() {
-		/** @type {import('../../shared/types.js').AcademicPublication[]} */
+		/** @type {import('../../constants/types.js').AcademicPublication[]} */
 		const publications = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
 		this.#setupPublications(publications);
 		const queryParams = getQueryParams();
@@ -42,7 +42,7 @@ class AcademicPublications extends Page {
 
 	/**
 	 *
-	 * @param {import('../../shared/types.js')} publications
+	 * @param {import('../../constants/types.js')} publications
 	 */
 	#setupPublications(publications) {
 		this.#publicationsList = PublicationCard.createListFromJson(publications);

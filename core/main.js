@@ -1,5 +1,5 @@
 import { navigateToHomePage } from '../services/navigation.js';
-import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../shared/events.js';
+import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../constants/events.js';
 import { DataLoader } from './DataLoader.js';
 
 let thisPage = location.href.split('/').slice(-1)[0];
