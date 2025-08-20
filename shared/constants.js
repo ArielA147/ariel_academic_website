@@ -12,7 +12,7 @@ export const JSON_DATA_FOLDER = 'data/jsons';
 
 export const JSON_FILE_PATHS = {
 	LECTURER_INFO_JSON: `${JSON_DATA_FOLDER}/lecturer.json`,
-	INDEX_JSON: `${JSON_DATA_FOLDER}/index.json`,
+	GENERAL_INFO_JSON: `${JSON_DATA_FOLDER}/general-info.json`,
 	RESOURCES_JSON: `${JSON_DATA_FOLDER}/resources.json`,
 	BLOG_JSON: `${JSON_DATA_FOLDER}/blog.json`,
 	NEXT_BLOG_JSON: `${JSON_DATA_FOLDER}/next_blog.json`,

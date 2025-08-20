@@ -13,8 +13,9 @@ class AcademicPublications extends Page {
 	#sorter = default_sorter;
 
 	async build() {
-		const pageData = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
-		this.#setupPublications(pageData.publications);
+		/** @type {import('../../shared/types.js').AcademicPublication[]} */
+		const publications = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
+		this.#setupPublications(publications);
 		const queryParams = getQueryParams();
 
 		if (queryParams.get('sort') != null) {
@@ -41,7 +42,7 @@ class AcademicPublications extends Page {
 
 	/**
 	 *
-	 * @param {any[]} publications
+	 * @param {import('../../shared/types.js')} publications
 	 */
 	#setupPublications(publications) {
 		this.#publicationsList = PublicationCard.createListFromJson(publications);

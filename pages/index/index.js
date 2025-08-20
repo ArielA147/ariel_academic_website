@@ -193,7 +193,7 @@ class IndexPage extends Page {
 
 	async buildPageContent() {
 		try {
-			var jsonObj = await this.loadPageData(JSON_FILE_PATHS.INDEX_JSON, DataType.JSON);
+			var jsonObj = await this.loadPageData(JSON_FILE_PATHS.GENERAL_INFO_JSON, DataType.JSON);
 
 			// Biography
 			document.getElementById('biography').innerHTML = jsonObj['biography'];

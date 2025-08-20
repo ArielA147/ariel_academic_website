@@ -8,11 +8,10 @@
 		}
 	],
 	"email": "ariel.alexi@biu.ac.il",
-	"linkedin_link": "https://www.linkedin.com/in/ariel-alexi/",
-	"google_scholar_link": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en&oi=ao",
-	"facebook_link": "",
-	"github_link": "https://github.com/ArielA147",
-	"bitbucket_link": "",
+	"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/",
+	"googleScholarLink": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en&oi=ao",
+	"facebookLink": "",
+	"githubLink": "https://github.com/ArielA147",
 	"name": "Ariel Alexi",
-	"cvfile": "/files/cv.pdf"
+	"cvFile": "/files/cv.pdf"
 }

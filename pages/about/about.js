@@ -14,6 +14,7 @@ let ALL_TOPIC_KEY = 'all';
 
 class About extends Page {
 	#openSection = null;
+	/** @type {import('../../shared/types.js').Resource} */
 	#resourcesObj = {};
 
 	constructor() {
@@ -34,7 +35,7 @@ class About extends Page {
 		await this.#setupPageData();
 
 		const [indexLecturerObj, infoLecturerObj] = await Promise.all([
-			this.loadPageData(JSON_FILE_PATHS.INDEX_JSON, DataType.JSON),
+			this.loadPageData(JSON_FILE_PATHS.GENERAL_INFO_JSON, DataType.JSON),
 			this.loadPageData(JSON_FILE_PATHS.LECTURER_INFO_JSON, DataType.JSON),
 		]);
 
@@ -314,7 +315,7 @@ class About extends Page {
 	buildResources(change = false, filterName) {
 		this.clearResources();
 		let res_section = document.getElementById('resources_section');
-		let resourcesList = Resource.createListFromJson(this.#resourcesObj['resources']);
+		let resourcesList = Resource.createListFromJson(this.#resourcesObj);
 		if (filterName == 'buildFilters') {
 			document.getElementById('resources_section').style.display = '';
 			this.buildFilters(resourcesList);
