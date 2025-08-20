@@ -6,6 +6,7 @@ import { ProjectSection } from '../../js/components/projectSection.js';
 import { Resource } from '../../js/components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { DataType } from '../../shared/constants.js';
+import { getSearchParams } from '../../services/url.js';
 
 // Data file paths
 let LECTURER_INFO_JSON = 'data/jsons/lecturer.json';
@@ -21,7 +22,7 @@ class About extends Page {
 
 	constructor() {
 		super();
-		const searchParams = this.getSearchParams();
+		const searchParams = getSearchParams();
 		if (searchParams.has('section')) {
 			this.#openSection = searchParams.get('section');
 		} else {

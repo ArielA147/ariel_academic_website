@@ -5,6 +5,7 @@ import { Icons } from '../../js/components/icons.js';
 import { ResearchPosition } from '../../js/components/researchPosition.js';
 import { ResearchProject } from '../../js/components/researchProject.js';
 import { Tabs } from '../../js/components/tabs.js';
+import { getSearchParams } from '../../services/url.js';
 import { DataType } from '../../shared/constants.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
@@ -25,7 +26,7 @@ class Research extends Page {
 	constructor() {
 		super();
 
-		const queryParams = this.getSearchParams();
+		const queryParams = getSearchParams();
 		if (queryParams.has('section')) {
 			this.#openSection = queryParams.get('section');
 		} else {

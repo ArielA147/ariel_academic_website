@@ -1,5 +1,6 @@
 import { Page } from '../../core/Page.js';
 import { NextBlogPostCard } from '../../js/components/nextBlogPostCard.js';
+import { getSearchParams } from '../../services/url.js';
 import { DataType } from '../../shared/constants.js';
 
 let NEXT_BLOG_JSON = 'data/jsons/next_blog.json';
@@ -11,7 +12,7 @@ class BlogPost extends Page {
 	#postName;
 
 	async build() {
-		const searchParams = this.getSearchParams();
+		const searchParams = getSearchParams();
 		if (searchParams.has('post')) {
 			this.#postName = searchParams.get('post');
 			this_post_index = this.#postName;

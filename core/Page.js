@@ -7,13 +7,6 @@ export class Page {
 	}
 
 	/**
-	 * @returns {URLSearchParams}
-	 */
-	getSearchParams() {
-		return new URLSearchParams(window.location.search);
-	}
-
-	/**
 	 * @param {string} filePath
 	 * @param {string} dataType
 	 * @returns {Promise<string | any>}

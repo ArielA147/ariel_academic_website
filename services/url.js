@@ -5,6 +5,10 @@ export function getSearchParams() {
 	return new URLSearchParams(window.location.search);
 }
 
+/**
+ * @param {string} name
+ * @param {string} value
+ */
 export function setSearchParam(name, value) {
 	name = encodeURIComponent(name);
 	value = encodeURIComponent(value);

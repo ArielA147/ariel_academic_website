@@ -3,6 +3,7 @@ import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
 import { Page } from '../../core/Page.js';
 import { DataType } from '../../shared/constants.js';
+import { getSearchParams } from '../../services/url.js';
 
 let PUBLICATIONS_JSON = 'data/jsons/academic-publications.json';
 
@@ -16,7 +17,7 @@ class AcademicPublications extends Page {
 	async build() {
 		const pageData = await this.loadPageData(PUBLICATIONS_JSON, DataType.JSON);
 		this.#setupPublications(pageData.publications);
-		const searchParams = this.getSearchParams();
+		const searchParams = getSearchParams();
 
 		if (searchParams.get('sort') != null) {
 			this.#sorter = searchParams.get('sort');
