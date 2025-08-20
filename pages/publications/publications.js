@@ -3,7 +3,7 @@ import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
 import { Page } from '../../core/Page.js';
 import { DataType } from '../../shared/constants.js';
-import { getSearchParams } from '../../services/url.js';
+import { getQueryParams } from '../../services/url.js';
 
 let PUBLICATIONS_JSON = 'data/jsons/academic-publications.json';
 
@@ -17,18 +17,18 @@ class AcademicPublications extends Page {
 	async build() {
 		const pageData = await this.loadPageData(PUBLICATIONS_JSON, DataType.JSON);
 		this.#setupPublications(pageData.publications);
-		const searchParams = getSearchParams();
+		const queryParams = getQueryParams();
 
-		if (searchParams.get('sort') != null) {
-			this.#sorter = searchParams.get('sort');
+		if (queryParams.get('sort') != null) {
+			this.#sorter = queryParams.get('sort');
 		} else {
 			this.#sorter = default_sorter;
 			console.log('AcademicPublications.build did not find sorter, using default');
 		}
 
 		let filter;
-		if (searchParams.get('filter') != null) {
-			filter = searchParams.get('filter');
+		if (queryParams.get('filter') != null) {
+			filter = queryParams.get('filter');
 		} else {
 			filter = default_filter;
 			console.log('AcademicPublications.build did not find filter, using default');
