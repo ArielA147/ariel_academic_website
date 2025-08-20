@@ -1,16 +1,9 @@
-import { DataType } from '../shared/constants.js';
+import { DataType } from '../constants/data.js';
 import { DataLoader } from './DataLoader.js';
 
 export class Page {
 	async build() {
 		throw new Error('NotImplemented: Page#Build method must be implemented by subclasses.');
-	}
-
-	/**
-	 * @returns {URLSearchParams}
-	 */
-	getSearchParams() {
-		return new URLSearchParams(window.location.search);
 	}
 
 	/**
@@ -40,7 +33,7 @@ export class Page {
 	}
 
 	/**
-	 * @param {string} filePath 
+	 * @param {string} filePath
 	 * @returns {Promise<string | null>}
 	 */
 	async loadPageComponent(filePath) {

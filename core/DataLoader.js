@@ -34,7 +34,7 @@ export class DataLoader {
 	/**
 	 * Loads a file from the file system
 	 * @param {string} filePath
-	 * @returns
+	 * @returns {Promise<Response | null>}
 	 */
 	static async loadFile(filePath) {
 		try {

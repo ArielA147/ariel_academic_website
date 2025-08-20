@@ -5,12 +5,12 @@
 		{
 			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
 			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
-			"start_month": 3,
-			"start_year": 2024,
-			"end_month": 7,
-			"end_year": 2025,
-			"team_members": 3,
-			"relevant_resources": [],
+			"startMonth": 3,
+			"startYear": 2024,
+			"endMonth": 7,
+			"endYear": 2025,
+			"teamMembers": 3,
+			"relevantResources": [],
 			"participants": []
 		},
 		{
@@ -34,12 +34,12 @@
 				}
 			],
 			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
-			"start_month": 1,
-			"start_year": 2025,
-			"end_month": 12,
-			"end_year": 2025,
-			"team_members": 3,
-			"relevant_resources": []
+			"startMonth": 1,
+			"startYear": 2025,
+			"endMonth": 12,
+			"endYear": 2025,
+			"teamMembers": 3,
+			"relevantResources": []
 		}
 	]
 }

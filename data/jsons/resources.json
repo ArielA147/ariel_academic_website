@@ -1,16 +1,21 @@
 {
-  "resources":[{
-      "name":"The ‘Chilling Effect’ on Academic Freedom",
-      "description":"",
-      "recommendation":"",
-      "fileLinks":[
-         {"info": "Project", "type": 1, "link": "https://blogs.timesofisrael.com/the-chilling-effect-on-academic-freedom/"},
-         {"info": "cite", "type": 3, "link": ""}
-       ],
-      "authors": "Peretz-Andersson, E.",
-      "year": 2024,
-      "topic":"Acedemic Freedom",
-      "type":"code"
-    }
-  ]
+	"resources": [
+		{
+			"name": "The ‘Chilling Effect’ on Academic Freedom",
+			"description": "",
+			"recommendation": "",
+			"fileLinks": [
+				{
+					"info": "Project",
+					"type": 1,
+					"link": "https://blogs.timesofisrael.com/the-chilling-effect-on-academic-freedom/"
+				},
+				{ "info": "cite", "type": 3, "link": "" }
+			],
+			"authors": "Peretz-Andersson, E.",
+			"year": 2024,
+			"topic": "Acedemic Freedom",
+			"type": "code"
+		}
+	]
 }

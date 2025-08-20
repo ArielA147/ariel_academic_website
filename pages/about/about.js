@@ -5,40 +5,38 @@ import { Tabs } from '../../js/components/tabs.js';
 import { ProjectSection } from '../../js/components/projectSection.js';
 import { Resource } from '../../js/components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
-import { DataType } from '../../shared/constants.js';
+import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
+import { getQueryParams } from '../../services/url.js';
 
-// Data file paths
-let LECTURER_INFO_JSON = 'data/jsons/lecturer.json';
-let INDEX_JSON = 'data/jsons/index.json';
-let RESOURCES_JSON = 'data/jsons/resources.json';
 let SECTIONS = ['Biography', 'Personal-projects', 'Recommended-resources'];
 
 let ALL_TOPIC_KEY = 'all';
 
 class About extends Page {
 	#openSection = null;
+	/** @type {import('../../constants/types.js').Resource} */
 	#resourcesObj = {};
 
 	constructor() {
 		super();
-		const searchParams = this.getSearchParams();
-		if (searchParams.has('section')) {
-			this.#openSection = searchParams.get('section');
+		const queryParams = getQueryParams();
+		if (queryParams.has('section')) {
+			this.#openSection = queryParams.get('section');
 		} else {
 			this.#openSection = SECTIONS[0];
 		}
 	}
 
 	async #setupPageData() {
-		this.#resourcesObj = await this.loadPageData(RESOURCES_JSON, DataType.JSON);
+		this.#resourcesObj = await this.loadPageData(JSON_FILE_PATHS.RESOURCES_JSON, DataType.JSON);
 	}
 
 	async build() {
 		await this.#setupPageData();
 
 		const [indexLecturerObj, infoLecturerObj] = await Promise.all([
-			this.loadPageData(INDEX_JSON, DataType.JSON),
-			this.loadPageData(LECTURER_INFO_JSON, DataType.JSON),
+			this.loadPageData(JSON_FILE_PATHS.GENERAL_INFO_JSON, DataType.JSON),
+			this.loadPageData(JSON_FILE_PATHS.LECTURER_INFO_JSON, DataType.JSON),
 		]);
 
 		// build tabs' content
@@ -185,9 +183,9 @@ class About extends Page {
 		let cv = lecturerObj.cvfile;
 		let email = lecturerObj.email;
 		let phone = lecturerObj.phone;
-		let linkedin = lecturerObj.linkedin_link;
-		let google = lecturerObj.google_scholar_link;
-		let facebook = lecturerObj.facebook_link;
+		let linkedin = lecturerObj.linkedinLink;
+		let google = lecturerObj.googleScholarLink;
+		let facebook = lecturerObj.facebookLink;
 
 		let contacts = document.getElementById('contacts');
 		let mobileContacts = document.getElementById('contacts-mobile');
@@ -317,7 +315,7 @@ class About extends Page {
 	buildResources(change = false, filterName) {
 		this.clearResources();
 		let res_section = document.getElementById('resources_section');
-		let resourcesList = Resource.createListFromJson(this.#resourcesObj['resources']);
+		let resourcesList = Resource.createListFromJson(this.#resourcesObj);
 		if (filterName == 'buildFilters') {
 			document.getElementById('resources_section').style.display = '';
 			this.buildFilters(resourcesList);

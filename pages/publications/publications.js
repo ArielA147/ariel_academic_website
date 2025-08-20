@@ -2,9 +2,8 @@ import { PublicationCard } from '../../js/components/publicationCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
 import { Page } from '../../core/Page.js';
-import { DataType } from '../../shared/constants.js';
-
-let PUBLICATIONS_JSON = 'data/jsons/academic-publications.json';
+import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
+import { getQueryParams } from '../../services/url.js';
 
 const default_sorter = 'year';
 const default_filter = null;
@@ -14,20 +13,21 @@ class AcademicPublications extends Page {
 	#sorter = default_sorter;
 
 	async build() {
-		const pageData = await this.loadPageData(PUBLICATIONS_JSON, DataType.JSON);
-		this.#setupPublications(pageData.publications);
-		const searchParams = this.getSearchParams();
+		/** @type {import('../../constants/types.js').AcademicPublication[]} */
+		const publications = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
+		this.#setupPublications(publications);
+		const queryParams = getQueryParams();
 
-		if (searchParams.get('sort') != null) {
-			this.#sorter = searchParams.get('sort');
+		if (queryParams.get('sort') != null) {
+			this.#sorter = queryParams.get('sort');
 		} else {
 			this.#sorter = default_sorter;
 			console.log('AcademicPublications.build did not find sorter, using default');
 		}
 
 		let filter;
-		if (searchParams.get('filter') != null) {
-			filter = searchParams.get('filter');
+		if (queryParams.get('filter') != null) {
+			filter = queryParams.get('filter');
 		} else {
 			filter = default_filter;
 			console.log('AcademicPublications.build did not find filter, using default');
@@ -42,7 +42,7 @@ class AcademicPublications extends Page {
 
 	/**
 	 *
-	 * @param {any[]} publications
+	 * @param {import('../../constants/types.js')} publications
 	 */
 	#setupPublications(publications) {
 		this.#publicationsList = PublicationCard.createListFromJson(publications);

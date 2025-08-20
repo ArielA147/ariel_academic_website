@@ -1,9 +1,7 @@
 import { BlogCard } from './components/blogCard.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Page } from '../../core/Page.js';
-import { DataType } from '../../shared/constants.js';
-
-let BLOG_JSON = 'data/jsons/blog.json';
+import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 
 const default_sorter = 'year';
 
@@ -15,7 +13,7 @@ class Blog extends Page {
 			return;
 		}
 
-		const pageData = await this.loadPageData(BLOG_JSON, DataType.JSON);
+		const pageData = await this.loadPageData(JSON_FILE_PATHS.BLOG_JSON, DataType.JSON);
 		this.#publicationList = BlogCard.createListFromJson(pageData['posts']);
 	}
 

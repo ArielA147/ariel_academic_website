@@ -1,5 +1,5 @@
-import { ROOT_PATH } from '../shared/constants.js';
-import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../shared/events.js';
+import { navigateToHomePage } from '../services/navigation.js';
+import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../constants/events.js';
 import { DataLoader } from './DataLoader.js';
 
 let thisPage = location.href.split('/').slice(-1)[0];
@@ -20,6 +20,8 @@ async function onPageLoad() {
 		var div = this.parentElement;
 		div.style.opacity = '0';
 	};
+
+	attachEventListeners();
 }
 
 async function renderHeader() {
@@ -101,21 +103,6 @@ document.getElementById('mobile-menu').onclick = function (e) {
 	e.stopPropagation();
 };
 
-function gotoIndex() {
-	var width = Math.max(
-		document.body.scrollWidth,
-		document.documentElement.scrollWidth,
-		document.body.offsetWidth,
-		document.documentElement.offsetWidth,
-		document.documentElement.clientWidth,
-	);
-
-	// TODO: fix magic number
-	if (width > 850) {
-		window.location.replace(ROOT_PATH);
-	}
-}
-
 function copy_cite(input_holder_id) {
 	var copyText = document.getElementById(input_holder_id).value;
 	navigator.clipboard.writeText(copyText).then(
@@ -138,73 +125,9 @@ function copy_cite(input_holder_id) {
 	}, 2500);
 }
 
-/* help functions */
-
-// TODO: duplicated of pageRender method - delete later
-function loadJSON(callback) {
-	var xobj = new XMLHttpRequest();
-	xobj.overrideMimeType('application/json');
-	xobj.open('GET', 'my_data.json', true); // Replace 'my_data' with the path to your file
-	xobj.onreadystatechange = function () {
-		if (xobj.readyState == 4 && xobj.status == '200') {
-			// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-			callback(xobj.responseText);
-		}
-	};
-	xobj.send(null);
-}
-
-// cookie related functions //
-
-function setCookie(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + exdays * 8640000); // 24 * 60 * 60 * 1000 = 8640000
-	var expires = 'expires=' + d.toUTCString();
-	document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
-}
-
-function getCookie(cname) {
-	var name = cname + '=';
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-			return c.substring(name.length, c.length);
-		}
-	}
-	return '';
-}
-
-// TODO: move to core/url.js
-export function insertGetParamToUrl(key, value) {
-	key = encodeURIComponent(key);
-	value = encodeURIComponent(value);
-
-	// kvp looks like ['key1=value1', 'key2=value2', ...]
-	var kvp = document.location.search.substr(1).split('&');
-	let i = 0;
-
-	for (; i < kvp.length; i++) {
-		if (kvp[i].startsWith(key + '=')) {
-			let pair = kvp[i].split('=');
-			pair[1] = value;
-			kvp[i] = pair.join('=');
-			break;
-		}
-	}
-
-	if (i >= kvp.length) {
-		kvp[kvp.length] = [key, value].join('=');
-	}
-
-	// can return this or...
-	let params = kvp.join('&');
-
-	// reload page with new params
-	history.pushState(null, null, '?' + params);
+function attachEventListeners() {
+	const logo = document.querySelector('a.logo');
+	logo.addEventListener('click', navigateToHomePage);
 }
 
 // close the update section
@@ -218,35 +141,3 @@ export function removeAlertsPanels() {
 		document.getElementById('alert-panel-' + i).style.display = 'none';
 	}
 }
-
-function passkey() {
-	// Get the URL from the hidden input field
-	let url = document.getElementById('passkey_path').value;
-
-	// Get the passkey entered by the user
-	const passkey = encodeURIComponent(document.getElementById('passkey').value);
-
-	// Create a URL object for easier manipulation
-	const urlObj = new URL(url, window.location.origin);
-
-	// Check if the 'course_password' parameter exists
-	if (urlObj.searchParams.has('course_password')) {
-		// If it exists, update its value
-		urlObj.searchParams.set('course_password', passkey);
-	} else {
-		// If it doesn't exist, append it
-		urlObj.searchParams.append('course_password', passkey);
-	}
-
-	// Redirect the user to the new URL
-	window.location.href = urlObj.toString();
-}
-
-// end - cookie related functions //
-
-/* end - help functions */
-
-// TODO: add this functionality. create a navigation.js script
-// navLink.addEventListener("click", e => {
-//   if (isCurrentPage) e.preventDefault();
-// });
