@@ -1,29 +1,17 @@
-// add header and footer to each page
+import { ROOT_PATH } from '../shared/constants.js';
+import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../shared/events.js';
+import { DataLoader } from './DataLoader.js';
 
-// init all the objects needed //
-let client;
 let thisPage = location.href.split('/').slice(-1)[0];
 if (thisPage == '') {
 	thisPage = 'index';
 }
-// end - init all the objects needed //
 
-// run this method on page load
-onPageLoad();
+await onPageLoad();
 
-// the function to run on page load to build dynamic components that does not change often or not render in SEO lookups
-function onPageLoad() {
-	// code for IE7+, Firefox, Chrome, Opera, Safari
-	if (window.XMLHttpRequest) {
-		client = new XMLHttpRequest();
-	} // code for IE6, IE5
-	else {
-		client = new ActiveXObject('Microsoft.XMLHTTP');
-	}
-
-	// perform all the preparation actions needed  //
-	loadHeader();
-	loadFooter();
+async function onPageLoad() {
+	await renderHeader();
+	await renderFooter();
 	activeMenuLink();
 	manageCollapsible();
 
@@ -34,29 +22,19 @@ function onPageLoad() {
 	};
 }
 
-// load the HTML of the header from the right file and put in the right location
-function loadHeader() {
-	client.onreadystatechange = HeaderHandler;
-	client.open('GET', 'partials/header.html', false);
-	client.send();
-}
-
-function HeaderHandler() {
-	if (this.readyState == 4 && this.status == 200 && this.responseText != null) {
-		document.getElementById('header').innerHTML = this.responseText;
+async function renderHeader() {
+	const header = await DataLoader.loadHeader();
+	if (header) {
+		document.getElementById('header').innerHTML = header;
+		document.dispatchEvent(new Event(HEADER_RENDERED_EVENT));
 	}
 }
 
-// load the HTML of the header from the right file and put in the right location
-function loadFooter() {
-	client.onreadystatechange = FooterHandler;
-	client.open('GET', 'partials/footer.html', false);
-	client.send();
-}
-
-function FooterHandler() {
-	if (this.readyState == 4 && this.status == 200 && this.responseText != null) {
-		document.getElementById('footer').innerHTML = this.responseText;
+async function renderFooter() {
+	const footer = await DataLoader.loadFooter();
+	if (footer) {
+		document.getElementById('footer').innerHTML = footer;
+		document.dispatchEvent(new Event(FOOTER_RENDERED_EVENT));
 	}
 }
 
@@ -134,9 +112,7 @@ function gotoIndex() {
 
 	// TODO: fix magic number
 	if (width > 850) {
-		const isDev =
-			location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1');
-		window.location.replace(isDev ? '/' : '/ariel_academic_website');
+		window.location.replace(ROOT_PATH);
 	}
 }
 
@@ -202,7 +178,8 @@ function getCookie(cname) {
 	return '';
 }
 
-function insertGetParamToUrl(key, value) {
+// TODO: move to core/url.js
+export function insertGetParamToUrl(key, value) {
 	key = encodeURIComponent(key);
 	value = encodeURIComponent(value);
 
@@ -235,7 +212,8 @@ function closeUpdates() {
 	document.getElementById('update-container').classList.add('closed-section');
 }
 
-function removeAlertsPanels() {
+// TODO: move to alerts.js?
+export function removeAlertsPanels() {
 	for (var i = 1; i <= 2; i++) {
 		document.getElementById('alert-panel-' + i).style.display = 'none';
 	}

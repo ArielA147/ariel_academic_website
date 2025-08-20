@@ -1,9 +1,9 @@
-// imports
-import { PageRender, retrivedData } from '../../js/pageRender.js';
-import { PublicationCard } from '../../js/components/publicationCard.js';
-import { ProjectPanel } from '../../js/components/projectPanel.js';
+import { Page } from '../../core/Page.js';
 import { Icons } from '../../js/components/icons.js';
-import { addCollapseFunction, descriptionTrim } from '../../utils/descriptionSlicer.js';
+import { ProjectPanel } from '../../js/components/projectPanel.js';
+import { PublicationCard } from '../../js/components/publicationCard.js';
+import { DataType } from '../../shared/constants.js';
+import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
 let UPDATES_TEXT = 'data/notifications.txt';
@@ -12,29 +12,23 @@ let INDEX_JSON = 'data/jsons/index.json';
 
 const notificationsArray = [];
 
-/*
-	Single instance class to build Index page with dynamic content from JSONS from the server
-*/
-class Index extends PageRender {
-	constructor() {}
-
+class IndexPage extends Page {
 	// just gather all the build of all the sections in the page - one per call to the server side
-	static build() {
-		Index.buildeNotifications();
-		Index.buildePersonalPanel();
-		Index.buildePageContent();
+	async build() {
+		await this.buildNotifications();
+		await this.buildPersonalPanel();
+		await this.buildPageContent();
 
 		addCollapseFunction();
 	}
 
 	/* build section functions */
 
-	static buildeNotifications() {
+	async buildNotifications() {
 		var container_id = 'update-container';
 		try {
-			Index.loadFileFromServer(UPDATES_TEXT);
-			var txtObj = retrivedData;
-			var notificationLines = txtObj.split('\n');
+			const data = await this.loadPageData(UPDATES_TEXT, DataType.TEXT);
+			var notificationLines = data.split('\n');
 
 			notificationsArray.push(...notificationLines);
 
@@ -78,16 +72,15 @@ class Index extends PageRender {
 				document.getElementById(container_id).style.display = 'none';
 			}
 		} catch (error) {
-			console.log('Error at Index.buildeNotifications saying: ' + error);
+			console.log('Error at Index.buildNotifications saying: ' + error);
 			document.getElementById('update-container').style.display = 'none';
 		}
 	}
 
-	static buildePersonalPanel() {
+	async buildPersonalPanel() {
 		var container_id = 'personal_container';
 		try {
-			Index.loadFileFromServer(LECTURE_INFO_JSON, true);
-			var jsonObj = retrivedData;
+			const jsonObj = await this.loadPageData(LECTURE_INFO_JSON, DataType.JSON);
 			document.getElementById('lecturer-name').innerHTML = jsonObj['name'];
 			document.getElementById('lecture_position').innerHTML = jsonObj['position'];
 			var addressesHtml = "<div class='lecturer-info'> ";
@@ -119,7 +112,7 @@ class Index extends PageRender {
 			document.getElementById('lecture_email').innerHTML += jsonObj['email'];
 
 			// create contact icons (mail, facebook etc)
-			Index.buildIconsContact(jsonObj);
+			this.buildIconsContact(jsonObj);
 
 			// mobile version click icon event
 			var infoItemBtn = document.getElementById('mobile-icon');
@@ -135,12 +128,12 @@ class Index extends PageRender {
 				}
 			});
 		} catch (error) {
-			console.log('Error at Index.buildePersonalPanel saying: ' + error);
+			console.log('Error at Index.buildPersonalPanel saying: ' + error);
 			document.getElementById(container_id).style.display = 'none';
 		}
 	}
 
-	static buildIconsContact(jsonObj) {
+	buildIconsContact(jsonObj) {
 		let cv = jsonObj.cvfile;
 		let email = jsonObj.email;
 		let phone = jsonObj.phone;
@@ -200,10 +193,9 @@ class Index extends PageRender {
 		}
 	}
 
-	static buildePageContent() {
+	async buildPageContent() {
 		try {
-			Index.loadFileFromServer(INDEX_JSON, true);
-			var jsonObj = retrivedData;
+			var jsonObj = await this.loadPageData(INDEX_JSON, DataType.JSON);
 
 			// Biography
 			document.getElementById('biography').innerHTML = jsonObj['biography'];
@@ -252,7 +244,7 @@ class Index extends PageRender {
 				document.getElementById('current_publications_header').style.display = 'none';
 			}
 		} catch (error) {
-			console.log('Error at Index.buildePageContent saying: ' + error);
+			console.log('Error at Index.buildPageContent saying: ' + error);
 		}
 	}
 
@@ -260,9 +252,10 @@ class Index extends PageRender {
 }
 
 // run the class build on page load
-Index.build();
+const indexPage = new IndexPage();
+await indexPage.build();
 
-window.addEventListener('resize', Index.buildeNotifications);
+window.addEventListener('resize', indexPage.buildNotifications);
 
 function changeNotificationLength() {
 	var notifications = document.getElementsByClassName('update-message');
@@ -294,5 +287,3 @@ function changeNotificationLength() {
 }
 
 // window.addEventListener('resize', changeNotificationLength);
-
-export { Index };

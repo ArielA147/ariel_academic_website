@@ -1,10 +1,11 @@
 // imports
-import { PageRender, retrivedData } from '../../js/pageRender.js';
+import { Page } from '../../core/Page.js';
 import { Icons } from '../../js/components/icons.js';
 import { Tabs } from '../../js/components/tabs.js';
 import { ProjectSection } from '../../js/components/projectSection.js';
 import { Resource } from '../../js/components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
+import { DataType } from '../../shared/constants.js';
 
 // Data file paths
 let LECTURER_INFO_JSON = 'data/jsons/lecturer.json';
@@ -14,46 +15,43 @@ let SECTIONS = ['Biography', 'Personal-projects', 'Recommended-resources'];
 
 let ALL_TOPIC_KEY = 'all';
 
-/*
-	Single instance class to build about page with dynamic content from JSONS from the server
-*/
-class About extends PageRender {
+class About extends Page {
+	#openSection = null;
+	#resourcesObj = {};
+
 	constructor() {
 		super();
-		this.section_open = null;
-		try {
-			var getParms = PageRender.readGetPrams();
-			this.section_open = getParms.get('section');
-			if (this.section_open == null) {
-				this.section_open = SECTIONS[0];
-			}
-		} catch (error) {
-			this.section_open = SECTIONS[0];
+		const searchParams = this.getSearchParams();
+		if (searchParams.has('section')) {
+			this.#openSection = searchParams.get('section');
+		} else {
+			this.#openSection = SECTIONS[0];
 		}
-
-		About.loadFileFromServer(RESOURCES_JSON, true);
-		this.resourcesObj = retrivedData;
 	}
 
-	// just gather all the build of all the sections in the page - one per call to the server side
-	build() {
-		About.loadFileFromServer(INDEX_JSON, true);
-		const lecturerObj = retrivedData;
+	async #setupPageData() {
+		this.#resourcesObj = await this.loadPageData(RESOURCES_JSON, DataType.JSON);
+	}
+
+	async build() {
+		await this.#setupPageData();
+
+		const [indexLecturerObj, infoLecturerObj] = await Promise.all([
+			this.loadPageData(INDEX_JSON, DataType.JSON),
+			this.loadPageData(LECTURER_INFO_JSON, DataType.JSON),
+		]);
 
 		// build tabs' content
-		this.buildBiography(lecturerObj);
-		this.buildProjects(lecturerObj);
+		this.buildBiography(indexLecturerObj);
+		this.buildProjects(indexLecturerObj);
 		this.buildResources(false, 'buildFilters');
 
-		// create the tabs flow themself
 		this.createTabsSection();
 
-		// build the info on the top of the page
-		this.buildInfo();
+		this.buildInfo(infoLecturerObj);
 
 		// pick the right tab according to the link
 		this.pickTab();
-		//
 	}
 
 	createTabsSection() {
@@ -73,12 +71,7 @@ class About extends PageRender {
 		Tabs.activateDefault(0); // default case;
 	}
 
-	/* build the overall contact info section */
-	buildInfo() {
-		let container_id = 'lecturer_info_container';
-		About.loadFileFromServer(LECTURER_INFO_JSON, true);
-		const lecturerObj = retrivedData;
-
+	buildInfo(lecturerObj) {
 		// setting titles
 		document.getElementById('lecturer_name').innerHTML = lecturerObj.name;
 		document.getElementById('lecturer_position').innerHTML = lecturerObj.position;
@@ -324,7 +317,7 @@ class About extends PageRender {
 	buildResources(change = false, filterName) {
 		this.clearResources();
 		let res_section = document.getElementById('resources_section');
-		let resourcesList = Resource.createListFromJson(this.resourcesObj['resources']);
+		let resourcesList = Resource.createListFromJson(this.#resourcesObj['resources']);
 		if (filterName == 'buildFilters') {
 			document.getElementById('resources_section').style.display = '';
 			this.buildFilters(resourcesList);
