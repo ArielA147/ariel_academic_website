@@ -40,7 +40,7 @@ export class Page {
 	}
 
 	/**
-	 * @param {string} filePath 
+	 * @param {string} filePath
 	 * @returns {Promise<string | null>}
 	 */
 	async loadPageComponent(filePath) {

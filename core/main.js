@@ -1,4 +1,4 @@
-import { ROOT_PATH } from '../shared/constants.js';
+import { navigateToHomePage } from '../services/navigation.js';
 import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../shared/events.js';
 import { DataLoader } from './DataLoader.js';
 
@@ -20,6 +20,8 @@ async function onPageLoad() {
 		var div = this.parentElement;
 		div.style.opacity = '0';
 	};
+
+	attachEventListeners();
 }
 
 async function renderHeader() {
@@ -101,21 +103,6 @@ document.getElementById('mobile-menu').onclick = function (e) {
 	e.stopPropagation();
 };
 
-function gotoIndex() {
-	var width = Math.max(
-		document.body.scrollWidth,
-		document.documentElement.scrollWidth,
-		document.body.offsetWidth,
-		document.documentElement.offsetWidth,
-		document.documentElement.clientWidth,
-	);
-
-	// TODO: fix magic number
-	if (width > 850) {
-		window.location.replace(ROOT_PATH);
-	}
-}
-
 function copy_cite(input_holder_id) {
 	var copyText = document.getElementById(input_holder_id).value;
 	navigator.clipboard.writeText(copyText).then(
@@ -154,57 +141,9 @@ function loadJSON(callback) {
 	xobj.send(null);
 }
 
-// cookie related functions //
-
-function setCookie(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + exdays * 8640000); // 24 * 60 * 60 * 1000 = 8640000
-	var expires = 'expires=' + d.toUTCString();
-	document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
-}
-
-function getCookie(cname) {
-	var name = cname + '=';
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-			return c.substring(name.length, c.length);
-		}
-	}
-	return '';
-}
-
-// TODO: move to core/url.js
-export function insertGetParamToUrl(key, value) {
-	key = encodeURIComponent(key);
-	value = encodeURIComponent(value);
-
-	// kvp looks like ['key1=value1', 'key2=value2', ...]
-	var kvp = document.location.search.substr(1).split('&');
-	let i = 0;
-
-	for (; i < kvp.length; i++) {
-		if (kvp[i].startsWith(key + '=')) {
-			let pair = kvp[i].split('=');
-			pair[1] = value;
-			kvp[i] = pair.join('=');
-			break;
-		}
-	}
-
-	if (i >= kvp.length) {
-		kvp[kvp.length] = [key, value].join('=');
-	}
-
-	// can return this or...
-	let params = kvp.join('&');
-
-	// reload page with new params
-	history.pushState(null, null, '?' + params);
+function attachEventListeners() {
+	const logo = document.querySelector('a.logo');
+	logo.addEventListener('click', navigateToHomePage);
 }
 
 // close the update section
