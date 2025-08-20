@@ -125,22 +125,6 @@ function copy_cite(input_holder_id) {
 	}, 2500);
 }
 
-/* help functions */
-
-// TODO: duplicated of pageRender method - delete later
-function loadJSON(callback) {
-	var xobj = new XMLHttpRequest();
-	xobj.overrideMimeType('application/json');
-	xobj.open('GET', 'my_data.json', true); // Replace 'my_data' with the path to your file
-	xobj.onreadystatechange = function () {
-		if (xobj.readyState == 4 && xobj.status == '200') {
-			// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-			callback(xobj.responseText);
-		}
-	};
-	xobj.send(null);
-}
-
 function attachEventListeners() {
 	const logo = document.querySelector('a.logo');
 	logo.addEventListener('click', navigateToHomePage);
@@ -156,27 +140,4 @@ export function removeAlertsPanels() {
 	for (var i = 1; i <= 2; i++) {
 		document.getElementById('alert-panel-' + i).style.display = 'none';
 	}
-}
-
-function passkey() {
-	// Get the URL from the hidden input field
-	let url = document.getElementById('passkey_path').value;
-
-	// Get the passkey entered by the user
-	const passkey = encodeURIComponent(document.getElementById('passkey').value);
-
-	// Create a URL object for easier manipulation
-	const urlObj = new URL(url, window.location.origin);
-
-	// Check if the 'course_password' parameter exists
-	if (urlObj.searchParams.has('course_password')) {
-		// If it exists, update its value
-		urlObj.searchParams.set('course_password', passkey);
-	} else {
-		// If it doesn't exist, append it
-		urlObj.searchParams.append('course_password', passkey);
-	}
-
-	// Redirect the user to the new URL
-	window.location.href = urlObj.toString();
 }
