@@ -14,3 +14,7 @@ export function navigateToHomePage() {
 		window.location.replace(ROOT_PATH);
 	}
 }
+
+// navLink.addEventListener("click", e => {
+//   if (isCurrentPage) e.preventDefault();
+// });

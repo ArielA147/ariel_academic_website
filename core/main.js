@@ -180,12 +180,3 @@ function passkey() {
 	// Redirect the user to the new URL
 	window.location.href = urlObj.toString();
 }
-
-// end - cookie related functions //
-
-/* end - help functions */
-
-// TODO: add this functionality. create a navigation.js script
-// navLink.addEventListener("click", e => {
-//   if (isCurrentPage) e.preventDefault();
-// });
