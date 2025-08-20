@@ -5,13 +5,9 @@ import { Tabs } from '../../js/components/tabs.js';
 import { ProjectSection } from '../../js/components/projectSection.js';
 import { Resource } from '../../js/components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
-import { DataType } from '../../shared/constants.js';
+import { JSON_FILE_PATHS, DataType } from '../../shared/constants.js';
 import { getQueryParams } from '../../services/url.js';
 
-// Data file paths
-let LECTURER_INFO_JSON = 'data/jsons/lecturer.json';
-let INDEX_JSON = 'data/jsons/index.json';
-let RESOURCES_JSON = 'data/jsons/resources.json';
 let SECTIONS = ['Biography', 'Personal-projects', 'Recommended-resources'];
 
 let ALL_TOPIC_KEY = 'all';
@@ -31,15 +27,15 @@ class About extends Page {
 	}
 
 	async #setupPageData() {
-		this.#resourcesObj = await this.loadPageData(RESOURCES_JSON, DataType.JSON);
+		this.#resourcesObj = await this.loadPageData(JSON_FILE_PATHS.RESOURCES_JSON, DataType.JSON);
 	}
 
 	async build() {
 		await this.#setupPageData();
 
 		const [indexLecturerObj, infoLecturerObj] = await Promise.all([
-			this.loadPageData(INDEX_JSON, DataType.JSON),
-			this.loadPageData(LECTURER_INFO_JSON, DataType.JSON),
+			this.loadPageData(JSON_FILE_PATHS.INDEX_JSON, DataType.JSON),
+			this.loadPageData(JSON_FILE_PATHS.LECTURER_INFO_JSON, DataType.JSON),
 		]);
 
 		// build tabs' content

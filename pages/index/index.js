@@ -2,13 +2,11 @@ import { Page } from '../../core/Page.js';
 import { Icons } from '../../js/components/icons.js';
 import { ProjectPanel } from '../../js/components/projectPanel.js';
 import { PublicationCard } from '../../js/components/publicationCard.js';
-import { DataType } from '../../shared/constants.js';
+import { DataType, JSON_FILE_PATHS } from '../../shared/constants.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
 let UPDATES_TEXT = 'data/notifications.txt';
-let LECTURE_INFO_JSON = 'data/jsons/lecturer.json';
-let INDEX_JSON = 'data/jsons/index.json';
 
 const notificationsArray = [];
 
@@ -80,7 +78,7 @@ class IndexPage extends Page {
 	async buildPersonalPanel() {
 		var container_id = 'personal_container';
 		try {
-			const jsonObj = await this.loadPageData(LECTURE_INFO_JSON, DataType.JSON);
+			const jsonObj = await this.loadPageData(JSON_FILE_PATHS.LECTURER_INFO_JSON, DataType.JSON);
 			document.getElementById('lecturer-name').innerHTML = jsonObj['name'];
 			document.getElementById('lecture_position').innerHTML = jsonObj['position'];
 			var addressesHtml = "<div class='lecturer-info'> ";
@@ -195,7 +193,7 @@ class IndexPage extends Page {
 
 	async buildPageContent() {
 		try {
-			var jsonObj = await this.loadPageData(INDEX_JSON, DataType.JSON);
+			var jsonObj = await this.loadPageData(JSON_FILE_PATHS.INDEX_JSON, DataType.JSON);
 
 			// Biography
 			document.getElementById('biography').innerHTML = jsonObj['biography'];

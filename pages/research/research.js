@@ -6,11 +6,10 @@ import { ResearchPosition } from '../../js/components/researchPosition.js';
 import { ResearchProject } from '../../js/components/researchProject.js';
 import { Tabs } from '../../js/components/tabs.js';
 import { getQueryParams } from '../../services/url.js';
-import { DataType } from '../../shared/constants.js';
+import { DataType, JSON_FILE_PATHS } from '../../shared/constants.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
-let RESEARCH_JSON = 'data/jsons/research.json';
 let SECTIONS = ['Ongoing-Projects', 'Previous-Projects', 'Work-with-me'];
 
 /*
@@ -38,7 +37,7 @@ class Research extends Page {
 	}
 
 	async #initializeData() {
-		this.#jsonData = await this.loadPageData(RESEARCH_JSON, DataType.JSON);
+		this.#jsonData = await this.loadPageData(JSON_FILE_PATHS.RESEARCH_JSON, DataType.JSON);
 
 		const nowDate = new Date();
 

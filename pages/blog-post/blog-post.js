@@ -1,9 +1,7 @@
 import { Page } from '../../core/Page.js';
 import { NextBlogPostCard } from '../../js/components/nextBlogPostCard.js';
 import { getQueryParams } from '../../services/url.js';
-import { DataType } from '../../shared/constants.js';
-
-let NEXT_BLOG_JSON = 'data/jsons/next_blog.json';
+import { JSON_FILE_PATHS, DataType } from '../../shared/constants.js';
 
 const WORDS_PER_MINUTE_READING = 240;
 let this_post_index = 0;
@@ -47,7 +45,7 @@ class BlogPost extends Page {
 	}
 
 	async #setNextBlogContent() {
-		const nextBlogPost = await this.loadPageData(NEXT_BLOG_JSON, DataType.JSON);
+		const nextBlogPost = await this.loadPageData(JSON_FILE_PATHS.NEXT_BLOG_JSON, DataType.JSON);
 
 		try {
 			const nextBlogsList = NextBlogPostCard.createListFromJson(nextBlogPost[this_post_index]);
