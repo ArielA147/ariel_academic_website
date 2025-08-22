@@ -25,7 +25,7 @@ async function onPageLoad() {
 }
 
 async function renderHeader() {
-	const header = await DataLoader.loadHeader();
+	const header = await DataLoader.loadComponent('partials/header.html');
 	if (header) {
 		document.getElementById('header').innerHTML = header;
 		document.dispatchEvent(new Event(HEADER_RENDERED_EVENT));
@@ -33,7 +33,7 @@ async function renderHeader() {
 }
 
 async function renderFooter() {
-	const footer = await DataLoader.loadFooter();
+	const footer = await DataLoader.loadComponent('partials/footer.html');
 	if (footer) {
 		document.getElementById('footer').innerHTML = footer;
 		document.dispatchEvent(new Event(FOOTER_RENDERED_EVENT));
