@@ -3,17 +3,6 @@
 	"open_positions": [],
 	"projects": [
 		{
-			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
-			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
-			"startMonth": 3,
-			"startYear": 2024,
-			"endMonth": 7,
-			"endYear": 2025,
-			"teamMembers": 3,
-			"relevantResources": [],
-			"participants": []
-		},
-		{
 			"name": "A biologically-informed and data-driven approach to scientometrics",
 			"participants": [
 				{
