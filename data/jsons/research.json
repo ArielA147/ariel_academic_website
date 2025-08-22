@@ -17,16 +17,25 @@
 					"name": "Teddy Lazebnik",
 					"title": "Dr.",
 					"role": "",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+			{
+					"name": "Amit Bengiat",
+					"title": "Ph.D student",
+					"role": "",
 					"websiteLink": "",
 					"googleLink": "",
-					"linkedinLink": ""
+					"linkedinLink": "https://www.linkedin.com/in/amit-bengiat-379288230/"
 				}
+
 			],
 			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
 			"startMonth": 1,
 			"startYear": 2025,
-			"endMonth": 12,
-			"endYear": 2025,
+			"endMonth": 11,
+			"endYear": 2027,
 			"teamMembers": 3,
 			"relevantResources": []
 		}
