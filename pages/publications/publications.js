@@ -1,12 +1,15 @@
-import { PublicationCard } from '../../js/components/publicationCard.js';
-import { PublicationCard as PublicationCardNew } from '../../components/publication-card.js';
+import { PublicationCard } from '../../components/publication-card.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Icons } from '../../js/components/icons.js';
 import { Page } from '../../core/Page.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
 import { TEMPLATES_LOADED_EVENT } from '../../constants/events.js';
-import { filterItemsByKeyValue, groupItemsByKey, sortItemsByKey } from '../../services/data-manipulator.js';
+import {
+	filterItemsByKeyValue,
+	groupItemsByKey,
+	sortItemsByKey,
+} from '../../services/data-manipulator.js';
 
 const default_sorter = 'year';
 const default_filter = null;
@@ -46,7 +49,8 @@ class AcademicPublications extends Page {
 	async #setupPublications() {
 		/** @type {import('../../constants/types.js').AcademicPublication[]} */
 		const publications = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
-		this.#publicationsList = PublicationCardNew.createListFromJson(publications);
+
+		this.#publicationsList = PublicationCard.createListFromJson(publications);
 	}
 
 	/* build section functions */
@@ -102,7 +106,7 @@ class AcademicPublications extends Page {
 		}
 		// perpare ds //
 		// sort the list
-		var buildPublicationList = sortItemsByKey(this.#publicationsList, sorter);
+		let buildPublicationList = sortItemsByKey(this.#publicationsList, sorter);
 
 		// if filter needed
 		if (filter != null) {
@@ -116,8 +120,8 @@ class AcademicPublications extends Page {
 		// build the UI //
 		try {
 			if (buildPublicationList.length > 0) {
-				var answerHtml = '';
-				var keys = [];
+				let answerHtml = '';
+				let keys = [];
 
 				for (var spliterKey in publicSets) {
 					keys.push(spliterKey);

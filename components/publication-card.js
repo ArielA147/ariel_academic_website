@@ -1,4 +1,5 @@
 import { Component } from '../core/Component.js';
+import { isFileFormat } from '../services/files.js';
 
 export class PublicationCard extends Component {
 	title;
@@ -68,7 +69,7 @@ export class PublicationCard extends Component {
 		publicationCard.querySelector('.year').textContent = this.year;
 		publicationCard.querySelector('.type').textContent = this.type;
 
-		if (this.fileLinks?.[0]?.link) {
+		if (this.fileLinks?.[0]?.link && isFileFormat(this.fileLinks[0].link)) {
 			publicationCard.querySelector('.download-btn').setAttribute('href', this.fileLinks[0].link);
 			publicationCard
 				.querySelector('.read-online-btn')
@@ -108,7 +109,7 @@ export class PublicationCard extends Component {
 	 * @param {import('../constants/types.js').AcademicPublication[]} data
 	 */
 	static createListFromJson(data) {
-		return data.map((item) => PublicationCard.createSingleFromJson(item));
+		return data.map(PublicationCard.createSingleFromJson);
 	}
 
 	/**
