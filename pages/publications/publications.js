@@ -6,6 +6,7 @@ import { Page } from '../../core/Page.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
 import { TEMPLATES_LOADED_EVENT } from '../../constants/events.js';
+import { filterItemsByKeyValue, groupItemsByKey, sortItemsByKey } from '../../services/data-manipulator.js';
 
 const default_sorter = 'year';
 const default_filter = null;
@@ -101,20 +102,16 @@ class AcademicPublications extends Page {
 		}
 		// perpare ds //
 		// sort the list
-		var buildPublicationList = PublicationCard.sortByProperty(this.#publicationsList, sorter);
+		var buildPublicationList = sortItemsByKey(this.#publicationsList, sorter);
 
 		// if filter needed
 		if (filter != null) {
 			// filter the needed list only
-			buildPublicationList = PublicationCard.filterList(
-				buildPublicationList,
-				filterProperty,
-				filter,
-			);
+			buildPublicationList = filterItemsByKeyValue(buildPublicationList, filterProperty, filter);
 		}
 
 		// split into the right sets
-		var publicSets = PublicationCard.splitByProperty(buildPublicationList, sorter);
+		const publicSets = groupItemsByKey(buildPublicationList, sorter);
 
 		// build the UI //
 		try {

@@ -1,16 +1,16 @@
 import { Component } from '../core/Component.js';
 
 export class PublicationCard extends Component {
-	#title;
-	#description;
+	title;
+	description;
 	/** @type {import('../constants/types.js').FileLink[]} */
-	#fileLinks;
-	#authors;
-	#year;
-	#topic; // TODO: not in use
-	#type;
-	#publisher;
-	#publicationStatus;
+	fileLinks;
+	authors;
+	year;
+	topic; // TODO: not in use
+	type;
+	publisher;
+	publicationStatus;
 
 	/**
 	 *
@@ -37,42 +37,42 @@ export class PublicationCard extends Component {
 		publicationStatus,
 	}) {
 		super(PublicationCard.name);
-		this.#title = title;
-		this.#description = description;
-		this.#fileLinks = fileLinks;
-		this.#authors = authors;
-		this.#year = year;
-		this.#topic = topic;
-		this.#type = type;
-		this.#publisher = publisher;
-		this.#publicationStatus = publicationStatus;
+		this.title = title;
+		this.description = description;
+		this.fileLinks = fileLinks;
+		this.authors = authors;
+		this.year = year;
+		this.topic = topic;
+		this.type = type;
+		this.publisher = publisher;
+		this.publicationStatus = publicationStatus;
 	}
 
 	render() {
 		const publicationCard = this.loadTemplate('publication-card');
 
-		publicationCard.querySelector('.title').textContent = this.#title;
+		publicationCard.querySelector('.title').textContent = this.title;
 
-		if (this.#fileLinks?.[1]?.link) {
+		if (this.fileLinks?.[1]?.link) {
 			publicationCard.querySelector('.cite-btn').addEventListener('click', async () => {
-				await this.#copyCitation(this.#title);
+				await this.copyCitation(this.title);
 			});
 		} else {
 			publicationCard.querySelector('.cite-btn').remove();
 		}
 
-		publicationCard.querySelector('.authors').textContent = this.#authors;
-		publicationCard.querySelector('.publisher').textContent = this.#publisher;
-		publicationCard.querySelector('.description').textContent = this.#description;
-		publicationCard.querySelector('.status').textContent = this.#publicationStatus;
-		publicationCard.querySelector('.year').textContent = this.#year;
-		publicationCard.querySelector('.type').textContent = this.#type;
+		publicationCard.querySelector('.authors').textContent = this.authors;
+		publicationCard.querySelector('.publisher').textContent = this.publisher;
+		publicationCard.querySelector('.description').textContent = this.description;
+		publicationCard.querySelector('.status').textContent = this.publicationStatus;
+		publicationCard.querySelector('.year').textContent = this.year;
+		publicationCard.querySelector('.type').textContent = this.type;
 
-		if (this.#fileLinks?.[0]?.link) {
-			publicationCard.querySelector('.download-btn').setAttribute('href', this.#fileLinks[0].link);
+		if (this.fileLinks?.[0]?.link) {
+			publicationCard.querySelector('.download-btn').setAttribute('href', this.fileLinks[0].link);
 			publicationCard
 				.querySelector('.read-online-btn')
-				.setAttribute('href', this.#fileLinks[0].link);
+				.setAttribute('href', this.fileLinks[0].link);
 		} else {
 			publicationCard.querySelector('.inner-publication-card-div').remove();
 		}
@@ -83,7 +83,7 @@ export class PublicationCard extends Component {
 	/**
 	 * @param {string} title
 	 */
-	async #copyCitation(title) {
+	async copyCitation(title) {
 		const parsedTitle = title.replaceAll("'", '').replaceAll(' ', '_');
 		try {
 			await navigator.clipboard.writeText(parsedTitle);

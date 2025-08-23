@@ -116,15 +116,6 @@ class PublicationCard extends Element {
 	}
 
 	// build a list of this object from Json object
-	static createListFromJson(jsonObj) {
-		var answer = [];
-		for (var publicationIndex = 0; publicationIndex < jsonObj.length; publicationIndex++) {
-			answer.push(PublicationCard.createFromJson(jsonObj[publicationIndex]));
-		}
-		return answer;
-	}
-
-	// build a list of this object from Json object
 	static createFromJson(jsonObj) {
 		return new PublicationCard(
 			jsonObj['name'],
@@ -137,44 +128,6 @@ class PublicationCard extends Element {
 			jsonObj['publisher'],
 			jsonObj['publicationStatus'],
 		);
-	}
-
-	// sort according to some property list of this object
-	static sortByProperty(ObjList, property) {
-		return ObjList.sort(function (a, b) {
-			var x = a[property + ''];
-			var y = b[property + ''];
-			return x < y ? -1 : x > y ? 1 : 0;
-		});
-	}
-
-	// filter the list according to some property and value
-	static filterList(objList, property, filterValue) {
-		var answer = [];
-		for (var objIndex = 0; objIndex < objList.length; objIndex++) {
-			if (objList[objIndex][property + ''] == filterValue) {
-				answer.push(objList[objIndex]);
-			}
-		}
-		return answer;
-	}
-
-	// split list into list of lists according to some property
-	static splitByProperty(ObjList, property) {
-		var answer = {};
-		var spliter = ObjList[0][property + ''];
-		var subGroup = [ObjList[0]];
-		for (var publicationIndex = 1; publicationIndex < ObjList.length; publicationIndex++) {
-			if (ObjList[publicationIndex][property + ''] != spliter) {
-				answer[spliter] = [...subGroup];
-				spliter = ObjList[publicationIndex][property + ''];
-				subGroup = [ObjList[publicationIndex]];
-			} else {
-				subGroup.push(ObjList[publicationIndex]);
-			}
-		}
-		answer[spliter] = [...subGroup];
-		return answer;
 	}
 }
 export { PublicationCard };
