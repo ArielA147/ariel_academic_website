@@ -139,7 +139,7 @@ class AcademicPublications extends Page {
 					for (let i = 0; i < publicSets[keys[spliterKeyIndex]].length; i++) {
 						const publication = publicSets[keys[spliterKeyIndex]][i];
 						const publicationCard = publication.render();
-						answerHtml += publicationCard.innerHTML;
+						answerHtml += publicationCard.outerHTML;
 					}
 				}
 				document.getElementById('publications-body').innerHTML = answerHtml;
