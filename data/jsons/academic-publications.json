@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Comparison of pandemic intervention policies in several building types using heterogeneous population model",
+		"title": "Comparison of pandemic intervention policies in several building types using heterogeneous population model",
 		"authors": "T. Lazebnik, A. Alexi",
 		"year": 2022,
 		"publisher": "Communications in Nonlinear Science and Numerical Simulation",
@@ -12,7 +12,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "Microfounded tax revenue forecast model with heterogeneous population and genetic algorithm approach",
+		"title": "Microfounded tax revenue forecast model with heterogeneous population and genetic algorithm approach",
 		"authors": "A. Alexi, T. Lazebnik, L. Shami",
 		"year": 2024,
 		"publisher": "Computational Economics",
@@ -24,7 +24,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "A security games inspired approach for distributed control of pandemic spread",
+		"title": "A security games inspired approach for distributed control of pandemic spread",
 		"authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
 		"year": 2023,
 		"publisher": "Advanced Theory and Simulations",
@@ -36,7 +36,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "High resolution spatio-temporal model for room-level airborne pandemic spread",
+		"title": "High resolution spatio-temporal model for room-level airborne pandemic spread",
 		"authors": "T. Lazebnik, A. Alexi",
 		"year": 2023,
 		"publisher": "Mathematics",
@@ -48,7 +48,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "Multi-species prey–predator dynamics during a multi-strain pandemic",
+		"title": "Multi-species prey–predator dynamics during a multi-strain pandemic",
 		"authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
 		"year": 2023,
 		"publisher": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
@@ -60,7 +60,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "The scientometrics and reciprocity underlying co-authorship panels in Google Scholar profiles",
+		"title": "The scientometrics and reciprocity underlying co-authorship panels in Google Scholar profiles",
 		"authors": "A. Alexi, T. Lazebnik, A. Rosenfeld",
 		"year": 2024,
 		"publisher": "Scientometrics",
@@ -72,7 +72,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "The trade-off between airborne pandemic control and energy consumption using air ventilation solutions",
+		"title": "The trade-off between airborne pandemic control and energy consumption using air ventilation solutions",
 		"authors": "A. Alexi, A. Rosenfeld, T. Lazebnik",
 		"year": 2022,
 		"publisher": "Sensors",
@@ -84,7 +84,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "Economical–epidemiological analysis of the coffee trees rust pandemic",
+		"title": "Economical–epidemiological analysis of the coffee trees rust pandemic",
 		"authors": "T. Lazebnik, A. Rosenfeld, L. Shami",
 		"year": 2024,
 		"publisher": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
@@ -96,7 +96,7 @@
 		"description": "this is a description ya'll"
 	},
 	{
-		"name": "The Academic Midas Touch: A citation-based indicator of research excellence",
+		"title": "The Academic Midas Touch: A citation-based indicator of research excellence",
 		"authors": "A. Rosenfeld, A. Alexi, L. Mushiev, T. Lazebnik",
 		"year": 2025,
 		"publisher": "Journal of Data and Information Science",

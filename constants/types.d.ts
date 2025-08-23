@@ -44,7 +44,7 @@ export type AcademicPublication = {
 export type FileLink = {
 	info: string;
 	type: string; // TODO: change the numeric types into something more descriptive (maybe use an enum)
-	string: string;
+	link: string;
 };
 
 export type Blog = {
