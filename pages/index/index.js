@@ -1,7 +1,7 @@
 import { Page } from '../../core/Page.js';
 import { Icons } from '../../js/components/icons.js';
 import { ProjectPanel } from '../../js/components/projectPanel.js';
-import { PublicationCard } from '../../js/components/publicationCard.js';
+import { PublicationCard } from '../../components/publication-card.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
@@ -214,10 +214,11 @@ class IndexPage extends Page {
 
 			// Featured Publications
 			var featuredPublicationsHtml = '';
-			for (var pubIndex = 0; pubIndex < jsonObj['featuredPublications'].length; pubIndex++) {
-				featuredPublicationsHtml += PublicationCard.createFromJson(
-					jsonObj['featuredPublications'][pubIndex],
-				).toHtml();
+			for (let i = 0; i < jsonObj['featuredPublications'].length; i++) {
+				const publicationCard = PublicationCard.createSingleFromJson(
+					jsonObj['featuredPublications'][i],
+				);
+				featuredPublicationsHtml += publicationCard.render().outerHTML;
 			}
 			document.getElementById('featured_publications').innerHTML = featuredPublicationsHtml;
 

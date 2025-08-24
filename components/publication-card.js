@@ -1,5 +1,6 @@
 import { Component } from '../core/Component.js';
 import { isFileFormat } from '../services/files.js';
+import { descriptionTrim } from '../utils/descriptionSlicer.js';
 
 export class PublicationCard extends Component {
 	title;
@@ -64,7 +65,7 @@ export class PublicationCard extends Component {
 
 		publicationCard.querySelector('.authors').textContent = this.authors;
 		publicationCard.querySelector('.publisher').textContent = this.publisher;
-		publicationCard.querySelector('.description').textContent = this.description;
+		publicationCard.querySelector('.description').innerHTML = descriptionTrim(this.description);
 		publicationCard.querySelector('.status').textContent = this.publicationStatus;
 		publicationCard.querySelector('.year').textContent = this.year;
 		publicationCard.querySelector('.type').textContent = this.type;
@@ -113,7 +114,6 @@ export class PublicationCard extends Component {
 	}
 
 	/**
-	 *
 	 * @param {import('../constants/types.js').AcademicPublication} data
 	 */
 	static createSingleFromJson(data) {
