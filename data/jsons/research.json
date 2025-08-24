@@ -3,43 +3,239 @@
 	"open_positions": [],
 	"projects": [
 		{
-			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
-			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
-			"startMonth": 3,
-			"startYear": 2024,
-			"endMonth": 7,
-			"endYear": 2025,
-			"teamMembers": 3,
-			"relevantResources": [],
-			"participants": []
-		},
-		{
 			"name": "A biologically-informed and data-driven approach to scientometrics",
 			"participants": [
 				{
 					"name": "Ariel Rosenfeld",
 					"title": "Prof.",
-					"role": "Co-author",
+					"role": "",
 					"websiteLink": "https://arielrosenfeld.com/",
 					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
 					"linkedinLink": ""
 				},
 				{
 					"name": "Teddy Lazebnik",
-					"title": "Dr.",
+					"title": "Ph.D.",
+					"role": "",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+			{
+					"name": "Amit Bengiat",
+					"title": "Ph.D student",
 					"role": "",
 					"websiteLink": "",
 					"googleLink": "",
-					"linkedinLink": ""
+					"linkedinLink": "https://www.linkedin.com/in/amit-bengiat-379288230/"
 				}
+
 			],
 			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
 			"startMonth": 1,
 			"startYear": 2025,
-			"endMonth": 12,
-			"endYear": 2025,
+			"endMonth": 11,
+			"endYear": 2027,
 			"teamMembers": 3,
 			"relevantResources": []
+		},{
+			"name": "The Scientometrics and Reciprocality Underlying Co-Authorship Panels in Google Scholar Profiles",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}],
+			"description": "Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar,  scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the Co-authroship panel. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four disciplines and various academic institutions. Our results suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars' selections.",
+			"start_month": 3,
+			"start_year": 2023,
+			"end_month": 8,
+			"end_year": 2023,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "Master (1) - A Security Games Inspired Approach for Distributed Controlling Of Pandemic Spread",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "CS Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}
+			],
+			"description": "In this research, we propose a novel Pandemic Intervention Policy (PIP) that relies on the strategic deployment of Inspection Units (IUs). These IUs are allocated in the environment, represented as a graph, and sample individuals who pass through the same node. If a sampled individual is identified as infected, she is extracted from the environment until she recovers (or dies).",
+			"start_month": 3,
+			"start_year": 2022,
+			"end_month": 7,
+			"end_year": 2022,
+			"team_members": 3,
+			"relevant_resources": []
+		},{
+			"name": "Master (2) - The Trade-off Between Energy Consumption and Airborne Pandemic Control Using Air-Ventilation Systems",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "CS Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}
+			],
+			"description": "We measured the energetic consumption and air ventilation capabilities of central air-ventilation fresh air system, anti-bacterial indoor device, and open window in inpatient rooms, classrooms, and conference rooms. This way, we will find the Parto-optimal trade-off between energy consumption and pandemic spread.",
+			"start_month": 6,
+			"start_year": 2022,
+			"end_month": 11,
+			"end_year": 2022,
+			"team_members": 3,
+			"relevant_resources": []
+		},
+		{
+			"name": "Master (3) - A Security Games For Pandemic Spread ",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "CS Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}
+			],
+			"description": "We extend the previous work - not sure how at this point...",
+			"start_month": 7,
+			"start_year": 2022,
+			"end_month": 12,
+			"end_year": 2022,
+			"team_members": 3,
+			"relevant_resources": []
+		},
+		{
+			"name": "Master (4) - Multi-Species Prey-Predator Dynamics During a Multi-Strain Pandemic",
+			"participants": [{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "CS Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}
+			],
+			"description": "We investigate the ecosystem's sensitivity during a multi-strain pandemic for several properties in syntactic cases. In addition, we used two real-world configurations to evaluate the influence of the inner-species and cross-species infection on the long-term ecosystem's stability, showing that cross-infection.",
+			"start_month": 10,
+			"start_year": 2022,
+			"end_month": 3,
+			"end_year": 2023,
+			"team_members": 3,
+			"relevant_resources": []
+		},{
+			"name": "Evaluating Taxation Policies Outcomes In a Close and Supply-Demand Based Economy with Heterogeneous Population using Genetic Algorithms",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-author",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				},
+				{
+					"name": "Labib Shami",
+					"title": "Ph.D.",
+					"role": "Co-author",
+					"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+					"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+					"linkedinLink": ""
+				}
+			],
+			"description": "We developed a mathematical model and computer simulation for close economy supply-demand model to evaluate taxation policies.",
+			"start_month": 8,
+			"start_year": 2021,
+			"end_month": 1,
+			"end_year": 2022,
+			"team_members": 3,
+			"relevant_resources": []
+		},{
+			"name": "Comparison Of Pandemic Intervention Policies In Different Building Types Using Spatio-Temporal Model",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-author",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				}],
+			"description": "We are studing the pandemic spread indoor for several types of buildings based on extended SIR model",
+			"start_month": 4,
+			"start_year": 2021,
+			"end_month": 7,
+			"end_year": 2021,
+			"team_members": 3,
+			"relevant_resources": []
+		},{
+			"name": "High Resolution Mathematical Model for Airborne Pandemic Spread Indoors",
+			"participants": [
+				{
+					"name": "Teddy Lazebnik",
+					"title": "Ph.D.",
+					"role": "Co-author",
+					"websiteLink": "https://teddylazebnik.com/",
+					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+					"linkedinLink": ""
+				}],
+			"description": "We investigate the influance of air circulation inside a room on the pandemic spread.",
+			"start_month": 1,
+			"start_year": 2022,
+			"end_month": 6,
+			"end_year": 2022,
+			"team_members": 2,
+			"relevant_resources": []
 		}
 	]
 }
