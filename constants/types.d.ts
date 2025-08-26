@@ -22,10 +22,10 @@ export type GeneralInfo = {
 };
 
 export type Project = {
-	name: string;
+	title: string;
 	description: string;
 	topic: string;
-	link: FileLink;
+	fileLink: FileLink;
 };
 
 export type AcademicPublication = {

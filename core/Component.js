@@ -1,18 +1,14 @@
+import { pascalCaseToKebabCase } from '../utils/case-converter.js';
 import { DataLoader } from './DataLoader.js';
 
 export class Component {
-	// TODO: decide if to use this field for constructing the template's path/id,
-	// or have the function receive a path argument that will be used to load the template.
-	// if all the components are in a specific folder, we can use this field to construct the path.
-	// what about specific page components? they wont be in the root components folder, so it's irrelevant to them
-	// instead of every common component repeating the 'components/name/name.js' path, we can create a utility for that.
-	// where should that utility be? in the Component class?
 	#name;
 
 	constructor(name) {
 		this.#name = name;
 	}
 
+	// TODO: remove this function
 	// /**
 	//  * @param {string} path
 	//  */
@@ -27,16 +23,14 @@ export class Component {
 	// }
 
 	/**
-	 * @param {string} templateId
 	 * @returns {DocumentFragment}
 	 */
-	loadTemplate(templateId) {
+	loadTemplate() {
+		const templateId = pascalCaseToKebabCase(this.#name);
+
 		/** @type HTMLTemplateElement */
 		const template = document.querySelector(`template#${templateId}`);
-
 		return template.content.cloneNode(true);
-
-		return template.content.firstElementChild;
 	}
 
 	// TODO: should this component add the component to the DOM/input container?

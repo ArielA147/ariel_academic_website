@@ -51,7 +51,7 @@ export class PublicationCard extends Component {
 	}
 
 	render() {
-		const publicationCard = this.loadTemplate('publication-card');
+		const publicationCard = this.loadTemplate();
 
 		publicationCard.querySelector('.title').textContent = this.title;
 

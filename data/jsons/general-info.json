@@ -28,7 +28,7 @@
 			"title": "The economics of AI",
 			"topic": "AI",
 			"description": "Something smart goes here",
-			"link": { "info": "View project", "type": 2, "link": "", "example": "" }
+			"fileLink": { "info": "View project", "type": 2, "link": "", "example": "" }
 		}
 	]
 }
