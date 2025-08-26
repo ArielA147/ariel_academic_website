@@ -21,7 +21,7 @@
 					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
 					"linkedinLink": ""
 				},
-			{
+				{
 					"name": "Amit Bengiat",
 					"title": "Ph.D student",
 					"role": "",
@@ -29,7 +29,6 @@
 					"googleLink": "",
 					"linkedinLink": "https://www.linkedin.com/in/amit-bengiat-379288230/"
 				}
-
 			],
 			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
 			"startMonth": 1,
@@ -38,7 +37,8 @@
 			"endYear": 2027,
 			"teamMembers": 3,
 			"relevantResources": []
-		},{
+		},
+		{
 			"name": "The Scientometrics and Reciprocality Underlying Co-Authorship Panels in Google Scholar Profiles",
 			"participants": [
 				{
@@ -56,15 +56,17 @@
 					"websiteLink": "https://arielrosenfeld.com/",
 					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
 					"linkedinLink": ""
-				}],
+				}
+			],
 			"description": "Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar,  scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the Co-authroship panel. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four disciplines and various academic institutions. Our results suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars' selections.",
 			"start_month": 3,
 			"start_year": 2023,
 			"end_month": 8,
 			"end_year": 2023,
 			"team_members": 2,
-			"relevant_resources": []
-		},{
+			"relevantResources": []
+		},
+		{
 			"name": "Master (1) - A Security Games Inspired Approach for Distributed Controlling Of Pandemic Spread",
 			"participants": [
 				{
@@ -90,8 +92,9 @@
 			"end_month": 7,
 			"end_year": 2022,
 			"team_members": 3,
-			"relevant_resources": []
-		},{
+			"relevantResources": []
+		},
+		{
 			"name": "Master (2) - The Trade-off Between Energy Consumption and Airborne Pandemic Control Using Air-Ventilation Systems",
 			"participants": [
 				{
@@ -117,7 +120,7 @@
 			"end_month": 11,
 			"end_year": 2022,
 			"team_members": 3,
-			"relevant_resources": []
+			"relevantResources": []
 		},
 		{
 			"name": "Master (3) - A Security Games For Pandemic Spread ",
@@ -145,11 +148,12 @@
 			"end_month": 12,
 			"end_year": 2022,
 			"team_members": 3,
-			"relevant_resources": []
+			"relevantResources": []
 		},
 		{
 			"name": "Master (4) - Multi-Species Prey-Predator Dynamics During a Multi-Strain Pandemic",
-			"participants": [{
+			"participants": [
+				{
 					"name": "Teddy Lazebnik",
 					"title": "Ph.D.",
 					"role": "Co-advisor",
@@ -172,8 +176,9 @@
 			"end_month": 3,
 			"end_year": 2023,
 			"team_members": 3,
-			"relevant_resources": []
-		},{
+			"relevantResources": []
+		},
+		{
 			"name": "Evaluating Taxation Policies Outcomes In a Close and Supply-Demand Based Economy with Heterogeneous Population using Genetic Algorithms",
 			"participants": [
 				{
@@ -199,8 +204,9 @@
 			"end_month": 1,
 			"end_year": 2022,
 			"team_members": 3,
-			"relevant_resources": []
-		},{
+			"relevantResources": []
+		},
+		{
 			"name": "Comparison Of Pandemic Intervention Policies In Different Building Types Using Spatio-Temporal Model",
 			"participants": [
 				{
@@ -210,15 +216,17 @@
 					"websiteLink": "https://teddylazebnik.com/",
 					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
 					"linkedinLink": ""
-				}],
+				}
+			],
 			"description": "We are studing the pandemic spread indoor for several types of buildings based on extended SIR model",
 			"start_month": 4,
 			"start_year": 2021,
 			"end_month": 7,
 			"end_year": 2021,
 			"team_members": 3,
-			"relevant_resources": []
-		},{
+			"relevantResources": []
+		},
+		{
 			"name": "High Resolution Mathematical Model for Airborne Pandemic Spread Indoors",
 			"participants": [
 				{
@@ -228,14 +236,15 @@
 					"websiteLink": "https://teddylazebnik.com/",
 					"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
 					"linkedinLink": ""
-				}],
+				}
+			],
 			"description": "We investigate the influance of air circulation inside a room on the pandemic spread.",
 			"start_month": 1,
 			"start_year": 2022,
 			"end_month": 6,
 			"end_year": 2022,
 			"team_members": 2,
-			"relevant_resources": []
+			"relevantResources": []
 		}
 	]
 }
