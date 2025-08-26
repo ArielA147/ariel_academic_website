@@ -67,7 +67,7 @@ class ProjectSection extends Element {
 		return new ProjectSection(
 			jsonObj['name'],
 			jsonObj['description'],
-			ActionButton.createFromJson(jsonObj['link']),
+			ActionButton.createFromJson(jsonObj['fileLink']),
 		);
 	}
 }
