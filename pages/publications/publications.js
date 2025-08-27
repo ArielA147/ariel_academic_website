@@ -1,6 +1,6 @@
 import { PublicationCard } from '../../components/publication-card.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
-import { Icons } from '../../js/components/icons.js';
+import { Icons } from '../../components/icons.js';
 import { Page } from '../../core/Page.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';

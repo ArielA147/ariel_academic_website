@@ -1,5 +1,5 @@
 import { Page } from '../../core/Page.js';
-import { Icons } from '../../js/components/icons.js';
+import { Icons } from '../../components/icons.js';
 import { ProjectPanel } from './components/project-panel.js';
 import { PublicationCard } from '../../components/publication-card.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';

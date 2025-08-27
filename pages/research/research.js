@@ -1,10 +1,10 @@
 // imports
 import { Page } from '../../core/Page.js';
 import { removeAlertsPanels } from '../../core/main.js';
-import { Icons } from '../../js/components/icons.js';
-import { ResearchPosition } from '../../js/components/researchPosition.js';
-import { ResearchProject } from '../../js/components/researchProject.js';
-import { Tabs } from '../../js/components/tabs.js';
+import { Icons } from '../../components/icons.js';
+import { ResearchPosition } from './components/researchPosition.js';
+import { ResearchProject } from './components/researchProject.js';
+import { Tabs } from '../../components/tabs.js';
 import { getQueryParams } from '../../services/url.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';

@@ -1,5 +1,5 @@
 import { Page } from '../../core/Page.js';
-import { NextBlogPostCard } from '../../js/components/nextBlogPostCard.js';
+import { NextBlogPostCard } from './components/nextBlogPostCard.js';
 import { getQueryParams } from '../../services/url.js';
 import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 

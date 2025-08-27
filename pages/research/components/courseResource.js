@@ -1,5 +1,5 @@
-import { Element } from '../../js/components/element.js';
-import { descriptionTrim } from '../../utils/descriptionSlicer.js';
+import { Element } from '../../../components/element.js';
+import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
 class CourseResource extends Element {
 	constructor(name, link, description, type) {

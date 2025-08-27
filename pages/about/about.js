@@ -1,9 +1,9 @@
 // imports
 import { Page } from '../../core/Page.js';
-import { Icons } from '../../js/components/icons.js';
-import { Tabs } from '../../js/components/tabs.js';
-import { ProjectSection } from '../../js/components/projectSection.js';
-import { Resource } from '../../js/components/resources.js';
+import { Icons } from '../../components/icons.js';
+import { Tabs } from '../../components/tabs.js';
+import { ProjectSection } from './components/projectSection.js';
+import { Resource } from './components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';

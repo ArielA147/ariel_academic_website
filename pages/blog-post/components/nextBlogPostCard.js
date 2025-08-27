@@ -1,5 +1,4 @@
-import { Element } from '../../js/components/element.js';
-import { ActionButton } from '../../js/components/actionButton.js';
+import { Element } from '../../../components/element.js';
 
 const MAX_DESC_LENGTH = 150;
 

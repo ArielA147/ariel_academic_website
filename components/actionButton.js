@@ -1,4 +1,4 @@
-import { Element } from '../../js/components/element.js';
+import { Element } from './element.js';
 
 const buttonsTypes = {
 	DOWNLOAD: 1,

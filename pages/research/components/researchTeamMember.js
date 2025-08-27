@@ -1,5 +1,5 @@
-import { Icons } from '../../js/components/icons.js';
-import { Element } from '../../js/components/element.js';
+import { Element } from '../../../components/element.js';
+
 class ResearchTeamMember extends Element {
 	constructor(name, title, role, websiteLink, googleLink, linkedinLink) {
 		super();
