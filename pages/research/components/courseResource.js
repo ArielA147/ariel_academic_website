@@ -1,7 +1,6 @@
-import { Element } from '../../../components/element.js';
 import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
-class CourseResource extends Element {
+class CourseResource {
 	constructor(name, link, description, type) {
 		super();
 		this.name = name;

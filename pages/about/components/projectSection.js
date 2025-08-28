@@ -1,10 +1,9 @@
-import { Element } from '../../../components/element.js';
 import { ActionButton } from '../../../components/actionButton.js';
 import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
 let ALL_TOPIC_KEY = 'all';
 
-class ProjectSection extends Element {
+class ProjectSection {
 	constructor(name, description, btn) {
 		super();
 		this.name = name;

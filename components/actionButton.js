@@ -1,12 +1,10 @@
-import { Element } from './element.js';
-
 const buttonsTypes = {
 	DOWNLOAD: 1,
 	VIEW: 2,
 	GOTO: 3,
 };
 
-class ActionButton extends Element {
+class ActionButton {
 	constructor(info, type, link) {
 		super();
 		this.info = info;

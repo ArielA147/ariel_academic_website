@@ -1,9 +1,8 @@
-import { Element } from '../../../components/element.js';
 import { ResearchTeamMember } from './researchTeamMember.js';
 import { CourseResource } from './courseResource.js';
 import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
-class ResearchProject extends Element {
+class ResearchProject {
 	constructor(
 		name,
 		participents,

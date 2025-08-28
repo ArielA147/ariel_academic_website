@@ -1,6 +1,4 @@
-import { Element } from '../../../components/element.js';
-
-class ResearchPosition extends Element {
+class ResearchPosition {
 	constructor(name, description, requierments, applay_text, position_type, connect_email) {
 		super();
 		this.name = name;

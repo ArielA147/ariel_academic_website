@@ -1,6 +1,4 @@
-import { Element } from '../../../components/element.js';
-
-class BlogCard extends Element {
+class BlogCard {
 	constructor(title, description, year, month, day, fileLinks, order) {
 		super();
 		this.title = title;

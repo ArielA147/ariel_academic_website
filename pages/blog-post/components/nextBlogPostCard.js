@@ -1,8 +1,6 @@
-import { Element } from '../../../components/element.js';
-
 const MAX_DESC_LENGTH = 150;
 
-class NextBlogPostCard extends Element {
+class NextBlogPostCard {
 	constructor(title, date, reading_time, description, link_address) {
 		super();
 		this.title = title;
