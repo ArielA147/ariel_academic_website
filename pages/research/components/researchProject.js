@@ -14,7 +14,6 @@ class ResearchProject {
 		teamMembers,
 		relevantResources,
 	) {
-		super();
 		this.name = name;
 		this.participents = participents;
 		this.description = description;

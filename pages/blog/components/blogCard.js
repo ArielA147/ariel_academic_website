@@ -1,6 +1,5 @@
 class BlogCard {
 	constructor(title, description, year, month, day, fileLinks, order) {
-		super();
 		this.title = title;
 		this.description = description;
 		this.year = year;

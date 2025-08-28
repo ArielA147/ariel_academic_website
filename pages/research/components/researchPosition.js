@@ -1,6 +1,5 @@
 class ResearchPosition {
 	constructor(name, description, requierments, applay_text, position_type, connect_email) {
-		super();
 		this.name = name;
 		this.description = description;
 		this.requierments = requierments;

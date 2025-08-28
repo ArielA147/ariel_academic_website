@@ -1,11 +1,9 @@
-import { ActionButton } from '../../../components/actionButton.js';
 import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
 let ALL_TOPIC_KEY = 'all';
 
 class ProjectSection {
 	constructor(name, description, btn) {
-		super();
 		this.name = name;
 		this.description = description;
 		this.btn = btn;
@@ -63,11 +61,7 @@ class ProjectSection {
 
 	// build a list of this object from Json object
 	static createFromJson(jsonObj) {
-		return new ProjectSection(
-			jsonObj['name'],
-			jsonObj['description'],
-			ActionButton.createFromJson(jsonObj['fileLink']),
-		);
+		return new ProjectSection(jsonObj['name'], jsonObj['description'], jsonObj['fileLink']);
 	}
 }
 export { ProjectSection };

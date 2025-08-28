@@ -2,7 +2,6 @@ import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
 class CourseResource {
 	constructor(name, link, description, type) {
-		super();
 		this.name = name;
 		this.link = link;
 		this.description = description;

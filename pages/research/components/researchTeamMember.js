@@ -1,6 +1,5 @@
 class ResearchTeamMember {
 	constructor(name, title, role, websiteLink, googleLink, linkedinLink) {
-		super();
 		this.name = name;
 		this.title = title;
 		this.role = role;

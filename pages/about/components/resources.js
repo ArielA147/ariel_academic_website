@@ -1,4 +1,3 @@
-import { ActionButton } from '../../../components/actionButton.js';
 import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
 let CITE_SYMBOL =
@@ -6,7 +5,6 @@ let CITE_SYMBOL =
 
 class Resource {
 	constructor(title, description, recommendation, fileLinks, authors, year, topic, type) {
-		super();
 		this.title = title;
 		this.description = description;
 		this.recommendation = recommendation;
@@ -93,7 +91,7 @@ class Resource {
 			jsonObj['name'],
 			jsonObj['description'],
 			jsonObj['recommendation'],
-			ActionButton.createListFromJson(jsonObj['fileLinks']),
+			jsonObj['fileLinks'],
 			jsonObj['authors'],
 			jsonObj['year'],
 			jsonObj['topic'],

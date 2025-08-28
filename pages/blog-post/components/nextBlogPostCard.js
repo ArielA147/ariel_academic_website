@@ -2,7 +2,6 @@ const MAX_DESC_LENGTH = 150;
 
 class NextBlogPostCard {
 	constructor(title, date, reading_time, description, link_address) {
-		super();
 		this.title = title;
 		this.date = date;
 		this.reading_time = reading_time;
