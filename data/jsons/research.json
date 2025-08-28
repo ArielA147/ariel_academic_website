@@ -3,7 +3,7 @@
 	"open_positions": [],
 	"projects": [
 		{
-			"name": "A biologically-informed and data-driven approach to scientometrics",
+			"title": "A biologically-informed and data-driven approach to scientometrics",
 			"participants": [
 				{
 					"name": "Ariel Rosenfeld",
@@ -39,7 +39,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "The Scientometrics and Reciprocality Underlying Co-Authorship Panels in Google Scholar Profiles",
+			"title": "The Scientometrics and Reciprocality Underlying Co-Authorship Panels in Google Scholar Profiles",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -67,7 +67,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "Master (1) - A Security Games Inspired Approach for Distributed Controlling Of Pandemic Spread",
+			"title": "Master (1) - A Security Games Inspired Approach for Distributed Controlling Of Pandemic Spread",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -95,7 +95,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "Master (2) - The Trade-off Between Energy Consumption and Airborne Pandemic Control Using Air-Ventilation Systems",
+			"title": "Master (2) - The Trade-off Between Energy Consumption and Airborne Pandemic Control Using Air-Ventilation Systems",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -123,7 +123,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "Master (3) - A Security Games For Pandemic Spread ",
+			"title": "Master (3) - A Security Games For Pandemic Spread ",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -151,7 +151,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "Master (4) - Multi-Species Prey-Predator Dynamics During a Multi-Strain Pandemic",
+			"title": "Master (4) - Multi-Species Prey-Predator Dynamics During a Multi-Strain Pandemic",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -179,7 +179,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "Evaluating Taxation Policies Outcomes In a Close and Supply-Demand Based Economy with Heterogeneous Population using Genetic Algorithms",
+			"title": "Evaluating Taxation Policies Outcomes In a Close and Supply-Demand Based Economy with Heterogeneous Population using Genetic Algorithms",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -207,7 +207,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "Comparison Of Pandemic Intervention Policies In Different Building Types Using Spatio-Temporal Model",
+			"title": "Comparison Of Pandemic Intervention Policies In Different Building Types Using Spatio-Temporal Model",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",
@@ -227,7 +227,7 @@
 			"relevantResources": []
 		},
 		{
-			"name": "High Resolution Mathematical Model for Airborne Pandemic Spread Indoors",
+			"title": "High Resolution Mathematical Model for Airborne Pandemic Spread Indoors",
 			"participants": [
 				{
 					"name": "Teddy Lazebnik",

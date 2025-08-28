@@ -29,7 +29,7 @@ export type Project = {
 };
 
 export type AcademicPublication = {
-	name: string;
+	title: string;
 	description: string;
 	authors: string;
 	year: number;
@@ -57,7 +57,7 @@ export type Blog = {
 };
 
 export type Resource = {
-	name: string;
+	title: string;
 	description: string;
 	recommendation: string;
 	fileLinks: FileLink[];
@@ -68,7 +68,7 @@ export type Resource = {
 };
 
 export type Research = {
-	name: string;
+	title: string;
 	description: string;
 	startYear: number;
 	startMonth: number;

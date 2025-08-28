@@ -2,11 +2,12 @@
 import { Page } from '../../core/Page.js';
 import { Icons } from '../../components/icons.js';
 import { Tabs } from '../../components/tabs.js';
-import { ProjectSection } from './components/projectSection.js';
+import { ProjectSection } from './components/project-section.js';
 import { Resource } from './components/resources.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
+import { filterItemsByKeyValue } from '../../services/data-manipulator.js';
 
 let SECTIONS = ['Biography', 'Personal-projects', 'Recommended-resources'];
 
@@ -121,7 +122,7 @@ class About extends Page {
 				let panels = '';
 				let n = projectsList.length;
 				for (let i = 0; i < n; i++) {
-					panels += '<div class="projects-panel">' + projectsList[i].toHtml() + '</div>';
+					panels += '<div class="projects-panel">' + projectsList[i].render().outerHTML + '</div>';
 					if (i + 1 < n) panels += '<hr>';
 				}
 				document.getElementById('projects_cards').innerHTML = panels;
@@ -134,7 +135,7 @@ class About extends Page {
 	}
 
 	dynamicBuildProjects(projects, topic) {
-		let projectsList = ProjectSection.filterList(projects, 'topic', topic);
+		let projectsList = filterItemsByKeyValue(projects, 'topic', [topic, ALL_TOPIC_KEY]);
 		projectsList = ProjectSection.createListFromJson(projectsList);
 		let panels = '';
 		for (let i = 0; i < projectsList.length; i++) {

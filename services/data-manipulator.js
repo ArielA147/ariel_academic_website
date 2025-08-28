@@ -13,12 +13,13 @@ export function sortItemsByKey(items, key) {
  * Filter a list of objects by a specified key and value.
  * @param {any[]} items
  * @param {string} key
- * @param {any} filterValue
+ * @param {any | any[]} filterValues
  * @returns {any[]}
  */
 // filterList
-export function filterItemsByKeyValue(items, key, filterValue) {
-	return items.filter((item) => item[key] === filterValue);
+export function filterItemsByKeyValue(items, key, filterValues) {
+	const values = Array.isArray(filterValues) ? filterValues : [filterValues];
+	return items.filter((item) => item[key] === values.includes(item[key]));
 }
 
 /**
