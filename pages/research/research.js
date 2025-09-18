@@ -3,7 +3,8 @@ import { Page } from '../../core/Page.js';
 import { removeAlertsPanels } from '../../core/main.js';
 import { Icons } from '../../components/icons.js';
 import { ResearchPosition } from './components/researchPosition.js';
-import { ResearchProject } from './components/researchProject.js';
+// import { ResearchProject } from './components/researchProject.js';
+import { ResearchProject } from './components/research-project.js';
 import { Tabs } from '../../components/tabs.js';
 import { getQueryParams } from '../../services/url.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
@@ -18,8 +19,12 @@ let SECTIONS = ['Ongoing-Projects', 'Previous-Projects', 'Work-with-me'];
 class Research extends Page {
 	#openSection = null;
 	#jsonData = {};
+
+	/** @type {ResearchProject[]} */
 	#ongoingProjects = [];
+	/** @type {ResearchProject[]} */
 	#previousProjects = [];
+
 	#openPositions = [];
 
 	constructor() {
@@ -41,7 +46,7 @@ class Research extends Page {
 		const nowDate = new Date();
 
 		for (let index = 0; index < this.#jsonData['projects'].length; index++) {
-			const newProject = ResearchProject.createFromJson(this.#jsonData['projects'][index]);
+			const newProject = ResearchProject.createSingleFromJson(this.#jsonData['projects'][index]);
 			//create lists of current and prev researches using date calculation.
 			if (
 				newProject.end_year < nowDate.getFullYear() ||
@@ -92,7 +97,7 @@ class Research extends Page {
 		let answerHTML = '<div class="body-section">';
 
 		this.#ongoingProjects.forEach((research, i) => {
-			answerHTML += research.toHtml();
+			answerHTML += research.render().outerHTML;
 
 			if (i < this.#ongoingProjects.length - 1) {
 				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';
@@ -107,7 +112,7 @@ class Research extends Page {
 		let answerHTML = '<div class="body-section">';
 
 		this.#previousProjects.forEach((research, i) => {
-			answerHTML += research.toHtml();
+			answerHTML += research.render().outerHTML;
 
 			if (i < this.#previousProjects.length - 1) {
 				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';

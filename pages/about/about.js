@@ -136,7 +136,7 @@ class About extends Page {
 
 	dynamicBuildProjects(projects, topic) {
 		/**
-		 * @type {import('./components/project-section.js').ProjectSection[]}
+		 * @type {ProjectSection[]}
 		 */
 		let projectsList = filterItemsByKeyValue(projects, 'topic', [topic, ALL_TOPIC_KEY]);
 		projectsList = ProjectSection.createListFromJson(projectsList);

@@ -4,6 +4,7 @@ export type Lecturer = {
 	field: string;
 	email: string;
 	linkedinLink: string;
+	websiteLink: string;
 	googleScholarLink: string;
 	facebookLink: string;
 	githubLink: string;
@@ -75,10 +76,11 @@ export type Research = {
 	endYear: number;
 	endMonth: number;
 	teamMembers: number;
-	participants: ResourceParticipant[];
+	participants: ResearchParticipant[];
 	relevantResources: any[]; // TODO: define a more specific type for relevant resources
 };
 
-type ResourceParticipant = Lecturer & {
+type ResearchParticipant = Lecturer & {
+	title: string;
 	role: string;
 };
