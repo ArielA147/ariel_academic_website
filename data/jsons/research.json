@@ -59,11 +59,11 @@
 				}
 			],
 			"description": "Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar,  scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the Co-authroship panel. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four disciplines and various academic institutions. Our results suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars' selections.",
-			"start_month": 3,
-			"start_year": 2023,
-			"end_month": 8,
-			"end_year": 2023,
-			"team_members": 2,
+			"startMonth": 3,
+			"startYear": 2023,
+			"endMonth": 8,
+			"endYear": 2023,
+			"teamMembers": 2,
 			"relevantResources": []
 		},
 		{
@@ -87,11 +87,11 @@
 				}
 			],
 			"description": "In this research, we propose a novel Pandemic Intervention Policy (PIP) that relies on the strategic deployment of Inspection Units (IUs). These IUs are allocated in the environment, represented as a graph, and sample individuals who pass through the same node. If a sampled individual is identified as infected, she is extracted from the environment until she recovers (or dies).",
-			"start_month": 3,
-			"start_year": 2022,
-			"end_month": 7,
-			"end_year": 2022,
-			"team_members": 3,
+			"startMonth": 3,
+			"startYear": 2022,
+			"endMonth": 7,
+			"endYear": 2022,
+			"teamMembers": 3,
 			"relevantResources": []
 		},
 		{
@@ -115,11 +115,11 @@
 				}
 			],
 			"description": "We measured the energetic consumption and air ventilation capabilities of central air-ventilation fresh air system, anti-bacterial indoor device, and open window in inpatient rooms, classrooms, and conference rooms. This way, we will find the Parto-optimal trade-off between energy consumption and pandemic spread.",
-			"start_month": 6,
-			"start_year": 2022,
-			"end_month": 11,
-			"end_year": 2022,
-			"team_members": 3,
+			"startMonth": 6,
+			"startYear": 2022,
+			"endMonth": 11,
+			"endYear": 2022,
+			"teamMembers": 3,
 			"relevantResources": []
 		},
 		{
@@ -143,11 +143,11 @@
 				}
 			],
 			"description": "We extend the previous work - not sure how at this point...",
-			"start_month": 7,
-			"start_year": 2022,
-			"end_month": 12,
-			"end_year": 2022,
-			"team_members": 3,
+			"startMonth": 7,
+			"startYear": 2022,
+			"endMonth": 12,
+			"endYear": 2022,
+			"teamMembers": 3,
 			"relevantResources": []
 		},
 		{
@@ -171,11 +171,11 @@
 				}
 			],
 			"description": "We investigate the ecosystem's sensitivity during a multi-strain pandemic for several properties in syntactic cases. In addition, we used two real-world configurations to evaluate the influence of the inner-species and cross-species infection on the long-term ecosystem's stability, showing that cross-infection.",
-			"start_month": 10,
-			"start_year": 2022,
-			"end_month": 3,
-			"end_year": 2023,
-			"team_members": 3,
+			"startMonth": 10,
+			"startYear": 2022,
+			"endMonth": 3,
+			"endYear": 2023,
+			"teamMembers": 3,
 			"relevantResources": []
 		},
 		{
@@ -199,11 +199,11 @@
 				}
 			],
 			"description": "We developed a mathematical model and computer simulation for close economy supply-demand model to evaluate taxation policies.",
-			"start_month": 8,
-			"start_year": 2021,
-			"end_month": 1,
-			"end_year": 2022,
-			"team_members": 3,
+			"startMonth": 8,
+			"startYear": 2021,
+			"endMonth": 1,
+			"endYear": 2022,
+			"teamMembers": 3,
 			"relevantResources": []
 		},
 		{
@@ -219,11 +219,11 @@
 				}
 			],
 			"description": "We are studing the pandemic spread indoor for several types of buildings based on extended SIR model",
-			"start_month": 4,
-			"start_year": 2021,
-			"end_month": 7,
-			"end_year": 2021,
-			"team_members": 3,
+			"startMonth": 4,
+			"startYear": 2021,
+			"endMonth": 7,
+			"endYear": 2021,
+			"teamMembers": 3,
 			"relevantResources": []
 		},
 		{
@@ -239,11 +239,11 @@
 				}
 			],
 			"description": "We investigate the influance of air circulation inside a room on the pandemic spread.",
-			"start_month": 1,
-			"start_year": 2022,
-			"end_month": 6,
-			"end_year": 2022,
-			"team_members": 2,
+			"startMonth": 1,
+			"startYear": 2022,
+			"endMonth": 6,
+			"endYear": 2022,
+			"teamMembers": 2,
 			"relevantResources": []
 		}
 	]
