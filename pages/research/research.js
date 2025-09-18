@@ -24,7 +24,6 @@ class Research extends Page {
 
 	constructor() {
 		super();
-
 		const queryParams = getQueryParams();
 		if (queryParams.has('section')) {
 			this.#openSection = queryParams.get('section');

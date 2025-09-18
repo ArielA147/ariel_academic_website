@@ -1,13 +1,13 @@
-// imports
 import { Page } from '../../core/Page.js';
 import { Icons } from '../../components/icons.js';
 import { Tabs } from '../../components/tabs.js';
 import { ProjectSection } from './components/project-section.js';
-import { Resource } from './components/resources.js';
+import { Resource } from './components/resource.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
 import { filterItemsByKeyValue } from '../../services/data-manipulator.js';
+import { TEMPLATES_LOADED_EVENT } from '../../constants/events.js';
 
 let SECTIONS = ['Biography', 'Personal-projects', 'Recommended-resources'];
 
@@ -15,7 +15,7 @@ let ALL_TOPIC_KEY = 'all';
 
 class About extends Page {
 	#openSection = null;
-	/** @type {import('../../constants/types.js').Resource} */
+	/** @type {import('../../constants/types.js').Resource[]} */
 	#resourcesObj = {};
 
 	constructor() {
@@ -42,7 +42,7 @@ class About extends Page {
 
 		// build tabs' content
 		this.buildBiography(indexLecturerObj);
-		this.buildProjects(indexLecturerObj);
+		// this.buildProjects(indexLecturerObj);
 		this.buildResources(false, 'buildFilters');
 
 		this.createTabsSection();
@@ -135,11 +135,14 @@ class About extends Page {
 	}
 
 	dynamicBuildProjects(projects, topic) {
+		/**
+		 * @type {import('./components/project-section.js').ProjectSection[]}
+		 */
 		let projectsList = filterItemsByKeyValue(projects, 'topic', [topic, ALL_TOPIC_KEY]);
 		projectsList = ProjectSection.createListFromJson(projectsList);
 		let panels = '';
 		for (let i = 0; i < projectsList.length; i++) {
-			panels += '<div class="projects-panel">' + projectsList[i].toHtml() + '</div>';
+			panels += '<div class="projects-panel">' + projectsList[i].render().outerHTML + '</div>';
 		}
 		document.getElementById('projects_cards').innerHTML = panels;
 	}
@@ -329,7 +332,7 @@ class About extends Page {
 					'No resources to show.');
 			} else {
 				for (let i = 0; i < resourcesList.length; i++) {
-					res_section.innerHTML += resourcesList[i].toHtml();
+					res_section.innerHTML += resourcesList[i].render().outerHTML;
 				}
 			}
 		} else {
@@ -344,7 +347,7 @@ class About extends Page {
 				}
 
 				if (value == filter) {
-					res_section.innerHTML += resourcesList[i].toHtml();
+					res_section.innerHTML += resourcesList[i].render().outerHTML;
 				}
 				let reset = document.getElementById('reset-btn');
 				reset.innerHTML = Icons.reset() + ' Reset';
@@ -383,7 +386,10 @@ class About extends Page {
 }
 
 document.aboutPage = new About();
-document.aboutPage.build();
+document.addEventListener(TEMPLATES_LOADED_EVENT, async () => {
+	await document.aboutPage.build();
+});
+
 document.getElementById('reset-btn').addEventListener('click', () => {
 	document.aboutPage.clearFiltersDesign();
 	document.aboutPage.buildResources();
