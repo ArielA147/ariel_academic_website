@@ -55,6 +55,7 @@ export type Blog = {
 	year: number;
 	month: number;
 	day: number;
+	order: number;
 };
 
 export type Resource = {

@@ -4,7 +4,6 @@
  * @param {string} key
  * @returns {any[]}
  */
-// sortByProperty
 export function sortItemsByKey(items, key) {
 	return items.sort((a, b) => a[key] - b[key]);
 }
@@ -16,7 +15,6 @@ export function sortItemsByKey(items, key) {
  * @param {any | any[]} filterValues
  * @returns {any[]}
  */
-// filterList
 export function filterItemsByKeyValue(items, key, filterValues) {
 	const values = Array.isArray(filterValues) ? filterValues : [filterValues];
 	return items.filter((item) => item[key] === values.includes(item[key]));
@@ -28,7 +26,6 @@ export function filterItemsByKeyValue(items, key, filterValues) {
  * @param {string} key
  * @returns {any[]}
  */
-// splitByProperty
 export function groupItemsByKey(items, key) {
 	return items.reduce((acc, item) => {
 		const value = item[key];
