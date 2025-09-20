@@ -1,6 +1,7 @@
 import { Component } from '../core/Component.js';
 import { isFileFormat } from '../services/files.js';
 import { descriptionTrim } from '../utils/descriptionSlicer.js';
+import { Icons } from './icons.js';
 
 export class PublicationCard extends Component {
 	title;
@@ -55,12 +56,15 @@ export class PublicationCard extends Component {
 
 		publicationCard.querySelector('.title').textContent = this.title;
 
+		const citeBtn = publicationCard.querySelector('.cite-btn');
+		citeBtn.innerHTML = `${Icons.cite()} Cite`;
+
 		if (this.fileLinks?.[1]?.link) {
-			publicationCard.querySelector('.cite-btn').addEventListener('click', async () => {
+			citeBtn.addEventListener('click', async () => {
 				await this.copyCitation(this.title);
 			});
 		} else {
-			publicationCard.querySelector('.cite-btn').remove();
+			citeBtn.remove();
 		}
 
 		publicationCard.querySelector('.authors').textContent = this.authors;

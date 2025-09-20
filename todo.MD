@@ -20,7 +20,7 @@ ariel academic website:
 
 
 advanced:
-[] instead of having all the components as js files, create a .js and .html for each component (like angular). the .js extends new class Component, that fetches the .html file, injects props and content and renders it to the page (some methods like render or fetchComponent will be in the base class)
+[x] instead of having all the components as js files, create a .js and .html for each component (like angular). the .js extends new class Component, that fetches the .html file, injects props and content and renders it to the page (some methods like render or fetchComponent will be in the base class)
 [] move the createListFromJson and createFromJson static methods to the Component class. each sub-component class will implement a "getConstructorParams" function that recieves a data object input and returns an object with the data for the constructor - the constructor destructures the object into the relevant fields
 
 project/

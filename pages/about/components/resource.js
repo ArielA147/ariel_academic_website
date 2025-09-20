@@ -1,3 +1,4 @@
+import { Icons } from '../../../components/icons.js';
 import { Component } from '../../../core/Component.js';
 import { descriptionTrim } from '../../../utils/descriptionSlicer.js';
 
@@ -31,12 +32,15 @@ export class Resource extends Component {
 
 		resource.querySelector('.title').textContent = this.title;
 
+		const citeBtn = resource.querySelector('.cite-btn');
+		citeBtn.innerHTML = `${Icons.cite()} Cite`;
+
 		if (this.fileLinks[0]?.link) {
-			resource.querySelector('.cite-btn').addEventListener('click', async () => {
+			citeBtn.addEventListener('click', async () => {
 				await this.copyCitation(this.title);
 			});
 		} else {
-			resource.querySelector('.cite-btn').remove();
+			citeBtn.remove();
 		}
 
 		if (this.authors) {
