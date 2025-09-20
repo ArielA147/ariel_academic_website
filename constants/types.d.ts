@@ -58,6 +58,14 @@ export type Blog = {
 	order: number;
 };
 
+export type NextBlog = {
+	title: string;
+	date: string;
+	description: string;
+	readingTime: string;
+	linkAddress: string;
+};
+
 export type Resource = {
 	title: string;
 	description: string;
