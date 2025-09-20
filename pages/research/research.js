@@ -1,9 +1,6 @@
-// imports
 import { Page } from '../../core/Page.js';
 import { removeAlertsPanels } from '../../core/main.js';
 import { Icons } from '../../components/icons.js';
-import { ResearchPosition } from './components/researchPosition.js';
-// import { ResearchProject } from './components/researchProject.js';
 import { ResearchProject } from './components/research-project.js';
 import { Tabs } from '../../components/tabs.js';
 import { getQueryParams } from '../../services/url.js';
@@ -11,7 +8,7 @@ import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
-let SECTIONS = ['Ongoing-Projects', 'Previous-Projects', 'Work-with-me'];
+let SECTIONS = ['Ongoing-Projects', 'Previous-Projects'];
 
 /*
 	Single instance class to build about page with dynamic content from JSONS from the server
@@ -24,8 +21,6 @@ class Research extends Page {
 	#ongoingProjects = [];
 	/** @type {ResearchProject[]} */
 	#previousProjects = [];
-
-	#openPositions = [];
 
 	constructor() {
 		super();
@@ -58,12 +53,6 @@ class Research extends Page {
 				this.#ongoingProjects.push(newProject);
 			}
 		}
-
-		for (var index = 0; index < this.#jsonData['open_positions'].length; index++) {
-			this.#openPositions.push(
-				ResearchPosition.createFromJson(this.#jsonData['open_positions'][index]),
-			);
-		}
 	}
 
 	// just gather all the build of all the sections in the page - one per call to the server side
@@ -76,7 +65,6 @@ class Research extends Page {
 		let tabsHTML = '';
 		tabsHTML += this.buildOngoing();
 		tabsHTML += this.buildPrevious();
-		tabsHTML += this.buildWorkWithMe();
 		document.getElementById('main-body-page').innerHTML += tabsHTML;
 
 		// open the right tab according to the url
@@ -90,7 +78,6 @@ class Research extends Page {
 		Tabs.createTabsSection();
 		Tabs.addTab('Ongoing Projects', 'Ongoing');
 		Tabs.addTab('Previous Projects', 'Previous');
-		Tabs.addTab('Work with me', 'Join me', true);
 	}
 
 	buildOngoing() {
@@ -115,26 +102,6 @@ class Research extends Page {
 			answerHTML += research.render().outerHTML;
 
 			if (i < this.#previousProjects.length - 1) {
-				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';
-			}
-		});
-
-		answerHTML += '</div>';
-		return answerHTML;
-	}
-
-	buildWorkWithMe() {
-		let answerHTML = '<div class="body-section">';
-
-		if (this.#jsonData['work_with_me_opening'] != '') {
-			answerHTML +=
-				'<div class="opening-statment">' + this.#jsonData['work_with_me_opening'] + '</div>';
-		}
-
-		this.#openPositions.forEach((position, i) => {
-			answerHTML += position.toHtml();
-
-			if (i < this.#openPositions.length - 1) {
 				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';
 			}
 		});

@@ -91,7 +91,6 @@ research:
 	- ResearchProject
 		- researchTeamMember
 		- courseResource
-	- ResearchPosition
 	- Icons
 	- Tabs
 
