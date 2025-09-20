@@ -1,94 +1,146 @@
 [
-		{
-         "name":"The Academic Midas Touch: A citation-based indicator of research excellence",
-         "description":"Purpose: This paper introduces a novel perspective on academic excellence, focusing on a researcher’s consistent ability to produce highly-cited publications, and demonstrates its utility in distinguishing high- achieving scientists compared to traditional scientometric indicators. Design/methodology/approach: We formulate this new perspective using a simple yet effective indicator termed the 'Academic Midas Touch' (AMT). We then empirically analyze how AMT aligns with or diverges from popular scientometrics such as the H-index, i10-index, and citation counts. We further evaluate AMT’s effectiveness in identifying award-winning scientists, using these awards as a proxy for recognized academic excellence. Findings: Our empirical analysis reveals that the AMT offers a distinct measure of academic excellence that does not fully correlate with commonly used scientometrics. Furthermore, AMT favorably compares to these traditional metrics in its ability to accurately identify award-winning scientists. Research limitations: The AMT emphasizes short-term citation accumulation, thus it may overlook long-term dynamics such as 'sleeping beauties'. Additionally, mindful parameter tuning and contextual interpretation within a specific discipline or a meaningful cohort of peers are necessary. Finally, the AMT does not seek to fully capture the multidimensional complexities of research excellence such as collaborations, mentoring, and societal impact. Practical implications: The findings suggest that AMT can serve as a valuable complementary tool for evaluating researchers, particularly in contexts such as excellence recognition, award nominations, grant applications, and faculty promotions, providing an under-explored view of a researcher’s consistent ability to produce highly-influential publications. Originality/value: This work introduces a unique conceptualization and measurement of academic excellence, shifting the focus from cumulative impact to the consistent propensity for producing highly-cited publications. The resulting AMT indicator provides a fresh perspective that complements existing scientometrics, offering a more nuanced understanding and recognition of research excellence.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/gold_touch.pdf"},
-					  {"info": "cite", "type": 3, "link": "Rosenfeld, A., Alexi, A., Mushiev, L., Lazebnik, T., The Academic Midas Touch: A citation-based indicator of research excellence. Journal of Data and Information Science. 2025."}],
-		 "authors": "Ariel Rosenfeld, Ariel Alexi, Liel Mushiev, Teddy Lazebnik",
-         "year": 2025,
-         "topic":"Machine learning",
-         "type":"Paper",
-         "publisher":"Journal of Data and Information Science",
-         "publicationStatus":"Published"
-      },
-	  	{
-         "name":"The scientometrics and reciprocality underlying co-authorship panels in Google Scholar profiles",
-         "description":"Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar, scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the “co-authroship panel”. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four dieffectsciplines and various academic institutions. Our results seem to suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars’ selections.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/coauthors_panel.pdf"},
-					  {"info": "cite", "type": 3, "link": "Alexi, A., Lazebnik, T., Rosenfeld, A. The scientometrics and reciprocality underlying co-authorship panels in Google Scholar profiles. Scientometrics. 2024."}],
-		 "authors": "Ariel Alexi, Teddy Lazebnik, Ariel Rosenfeld",
-         "year": 2024,
-         "topic":"Social",
-         "type":"Paper",
-         "publisher":"Scientometrics",
-         "publicationStatus":"Published"
-      },	{
-         "name":"Multi-species prey–predator dynamics during a multi-strain pandemic ",
-         "description":"Small and large scale pandemics are a natural phenomenon repeatably appearing throughout history, causing ecological and biological shifts in ecosystems and a wide range of their habitats. These pandemics usually start with a single strain but shortly become multi-strain due to a mutation process of the pathogen causing the epidemic. In this study, we propose a novel eco-epidemiological model that captures multi-species prey–predator dynamics with a multi-strain pandemic. The proposed model extends and combines the Lotka–Volterra prey–predator model and the Susceptible–Infectious–Recovered epidemiological model. We investigate the ecosystem’s sensitivity and stability during such a multi-strain pandemic through extensive simulation relying on both synthetic cases as well as two real-world configurations. Our results are aligned with known ecological and epidemiological findings, thus supporting the adequacy of the proposed model in realistically capturing the complex eco-epidemiological properties of the multi-species multi-strain pandemic dynamics.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/msms.pdf"},
-					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T. Multi-species prey–predator dynamics during a multi-strain pandemic. Chaos. 2023."}],
-		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
-         "year": 2023,
-         "topic":"Biomathematics",
-         "type":"Paper",
-         "publisher":"Chaos",
-         "publicationStatus":"Published"
-      },
-	  {
-         "name":"Microfounded tax revenue forecast model with heterogeneous population and genetic algorithm approach",
-         "description":"The ability of governments to accurately forecast tax revenues is essential for the successful implementation of fiscal programs. However, forecasting state government tax revenues using only aggregate economic variables is subject to Lucas’s critique, which is left not fully answered as classical methods do not consider the complex feedback dynamics between heterogeneous consumers, businesses, and the government. In this study we present an agent-based model with a heterogeneous population and genetic algorithm-based decision-making to model and simulate an economy with taxation policy dynamics. The model focuses on assessing state tax revenues obtained from regions or cities within countries while introducing consumers and businesses, each with unique attributes and a decision-making mechanism driven by an adaptive genetic algorithm. We demonstrate the efficacy of the proposed method on a small village, resulting in a mean relative error of 5.44 +- 2.34 percent from the recorded taxes over 4 years and 4.08 +- 1.21 percent for the following year’s assessment. Moreover, we demonstrate the model’s ability to evaluate the effect of different taxation policies on economic activity and tax revenues.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/economy_model.pdf"},
-					  {"info": "cite", "type": 3, "link": "Alexi, A., Lazebnik, T., Shami, L. Microfounded Tax Revenue Forecast Model with Heterogeneous Population and Genetic Algorithm Approach. Computational Economics. 2023."}],
-		 "authors": "Ariel Alexi, Teddy Lazebnik, Labib Shami",
-         "year": 2023,
-         "topic":"Economic",
-         "type":"Paper",
-         "publisher":"Computational Economics",
-         "publicationStatus":"Published"
-      },	{
-         "name":"High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread",
-         "description":"Airborne pandemics have caused millions of deaths worldwide, large-scale economic losses, and catastrophic sociological shifts in human history. Researchers have developed multiple mathematical models and computational frameworks to investigate and predict pandemic spread on various levels and scales such as countries, cities, large social events, and even buildings. However, attempts of modeling airborne pandemic dynamics on the smallest scale, a single room, have been mostly neglected. As time indoors increases due to global urbanization processes, more infections occur in shared rooms. In this study, a high-resolution spatio-temporal epidemiological model with airflow dynamics to evaluate airborne pandemic spread is proposed. The model is implemented, using Python, with high-resolution 3D data obtained from a light detection and ranging (LiDAR) device and computing model based on the Computational Fluid Dynamics (CFD) model for the airflow and the Susceptible–Exposed–Infected (SEI) model for the epidemiological dynamics. The pandemic spread is evaluated in four types of rooms, showing significant differences even for a short exposure duration. We show that the room’s topology and individual distribution in the room define the ability of air ventilation to reduce pandemic spread throughout breathing zone infection.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/aura_1.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Alexi, A., High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread. Mathematics. 2023."}],
-		 "authors": "Teddy Lazebnik, Ariel Alexi",
-         "year": 2023,
-         "topic":"Epidemiology",
-         "type":"Paper",
-         "publisher":"Mathematics",
-         "publicationStatus":"Published"
-      },	{
-         "name":"A Security Games Inspired Approach for Distributed Control of Pandemic Spread",
-         "description":"Pandemics are a source of extensive mortality, economic impairment, and dramatic social fluctuation. Once a pandemic occurs, policymakers are faced with the highly challenging task of controlling it over time and space. In this article, a novel pandemic intervention policy that relies on the strategic deployment of inspection units (IUs) is proposed. These IUs are allocated in the environment, represented as a graph, and sample individuals who pass through the same node. If a sampled individual is identified as infected, she is extracted from the environment until she recovers (or dies). A realistic simulation‐based evaluation of the Influenza A pathogen using both synthetic and real‐world data is provided. The results demonstrate potential significant benefits of the proposed PIP in mitigating a pandemic spread which can complement other standard policies such as social distancing and mask-wearing.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/iu_pandemic.pdf"},
-					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T., A Security Games Inspired Approach for Distributed Control of Pandemic Spread. Advanced Theory and Simulations. 2022."}],
-		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
-         "year": 2022,
-         "topic":"Epidemiology",
-         "type":"Paper",
-         "publisher":"Advanced Theory and Simulations",
-         "publicationStatus":"Published"
-      },
 	{
-         "name":"The Trade-Off between Airborne Pandemic Control and Energy Consumption Using Air Ventilation Solutions",
-         "description":"A single paragraph of about 200 words maximum. For research articles, abstracts should give a pertinent overview of the work. We strongly encourage authors to use the following style of structured abstracts, but without headings: (1) Background: place the question addressed in a broad context and highlight the purpose of the study; (2) Methods: describe briefly the main methods or treatments applied; (3) Results: summarize the article’s main findings; (4) Conclusions: indicate the main conclusions or interpretations. The abstract should be an objective representation of the article, it must not contain results which are not presented and substantiated in the main text and should not exaggerate the main conclusions. Airborne diseases cause high mortality and adverse socioeconomic consequences. Due to urbanization, more people spend more time indoors. According to recent research, air ventilation reduces long-range airborne transmission in indoor settings. However, air ventilation solutions often incur significant energy costs and ecological footprints. The trade-offs between energy consumption and pandemic control indoors have not yet been thoroughly analyzed. In this work, we use advanced sensors to monitor the energy consumption and pandemic control capabilities of an air-conditioning system, a pedestal fan, and an open window in hospital rooms, classrooms, and conference rooms. A simulation of an indoor airborne pandemic spread of Coronavirus (COVID-19) is used to analyze the Pareto front. For the three examined room types, the Pareto front consists of all three air ventilation solutions, with some ventilation configurations demonstrating significant inefficiencies. Specifically, air-conditioning is found to be efficient only at a very high energy cost and fans seem to pose a reasonable alternative. To conclude, a more informed ventilation policy can bring about a more desirable compromise between energy consumption and pandemic spread control.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sensors_alexi.pdf"},
-					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T., The Trade-Off between Airborne Pandemic Control and Energy Consumption Using Air Ventilation Solutions. Sensors. 2022."}],
-		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
-         "year": 2022,
-         "topic":"Epidemiology",
-         "type":"Paper",
-         "publisher":"Sensors",
-         "publicationStatus":"Published"
-      },      {
-         "name":"Comparison of pandemic intervention policies in several building types using heterogeneous population model",
-         "description":"In a world where pandemics are a matter of time and increasing urbanization of the world’s population, governments should be prepared with pandemic intervention policies (IPs) to minimize the crisis direct and indirect adverse effects while keeping normal life as much as possible. Successful pandemic IPs have to take into consideration the heterogeneous behavior of individuals in different types of buildings and social contexts. In this study, we propose a spatio-temporal, heterogeneous population model and in silico simulation to evaluate pandemic IPs in four types of buildings - home, office, school, and mall. We show that indeed each building type has a unique pandemic spread and therefore a different optimal IP. Moreover, we show that temporal-based IPs (such as mask wearing) have a similar influence on the pandemic spread in all four building types while spatial-based IPs (such as social distance) highly differ.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/indoor_pandemic.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Alexi, A., Comparison of pandemic intervention policies in several building types using heterogeneous population model. Communications in Nonlinear Science and Numerical Simulation. 2021."}],
-		 "authors": "Teddy Lazebnik, Ariel Alexi",
-         "year": 2021,
-         "topic":"Epidemiology",
-         "type":"Paper",
-         "publisher":"Communications in Nonlinear Science and Numerical Simulation",
-         "publicationStatus":"Published"
-      }
+		"title": "The Academic Midas Touch: A citation-based indicator of research excellence",
+		"description": "Purpose: This paper introduces a novel perspective on academic excellence, focusing on a researcher’s consistent ability to produce highly-cited publications, and demonstrates its utility in distinguishing high- achieving scientists compared to traditional scientometric indicators. Design/methodology/approach: We formulate this new perspective using a simple yet effective indicator termed the 'Academic Midas Touch' (AMT). We then empirically analyze how AMT aligns with or diverges from popular scientometrics such as the H-index, i10-index, and citation counts. We further evaluate AMT’s effectiveness in identifying award-winning scientists, using these awards as a proxy for recognized academic excellence. Findings: Our empirical analysis reveals that the AMT offers a distinct measure of academic excellence that does not fully correlate with commonly used scientometrics. Furthermore, AMT favorably compares to these traditional metrics in its ability to accurately identify award-winning scientists. Research limitations: The AMT emphasizes short-term citation accumulation, thus it may overlook long-term dynamics such as 'sleeping beauties'. Additionally, mindful parameter tuning and contextual interpretation within a specific discipline or a meaningful cohort of peers are necessary. Finally, the AMT does not seek to fully capture the multidimensional complexities of research excellence such as collaborations, mentoring, and societal impact. Practical implications: The findings suggest that AMT can serve as a valuable complementary tool for evaluating researchers, particularly in contexts such as excellence recognition, award nominations, grant applications, and faculty promotions, providing an under-explored view of a researcher’s consistent ability to produce highly-influential publications. Originality/value: This work introduces a unique conceptualization and measurement of academic excellence, shifting the focus from cumulative impact to the consistent propensity for producing highly-cited publications. The resulting AMT indicator provides a fresh perspective that complements existing scientometrics, offering a more nuanced understanding and recognition of research excellence.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/gold_touch.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Rosenfeld, A., Alexi, A., Mushiev, L., Lazebnik, T., The Academic Midas Touch: A citation-based indicator of research excellence. Journal of Data and Information Science. 2025."
+			}
+		],
+		"authors": "Ariel Rosenfeld, Ariel Alexi, Liel Mushiev, Teddy Lazebnik",
+		"year": 2025,
+		"topic": "Machine learning",
+		"type": "Paper",
+		"publisher": "Journal of Data and Information Science",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "The scientometrics and reciprocality underlying co-authorship panels in Google Scholar profiles",
+		"description": "Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar, scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the “co-authroship panel”. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four dieffectsciplines and various academic institutions. Our results seem to suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars’ selections.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/coauthors_panel.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Alexi, A., Lazebnik, T., Rosenfeld, A. The scientometrics and reciprocality underlying co-authorship panels in Google Scholar profiles. Scientometrics. 2024."
+			}
+		],
+		"authors": "Ariel Alexi, Teddy Lazebnik, Ariel Rosenfeld",
+		"year": 2024,
+		"topic": "Social",
+		"type": "Paper",
+		"publisher": "Scientometrics",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "Multi-species prey-predator dynamics during a multi-strain pandemic ",
+		"description": "Small and large scale pandemics are a natural phenomenon repeatably appearing throughout history, causing ecological and biological shifts in ecosystems and a wide range of their habitats. These pandemics usually start with a single strain but shortly become multi-strain due to a mutation process of the pathogen causing the epidemic. In this study, we propose a novel eco-epidemiological model that captures multi-species prey-predator dynamics with a multi-strain pandemic. The proposed model extends and combines the Lotka–Volterra prey–predator model and the Susceptible–Infectious–Recovered epidemiological model. We investigate the ecosystem’s sensitivity and stability during such a multi-strain pandemic through extensive simulation relying on both synthetic cases as well as two real-world configurations. Our results are aligned with known ecological and epidemiological findings, thus supporting the adequacy of the proposed model in realistically capturing the complex eco-epidemiological properties of the multi-species multi-strain pandemic dynamics.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/msms.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Alexi, A., Rosenfeld, A., Lazebnik, T. Multi-species prey-predator dynamics during a multi-strain pandemic. Chaos. 2023."
+			}
+		],
+		"authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
+		"year": 2023,
+		"topic": "Biomathematics",
+		"type": "Paper",
+		"publisher": "Chaos",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "Microfounded tax revenue forecast model with heterogeneous population and genetic algorithm approach",
+		"description": "The ability of governments to accurately forecast tax revenues is essential for the successful implementation of fiscal programs. However, forecasting state government tax revenues using only aggregate economic variables is subject to Lucas’s critique, which is left not fully answered as classical methods do not consider the complex feedback dynamics between heterogeneous consumers, businesses, and the government. In this study we present an agent-based model with a heterogeneous population and genetic algorithm-based decision-making to model and simulate an economy with taxation policy dynamics. The model focuses on assessing state tax revenues obtained from regions or cities within countries while introducing consumers and businesses, each with unique attributes and a decision-making mechanism driven by an adaptive genetic algorithm. We demonstrate the efficacy of the proposed method on a small village, resulting in a mean relative error of 5.44 +- 2.34 percent from the recorded taxes over 4 years and 4.08 +- 1.21 percent for the following year’s assessment. Moreover, we demonstrate the model’s ability to evaluate the effect of different taxation policies on economic activity and tax revenues.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/economy_model.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Alexi, A., Lazebnik, T., Shami, L. Microfounded Tax Revenue Forecast Model with Heterogeneous Population and Genetic Algorithm Approach. Computational Economics. 2023."
+			}
+		],
+		"authors": "Ariel Alexi, Teddy Lazebnik, Labib Shami",
+		"year": 2023,
+		"topic": "Economic",
+		"type": "Paper",
+		"publisher": "Computational Economics",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread",
+		"description": "Airborne pandemics have caused millions of deaths worldwide, large-scale economic losses, and catastrophic sociological shifts in human history. Researchers have developed multiple mathematical models and computational frameworks to investigate and predict pandemic spread on various levels and scales such as countries, cities, large social events, and even buildings. However, attempts of modeling airborne pandemic dynamics on the smallest scale, a single room, have been mostly neglected. As time indoors increases due to global urbanization processes, more infections occur in shared rooms. In this study, a high-resolution spatio-temporal epidemiological model with airflow dynamics to evaluate airborne pandemic spread is proposed. The model is implemented, using Python, with high-resolution 3D data obtained from a light detection and ranging (LiDAR) device and computing model based on the Computational Fluid Dynamics (CFD) model for the airflow and the Susceptible–Exposed–Infected (SEI) model for the epidemiological dynamics. The pandemic spread is evaluated in four types of rooms, showing significant differences even for a short exposure duration. We show that the room’s topology and individual distribution in the room define the ability of air ventilation to reduce pandemic spread throughout breathing zone infection.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/aura_1.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Lazebnik, T., Alexi, A., High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread. Mathematics. 2023."
+			}
+		],
+		"authors": "Teddy Lazebnik, Ariel Alexi",
+		"year": 2023,
+		"topic": "Epidemiology",
+		"type": "Paper",
+		"publisher": "Mathematics",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "A Security Games Inspired Approach for Distributed Control of Pandemic Spread",
+		"description": "Pandemics are a source of extensive mortality, economic impairment, and dramatic social fluctuation. Once a pandemic occurs, policymakers are faced with the highly challenging task of controlling it over time and space. In this article, a novel pandemic intervention policy that relies on the strategic deployment of inspection units (IUs) is proposed. These IUs are allocated in the environment, represented as a graph, and sample individuals who pass through the same node. If a sampled individual is identified as infected, she is extracted from the environment until she recovers (or dies). A realistic simulation‐based evaluation of the Influenza A pathogen using both synthetic and real‐world data is provided. The results demonstrate potential significant benefits of the proposed PIP in mitigating a pandemic spread which can complement other standard policies such as social distancing and mask-wearing.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/iu_pandemic.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Alexi, A., Rosenfeld, A., Lazebnik, T., A Security Games Inspired Approach for Distributed Control of Pandemic Spread. Advanced Theory and Simulations. 2022."
+			}
+		],
+		"authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
+		"year": 2022,
+		"topic": "Epidemiology",
+		"type": "Paper",
+		"publisher": "Advanced Theory and Simulations",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "The Trade-Off between Airborne Pandemic Control and Energy Consumption Using Air Ventilation Solutions",
+		"description": "A single paragraph of about 200 words maximum. For research articles, abstracts should give a pertinent overview of the work. We strongly encourage authors to use the following style of structured abstracts, but without headings: (1) Background: place the question addressed in a broad context and highlight the purpose of the study; (2) Methods: describe briefly the main methods or treatments applied; (3) Results: summarize the article’s main findings; (4) Conclusions: indicate the main conclusions or interpretations. The abstract should be an objective representation of the article, it must not contain results which are not presented and substantiated in the main text and should not exaggerate the main conclusions. Airborne diseases cause high mortality and adverse socioeconomic consequences. Due to urbanization, more people spend more time indoors. According to recent research, air ventilation reduces long-range airborne transmission in indoor settings. However, air ventilation solutions often incur significant energy costs and ecological footprints. The trade-offs between energy consumption and pandemic control indoors have not yet been thoroughly analyzed. In this work, we use advanced sensors to monitor the energy consumption and pandemic control capabilities of an air-conditioning system, a pedestal fan, and an open window in hospital rooms, classrooms, and conference rooms. A simulation of an indoor airborne pandemic spread of Coronavirus (COVID-19) is used to analyze the Pareto front. For the three examined room types, the Pareto front consists of all three air ventilation solutions, with some ventilation configurations demonstrating significant inefficiencies. Specifically, air-conditioning is found to be efficient only at a very high energy cost and fans seem to pose a reasonable alternative. To conclude, a more informed ventilation policy can bring about a more desirable compromise between energy consumption and pandemic spread control.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/sensors_alexi.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Alexi, A., Rosenfeld, A., Lazebnik, T., The Trade-Off between Airborne Pandemic Control and Energy Consumption Using Air Ventilation Solutions. Sensors. 2022."
+			}
+		],
+		"authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
+		"year": 2022,
+		"topic": "Epidemiology",
+		"type": "Paper",
+		"publisher": "Sensors",
+		"publicationStatus": "Published"
+	},
+	{
+		"title": "Comparison of pandemic intervention policies in several building types using heterogeneous population model",
+		"description": "In a world where pandemics are a matter of time and increasing urbanization of the world’s population, governments should be prepared with pandemic intervention policies (IPs) to minimize the crisis direct and indirect adverse effects while keeping normal life as much as possible. Successful pandemic IPs have to take into consideration the heterogeneous behavior of individuals in different types of buildings and social contexts. In this study, we propose a spatio-temporal, heterogeneous population model and in silico simulation to evaluate pandemic IPs in four types of buildings - home, office, school, and mall. We show that indeed each building type has a unique pandemic spread and therefore a different optimal IP. Moreover, we show that temporal-based IPs (such as mask wearing) have a similar influence on the pandemic spread in all four building types while spatial-based IPs (such as social distance) highly differ.",
+		"fileLinks": [
+			{ "info": "download", "type": 1, "link": "/files/indoor_pandemic.pdf" },
+			{
+				"info": "cite",
+				"type": 3,
+				"link": "Lazebnik, T., Alexi, A., Comparison of pandemic intervention policies in several building types using heterogeneous population model. Communications in Nonlinear Science and Numerical Simulation. 2021."
+			}
+		],
+		"authors": "Teddy Lazebnik, Ariel Alexi",
+		"year": 2021,
+		"topic": "Epidemiology",
+		"type": "Paper",
+		"publisher": "Communications in Nonlinear Science and Numerical Simulation",
+		"publicationStatus": "Published"
+	}
 ]

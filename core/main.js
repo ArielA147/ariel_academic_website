@@ -1,5 +1,9 @@
 import { navigateToHomePage } from '../services/navigation.js';
-import { FOOTER_RENDERED_EVENT, HEADER_RENDERED_EVENT } from '../constants/events.js';
+import {
+	FOOTER_RENDERED_EVENT,
+	HEADER_RENDERED_EVENT,
+	TEMPLATES_LOADED_EVENT,
+} from '../constants/events.js';
 import { DataLoader } from './DataLoader.js';
 
 let thisPage = location.href.split('/').slice(-1)[0];
@@ -14,6 +18,7 @@ async function onPageLoad() {
 	await renderFooter();
 	activeMenuLink();
 	manageCollapsible();
+	await loadAllTemplates();
 
 	// cite alerts
 	document.getElementById('alert-close-btn').onclick = function () {
@@ -25,7 +30,7 @@ async function onPageLoad() {
 }
 
 async function renderHeader() {
-	const header = await DataLoader.loadHeader();
+	const header = await DataLoader.loadComponent('partials/header.html');
 	if (header) {
 		document.getElementById('header').innerHTML = header;
 		document.dispatchEvent(new Event(HEADER_RENDERED_EVENT));
@@ -33,11 +38,23 @@ async function renderHeader() {
 }
 
 async function renderFooter() {
-	const footer = await DataLoader.loadFooter();
+	const footer = await DataLoader.loadComponent('partials/footer.html');
 	if (footer) {
 		document.getElementById('footer').innerHTML = footer;
 		document.dispatchEvent(new Event(FOOTER_RENDERED_EVENT));
 	}
+}
+
+async function loadAllTemplates() {
+	const response = await DataLoader.loadFile('components/templates.html');
+	const text = await response.text();
+
+	const parser = new DOMParser();
+	const doc = parser.parseFromString(text, 'text/html');
+	const templates = doc.querySelectorAll('template');
+
+	templates.forEach((template) => document.body.appendChild(template));
+	document.dispatchEvent(new Event(TEMPLATES_LOADED_EVENT));
 }
 
 // mark the right menu link as active

@@ -1,4 +1,4 @@
-import { setSearchParam } from '../../services/url.js';
+import { setSearchParam } from '../services/url.js';
 
 class Tabs {
 	/*

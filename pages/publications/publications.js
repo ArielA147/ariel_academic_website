@@ -1,21 +1,27 @@
-import { PublicationCard } from '../../js/components/publicationCard.js';
+import { PublicationCard } from '../../components/publication-card.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
-import { Icons } from '../../js/components/icons.js';
+import { Icons } from '../../components/icons.js';
 import { Page } from '../../core/Page.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { getQueryParams } from '../../services/url.js';
+import { TEMPLATES_LOADED_EVENT } from '../../constants/events.js';
+import {
+	filterItemsByKeyValue,
+	groupItemsByKey,
+	sortItemsByKey,
+} from '../../services/data-manipulator.js';
 
 const default_sorter = 'year';
 const default_filter = null;
 
+// TODO: add the filter and order type to the url.
+// if they exist in the URL, load them into the page and show the relevant/filtered data.
 class AcademicPublications extends Page {
 	#publicationsList = []; // list of PublicationCard objects
 	#sorter = default_sorter;
 
 	async build() {
-		/** @type {import('../../constants/types.js').AcademicPublication[]} */
-		const publications = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
-		this.#setupPublications(publications);
+		await this.#setupPublications();
 		const queryParams = getQueryParams();
 
 		if (queryParams.get('sort') != null) {
@@ -40,11 +46,10 @@ class AcademicPublications extends Page {
 		addCollapseFunction();
 	}
 
-	/**
-	 *
-	 * @param {import('../../constants/types.js')} publications
-	 */
-	#setupPublications(publications) {
+	async #setupPublications() {
+		/** @type {import('../../constants/types.js').AcademicPublication[]} */
+		const publications = await this.loadPageData(JSON_FILE_PATHS.PUBLICATIONS_JSON, DataType.JSON);
+
 		this.#publicationsList = PublicationCard.createListFromJson(publications);
 	}
 
@@ -101,26 +106,22 @@ class AcademicPublications extends Page {
 		}
 		// perpare ds //
 		// sort the list
-		var buildPublicationList = PublicationCard.sortByProperty(this.#publicationsList, sorter);
+		let buildPublicationList = sortItemsByKey(this.#publicationsList, sorter);
 
 		// if filter needed
 		if (filter != null) {
 			// filter the needed list only
-			buildPublicationList = PublicationCard.filterList(
-				buildPublicationList,
-				filterProperty,
-				filter,
-			);
+			buildPublicationList = filterItemsByKeyValue(buildPublicationList, filterProperty, filter);
 		}
 
 		// split into the right sets
-		var publicSets = PublicationCard.splitByProperty(buildPublicationList, sorter);
+		const publicSets = groupItemsByKey(buildPublicationList, sorter);
 
 		// build the UI //
 		try {
 			if (buildPublicationList.length > 0) {
-				var ansewrHtml = '';
-				var keys = [];
+				let answerHtml = '';
+				let keys = [];
 
 				for (var spliterKey in publicSets) {
 					keys.push(spliterKey);
@@ -134,17 +135,15 @@ class AcademicPublications extends Page {
 
 				for (var spliterKeyIndex = 0; spliterKeyIndex < keys.length; spliterKeyIndex++) {
 					// add spliter
-					// ansewrHtml += "<h3>" + keys[spliterKeyIndex] + "</h3>";
+					// answerHtml += "<h3>" + keys[spliterKeyIndex] + "</h3>";
 					// add elements inside the list
-					for (
-						var elementIndex = 0;
-						elementIndex < publicSets[keys[spliterKeyIndex]].length;
-						elementIndex++
-					) {
-						ansewrHtml += publicSets[keys[spliterKeyIndex]][elementIndex].toHtml();
+					for (let i = 0; i < publicSets[keys[spliterKeyIndex]].length; i++) {
+						const publication = publicSets[keys[spliterKeyIndex]][i];
+						const publicationCard = publication.render();
+						answerHtml += publicationCard.outerHTML;
 					}
 				}
-				document.getElementById('publications-body').innerHTML = ansewrHtml;
+				document.getElementById('publications-body').innerHTML = answerHtml;
 			} // show error message
 			else {
 				document.getElementById('publications-body').innerHTML =
@@ -284,6 +283,8 @@ class AcademicPublications extends Page {
 
 // run the class build on page load
 document.academicPublications = new AcademicPublications();
-await document.academicPublications.build();
+document.addEventListener(TEMPLATES_LOADED_EVENT, async () => {
+	await document.academicPublications.build();
+});
 
 export { AcademicPublications };

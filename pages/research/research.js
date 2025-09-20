@@ -1,16 +1,14 @@
-// imports
 import { Page } from '../../core/Page.js';
 import { removeAlertsPanels } from '../../core/main.js';
-import { Icons } from '../../js/components/icons.js';
-import { ResearchPosition } from '../../js/components/researchPosition.js';
-import { ResearchProject } from '../../js/components/researchProject.js';
-import { Tabs } from '../../js/components/tabs.js';
+import { Icons } from '../../components/icons.js';
+import { ResearchProject } from './components/research-project.js';
+import { Tabs } from '../../components/tabs.js';
 import { getQueryParams } from '../../services/url.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
 // Data file paths
-let SECTIONS = ['Ongoing-Projects', 'Previous-Projects', 'Work-with-me'];
+let SECTIONS = ['Ongoing-Projects', 'Previous-Projects'];
 
 /*
 	Single instance class to build about page with dynamic content from JSONS from the server
@@ -18,13 +16,14 @@ let SECTIONS = ['Ongoing-Projects', 'Previous-Projects', 'Work-with-me'];
 class Research extends Page {
 	#openSection = null;
 	#jsonData = {};
+
+	/** @type {ResearchProject[]} */
 	#ongoingProjects = [];
+	/** @type {ResearchProject[]} */
 	#previousProjects = [];
-	#openPositions = [];
 
 	constructor() {
 		super();
-
 		const queryParams = getQueryParams();
 		if (queryParams.has('section')) {
 			this.#openSection = queryParams.get('section');
@@ -42,7 +41,7 @@ class Research extends Page {
 		const nowDate = new Date();
 
 		for (let index = 0; index < this.#jsonData['projects'].length; index++) {
-			const newProject = ResearchProject.createFromJson(this.#jsonData['projects'][index]);
+			const newProject = ResearchProject.createSingleFromJson(this.#jsonData['projects'][index]);
 			//create lists of current and prev researches using date calculation.
 			if (
 				newProject.end_year < nowDate.getFullYear() ||
@@ -53,12 +52,6 @@ class Research extends Page {
 			} else {
 				this.#ongoingProjects.push(newProject);
 			}
-		}
-
-		for (var index = 0; index < this.#jsonData['open_positions'].length; index++) {
-			this.#openPositions.push(
-				ResearchPosition.createFromJson(this.#jsonData['open_positions'][index]),
-			);
 		}
 	}
 
@@ -72,7 +65,6 @@ class Research extends Page {
 		let tabsHTML = '';
 		tabsHTML += this.buildOngoing();
 		tabsHTML += this.buildPrevious();
-		tabsHTML += this.buildWorkWithMe();
 		document.getElementById('main-body-page').innerHTML += tabsHTML;
 
 		// open the right tab according to the url
@@ -86,14 +78,13 @@ class Research extends Page {
 		Tabs.createTabsSection();
 		Tabs.addTab('Ongoing Projects', 'Ongoing');
 		Tabs.addTab('Previous Projects', 'Previous');
-		Tabs.addTab('Work with me', 'Join me', true);
 	}
 
 	buildOngoing() {
 		let answerHTML = '<div class="body-section">';
 
 		this.#ongoingProjects.forEach((research, i) => {
-			answerHTML += research.toHtml();
+			answerHTML += research.render().outerHTML;
 
 			if (i < this.#ongoingProjects.length - 1) {
 				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';
@@ -108,29 +99,9 @@ class Research extends Page {
 		let answerHTML = '<div class="body-section">';
 
 		this.#previousProjects.forEach((research, i) => {
-			answerHTML += research.toHtml();
+			answerHTML += research.render().outerHTML;
 
 			if (i < this.#previousProjects.length - 1) {
-				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';
-			}
-		});
-
-		answerHTML += '</div>';
-		return answerHTML;
-	}
-
-	buildWorkWithMe() {
-		let answerHTML = '<div class="body-section">';
-
-		if (this.#jsonData['work_with_me_opening'] != '') {
-			answerHTML +=
-				'<div class="opening-statment">' + this.#jsonData['work_with_me_opening'] + '</div>';
-		}
-
-		this.#openPositions.forEach((position, i) => {
-			answerHTML += position.toHtml();
-
-			if (i < this.#openPositions.length - 1) {
 				answerHTML += '<div class="section-seperator">' + Icons.dots_seperator() + '</div>';
 			}
 		});

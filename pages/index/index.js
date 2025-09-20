@@ -1,7 +1,7 @@
 import { Page } from '../../core/Page.js';
-import { Icons } from '../../js/components/icons.js';
-import { ProjectPanel } from '../../js/components/projectPanel.js';
-import { PublicationCard } from '../../js/components/publicationCard.js';
+import { Icons } from '../../components/icons.js';
+import { ProjectPanel } from './components/project-panel.js';
+import { PublicationCard } from '../../components/publication-card.js';
 import { DataType, JSON_FILE_PATHS } from '../../constants/data.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 
@@ -214,19 +214,19 @@ class IndexPage extends Page {
 
 			// Featured Publications
 			var featuredPublicationsHtml = '';
-			for (var pubIndex = 0; pubIndex < jsonObj['featuredPublications'].length; pubIndex++) {
-				featuredPublicationsHtml += PublicationCard.createFromJson(
-					jsonObj['featuredPublications'][pubIndex],
-				).toHtml();
+			for (let i = 0; i < jsonObj['featuredPublications'].length; i++) {
+				const data = jsonObj['featuredPublications'][i];
+				const publicationCard = PublicationCard.createSingleFromJson(data);
+				featuredPublicationsHtml += publicationCard.render().outerHTML;
 			}
 			document.getElementById('featured_publications').innerHTML = featuredPublicationsHtml;
 
 			// Current Projects
-			var currentProjectsHtml = '';
-			for (var projIndex = 0; projIndex < jsonObj['currentProjects'].length; projIndex++) {
-				currentProjectsHtml += ProjectPanel.createFromJson(
-					jsonObj['currentProjects'][projIndex],
-				).toHtml();
+			let currentProjectsHtml = '';
+			for (let i = 0; i < jsonObj['currentProjects'].length; i++) {
+				const data = jsonObj['currentProjects'][i];
+				const projectPanel = ProjectPanel.createSingleFromJson(data);
+				currentProjectsHtml += projectPanel.render().outerHTML;
 			}
 			document.getElementById('current_projects').innerHTML = currentProjectsHtml;
 

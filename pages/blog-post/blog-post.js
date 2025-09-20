@@ -1,5 +1,5 @@
 import { Page } from '../../core/Page.js';
-import { NextBlogPostCard } from '../../js/components/nextBlogPostCard.js';
+import { NextBlogPostCard } from './components/next-blog-post-card.js';
 import { getQueryParams } from '../../services/url.js';
 import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
 
@@ -52,7 +52,7 @@ class BlogPost extends Page {
 			if (nextBlogsList.length > 0) {
 				let answerHtml = '';
 				for (var elementIndex = nextBlogsList.length - 1; elementIndex >= 0; elementIndex--) {
-					answerHtml += nextBlogsList[elementIndex].toHtml();
+					answerHtml += nextBlogsList[elementIndex].render().outerHTML;
 				}
 				document.getElementById('next_papers').innerHTML = answerHtml;
 			} else {

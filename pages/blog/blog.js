@@ -1,15 +1,19 @@
-import { BlogCard } from './components/blogCard.js';
+// import { BlogCard } from './components/blogCard.js';
+import { BlogCard } from './components/blog-card.js';
 import { addCollapseFunction } from '../../utils/descriptionSlicer.js';
 import { Page } from '../../core/Page.js';
 import { JSON_FILE_PATHS, DataType } from '../../constants/data.js';
+import { sortItemsByKey } from '../../services/data-manipulator.js';
+import { TEMPLATES_LOADED_EVENT } from '../../constants/events.js';
 
 const default_sorter = 'year';
 
 class Blog extends Page {
-	#publicationList = null;
+	/** @type {import('./components/blog-card.js').BlogCard[]} */
+	#publicationList;
 
 	async #setupPublicationData() {
-		if (this.#publicationList !== null) {
+		if (this.#publicationList) {
 			return;
 		}
 
@@ -24,14 +28,15 @@ class Blog extends Page {
 
 	async buildBody(search_term = '') {
 		await this.#setupPublicationData();
-		const sortedPublicationList = BlogCard.sortByProperty(this.#publicationList, default_sorter);
+		/** @type {import('./components/blog-card.js').BlogCard[]} */
+		const sortedPublicationList = sortItemsByKey(this.#publicationList, default_sorter);
 
 		try {
 			if (sortedPublicationList.length > 0) {
 				let answerHtml = '';
 				for (let i = sortedPublicationList.length - 1; i >= 0; i--) {
 					if (sortedPublicationList[i].title.includes(search_term) || search_term == '') {
-						answerHtml += sortedPublicationList[i].toHtml();
+						answerHtml += sortedPublicationList[i].render().outerHTML;
 					}
 				}
 				document.getElementById('publications-body').innerHTML = answerHtml;
@@ -52,6 +57,8 @@ class Blog extends Page {
 }
 
 document.blog = new Blog();
-await document.blog.build();
+document.addEventListener(TEMPLATES_LOADED_EVENT, async () => {
+	await document.blog.build();
+});
 
 export { Blog };

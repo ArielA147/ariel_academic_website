@@ -4,6 +4,7 @@ export type Lecturer = {
 	field: string;
 	email: string;
 	linkedinLink: string;
+	websiteLink: string;
 	googleScholarLink: string;
 	facebookLink: string;
 	githubLink: string;
@@ -22,14 +23,14 @@ export type GeneralInfo = {
 };
 
 export type Project = {
-	name: string;
+	title: string;
 	description: string;
 	topic: string;
-	link: FileLink;
+	fileLink: FileLink;
 };
 
 export type AcademicPublication = {
-	name: string;
+	title: string;
 	description: string;
 	authors: string;
 	year: number;
@@ -44,7 +45,7 @@ export type AcademicPublication = {
 export type FileLink = {
 	info: string;
 	type: string; // TODO: change the numeric types into something more descriptive (maybe use an enum)
-	string: string;
+	link: string;
 };
 
 export type Blog = {
@@ -54,10 +55,19 @@ export type Blog = {
 	year: number;
 	month: number;
 	day: number;
+	order: number;
+};
+
+export type NextBlog = {
+	title: string;
+	date: string;
+	description: string;
+	readingTime: string;
+	linkAddress: string;
 };
 
 export type Resource = {
-	name: string;
+	title: string;
 	description: string;
 	recommendation: string;
 	fileLinks: FileLink[];
@@ -68,17 +78,18 @@ export type Resource = {
 };
 
 export type Research = {
-	name: string;
+	title: string;
 	description: string;
 	startYear: number;
 	startMonth: number;
 	endYear: number;
 	endMonth: number;
 	teamMembers: number;
-	participants: ResourceParticipant[];
+	participants: ResearchParticipant[];
 	relevantResources: any[]; // TODO: define a more specific type for relevant resources
 };
 
-type ResourceParticipant = Lecturer & {
+type ResearchParticipant = Lecturer & {
+	title: string;
 	role: string;
 };

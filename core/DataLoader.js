@@ -51,49 +51,21 @@ export class DataLoader {
 		}
 	}
 
-	// /**
-	//  *
-	//  * @param {string} path
-	//  */
-	// static async loadComponent(path) {
-	// 	const response = await DataLoader.loadFile(path);
-	// 	if (!response) {
-	// 		return null;
-	// 	}
-
-	// 	try {
-	// 		const component = await response.text();
-	// 		return component;
-	// 	} catch (error) {
-	// 		console.error(`Error loading component from path: ${path}`, error);
-	// 		return null;
-	// 	}
-	// }
-
-	static async loadHeader() {
-		const response = await DataLoader.loadFile('partials/header.html');
+	/**
+	 * @param {string} path
+	 * @returns {Promise<string | null>}
+	 */
+	static async loadComponent(path) {
+		const response = await DataLoader.loadFile(path);
 		if (!response) {
 			return null;
 		}
 
 		try {
-			return await response.text();
+			const component = await response.text();
+			return component;
 		} catch (error) {
-			console.error(`Error loading header from path: partials/header.html`, error);
-			return null;
-		}
-	}
-
-	static async loadFooter() {
-		const response = await DataLoader.loadFile('partials/footer.html');
-		if (!response) {
-			return null;
-		}
-
-		try {
-			return await response.text();
-		} catch (error) {
-			console.error(`Error loading footer from path: partials/footer.html`, error);
+			console.error(`Error loading component from path: ${path}`, error);
 			return null;
 		}
 	}
